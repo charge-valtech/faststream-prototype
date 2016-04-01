@@ -1,0 +1,84 @@
+---
+pageTitle: Find a candidate
+layout: admin-layout.hbs
+---
+
+    <h2 class="heading-xlarge">
+      Find a candidate
+    </h2>
+    <p><a href="view-candidate.html">Return to candidate</a></p>
+
+    <section>
+      <div class="grid-wrapper">
+        <div class="grid grid-2-3">
+          <h3 class="heading-large">Candidate adjustment need</h3>
+        </div>
+      </div>
+
+      <section>
+        <h4 class="bold-small">Candidate name</h4>
+        <p>John Smith</p>
+      </section>
+
+      <section class="section-border">
+        <div class="form-group form-group-compound">
+          <div>
+            <label for="adjustment-choice-01" class="block-label block-label-slim"><input checked type="checkbox" id="adjustment-choice-01">Time extension, eg 25% or 30% </label>
+            <div id="adjustment-choice-01-panel" class="toggle-content" aria-hidden="true">
+              <div class="form-group">
+                <label class="form-label" for="time-needed">Extra time needed (Verbal)</label>
+                <input type="number" class="form-control form-control-small" id="time-needed" value="0" min="0" max="200" step="5"/>
+                <span>% added time</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="time-needed-num">Extra time needed (Numerical)</label>
+                <input type="number" class="form-control form-control-small" id="time-needed-num" value="0" min="0" max="200" step="5"/>
+                <span>% added time</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="adjustment-choice-03" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-03">Coloured paper</label>
+          </div>
+          <div>
+            <label for="adjustment-choice-06" class="block-label block-label-slim"><input checked type="checkbox" id="adjustment-choice-06">Braille test paper</label>
+          </div>
+          <div>
+            <label for="adjustment-choice-07" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-07">Room alone</label>
+          </div>
+          <div>
+            <label for="adjustment-choice-09" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-09">Rest breaks</label>
+          </div>
+          <div>
+            <label for="adjustment-choice-12" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-12">Reader/assistant</label>
+          </div>
+          <div>
+            <label for="adjustment-choice-13" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-13">Stand up and move around</label>
+          </div>
+        </div>
+        <div>
+          <h4 class="heading-small">Additional comments from candidate</h4>
+          <p>I also need to have a helper with me at the assessment.</p>
+        </div>
+      </section>
+
+      <div class="panel-indent text">
+        <p>Ensure that the adjustments have been confirmed with the candidate before saving</p>
+      </div>
+      <div class="form-group">
+        <a href="view-candidate.html?change=adjustment" class="button">Confirm adjustments</a>
+      </div>
+    </section>
+
+<script>
+  $(function() {
+    if($('#adjustment-choice-01').is(':checked')) {
+      $('#adjustment-choice-01-panel').show();
+    }
+
+    $('#adjustment-choice-01').on('change', function( ){
+      $('#adjustment-choice-01-panel').toggle();
+    });
+  });
+</script>

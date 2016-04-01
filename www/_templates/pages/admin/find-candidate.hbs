@@ -1,0 +1,41 @@
+---
+pageTitle: Find a candidate
+layout: admin-layout.hbs
+---
+
+    <h2 class="heading-xlarge">
+      Find a candidate
+    </h2>
+    <section>
+      <div class="form-group">
+        <label class="form-label" for="email-address">Email address</label>
+        <input type="text" class="form-control" id="email-address"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="last-name">Last name</label>
+        <input type="text" class="form-control" id="last-name"/>
+      </div>
+      <div class="form-group form-group-compound inline-fixed">
+        <p class="form-label">Date of birth</p>
+        <span class="form-hint">For example, 19 7 1994</span>
+        <div class="form-group form-group-compound">
+          <label class="date-hint" for="dob-day">Day</label>
+          <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-day">
+        </div>
+        <div class="form-group form-group-compound">
+          <label class="date-hint" for="dob-month">Month</label>
+          <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-month">
+        </div>
+        <div class="form-group form-group-compound form-group-year">
+          <label class="date-hint" for="dob-year">Year</label>
+          <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address4" class="form-label">Postcode</label>
+        <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
+      </div>
+      <div class="form-group">
+        <a href="candidate-results.html" class="button">Find candidate</a>
+      </div>
+    </section>
