@@ -266,13 +266,13 @@ module.exports = function(grunt) {
             },
             prototypeheroku: {
                 options: {
-                    remote: 'git@heroku.com:csr-ft-prototype.git',
+                    remote: 'git@heroku.com:faststream-prototype.git',
                     branch: 'master'
                 }
             },
             sprintheroku: {
                 options: {
-                    remote: 'git@heroku.com:csr-ft-sprint.git',
+                    remote: 'git@heroku.com:faststream-sprint.git',
                     branch: 'master'
                 }
             },
