@@ -1,5 +1,5 @@
 ---
-pageTitle: Choose your preferred location and scheme
+pageTitle: Choose your schemes
 ---
 <div class="grid-wrapper">
   <div class="grid grid-2-3">
@@ -8,99 +8,73 @@ pageTitle: Choose your preferred location and scheme
   <div class="grid grid-1-3">
   </div>
 </div>
-<div class="grid-wrapper">
-  <div class="grid grid-1-3 hide-nojs">
-    <div class="inner-block-padr map-legend-container">
-      <div class="map-control">
-        <div class="panel-indent toggle-content" id="chooseRegionContainer">
-          <h2 class="heading-small" id="chooseRegionText">Choose a region to filter the locations</h2>
-          <a href="#" id="clearMap" class="toggle-content">Reset selected region</a>
-        </div>
-      </div>
-      <div class="map-legend grid-1-2">
-        <h2 class="heading-small" id="hoveredRegionName"></h2>
-      </div>
-      <div class="show-ie8">
-        {{> map-uk-ie8 }}
-      </div>
-      <div class="svg-map-container hide-ie8">
-        {{> map-uk }}
-      </div>
-    </div>
-  </div>
-  <div class="grid grid-2-3" id="containingGridPreference">
 
-    <div id="chooseLocationAndScheme">
-      <section>
-        <h2 class="heading-medium" id="chooseHeading">
-          First preference of location
-        </h2>
-        <div id="selectLocationBlurb" class="hide-nojs">
-          <p>Select a region on the map to see the available locations listed. The schemes available at different locations will vary.</p>
-          <p>Once you've selected at least one location, you'll then be able to tell us whether you're open to alternatives.</p>
-          <p>Or, view a <a href="" id="viewListOfLocations">list of the locations</a>.</p>
-        </div>
-        <p class="hide-js">Choose a location from the list</p>
-        <p id="chosenRegionBlurb" class="toggle-content hide-nojs">Choose a location in the region: <b></b></p>
-        <p class="toggle-content hide-nojs" id="locationSelectedText">
-          Location selected
-        </p>
-        <div class="grid-2-3 toggle-content" id="listOfLocationsContainer">
-          {{> location-select }}
-        </div>
-      </section>
-      <section class="toggle-content" id="locationSelectedContainer" aria-hidden="true">
-
-        <div class="hgroup-medium">
-          <h2 class="heading-medium" aria-live="polite">Choose a scheme</h2>
-          <p class="subtitle">
-            <a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-fast-track-schemes" target="_blank" >Find out more about the schemes we offer</a>
-          </p>
-        </div>
-        <div class="panel-indent text">
-          <p>Scheme availability varies depending on your selected location and your education details</p>
-        </div>
-
-        <div class="grid-3-4">
-          <div class="form-group">
-            <label for="schemePref1" class="form-label">First preference of scheme</label>
-            <select name="" id="schemePref1">
-              <option value="" class="placeholder-option"></option>
-              <option value="Business">Business</option>
-              <option value="Commercial">Commercial</option>
-              <option value="Cyber security">Cyber security</option>
-              <option value="Digital and technology">Digital and technology</option>
-              <option value="Finance">Finance</option>
-              <option value="Project delivery">Project delivery</option>
-            </select>
-          </div>
-
-          <div class="form-group" id="secondPreferenceContainer">
-            <label for="schemePref2" class="form-label">Second preference of scheme</label>
-            <select name="" id="schemePref2">
-              <option value="" class="placeholder-option"></option>
-              <option value="Business">Business</option>
-              <option value="Commercial">Commercial</option>
-              <option value="Cyber security">Cyber security</option>
-              <option value="Digital and technology">Digital and technology</option>
-              <option value="Finance">Finance</option>
-              <option value="Project delivery">Project delivery</option>
-              <option value="No second preference">No second preference</option>
-            </select>
-          </div>
-        </div>
-
-      </section>
-    </div>
-
-    <div>
-      <a href="scheme-summary-01.html" class="button toggle-content first-choice-btn" id="choiceSave">Save first location and scheme</a>
-    </div>
-  </div>
+<div class="form-group">
+  <label class="form-label" for="preferredScheme">What is your preferred scheme?</label>
+  <select name="" id="preferredScheme">
+    <option value="">-- Choose one --</option>
+    <option value="schemePref01">Government Economic Service (GES)</option>
+    <option value="schemePref02">Government Statistical Service (GSS)</option>
+    <option value="schemePref03">Government Social Researchers (GSR)</option>
+    <option value="schemePref04">Government Operational Research Service (GORS)</option>
+    <option value="schemePref05">Commercial</option>
+    <option value="schemePref06">Finance</option>
+    <option value="schemePref07">European</option>
+    <option value="schemePref08">Government Communication Services</option>
+    <option value="schemePref09">Human Resources</option>
+    <option value="schemePref10">Project Delivery</option>
+    <option value="schemePref11">Digital and Technology</option>
+    <option value="schemePref12">Tax</option>
+    <optgroup label="Generalist">
+      <option value="schemePref13">Central Departments</option>
+      <option value="schemePref14">Diplomatic Service</option>
+      <option value="schemePref15">Science and Engineering</option>
+      <option value="schemePref16">Houses of Parliament</option>
+    </optgroup>
+  </select>
 </div>
 
+<div class="text">
+  <p>Once you've selected your preferred scheme you can then select the other schemes that you'd like to be considered for.</p>
+</div>
+
+<details class="text" id="otherSchemes">
+  <summary>Select other schemes</summary>
+  <ul class="detail-content list-text list-checkradio" id="otherSchemesList">
+    <li><input type="checkbox" name="schemePreferences" id="schemePref01"><label for="schemePref01">Government Economic Service (GES)</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref02"><label for="schemePref02">Government Statistical Service (GSS)</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref03"><label for="schemePref03">Government Social Researchers (GSR)</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref04"><label for="schemePref04">Government Operational Research Service (GORS)</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref05"><label for="schemePref05">Commercial</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref06"><label for="schemePref06">Finance</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref07"><label for="schemePref07">European</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref08"><label for="schemePref08">Government Communication Services</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref09"><label for="schemePref09">Human Resources</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref10"><label for="schemePref10">Project Delivery</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref11"><label for="schemePref11">Digital and Technology</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref12"><label for="schemePref12">Tax</label></li>
+    <li class="bold-small">Generalist:</li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref13"><label for="schemePref13">Central Departments</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref14"><label for="schemePref14">Diplomatic Service</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref15"><label for="schemePref15">Science and Engineering</label></li>
+    <li><input type="checkbox" name="schemePreferences" id="schemePref16"><label for="schemePref16">Houses of Parliament</label></li>
+  </ul>
+</details>
+
+<a href="assistance.html" class="button">Save and continue</a>
 
 <script>
-  var availableLocationsAndSchemes = {"East":{"Bedford":["Business","Commercial","Finance"],"Hertford":["Business","Commercial","Finance"],"Milton Keynes":["Business","Commercial","Finance"],"Norwich":["Business","Commercial","Finance"],"Southend":["Business","Commercial","Finance"],"TestGCSE":["Business","Commercial","Finance"]},"East-midlands":{"Leicester":["Business","Commercial","Finance"],"Nottingham":["Business","Commercial","Finance"]},"London":{"Hackney":["Business","Commercial","Finance"],"London":["Business","Commercial","Finance"],"Northwood":["Business","Commercial","Finance"]},"North-east":{"Darlington":["Business","Commercial","Finance"],"Jarrow South":["Business","Commercial","Finance"],"Newcastle":["Business","Commercial","Finance"],"Stockton":["Business","Commercial","Finance"],"Teeside":["Business","Commercial","Finance"],"Washington":["Business","Commercial","Finance"]},"North-west":{"Blackpool":["Business","Commercial","Finance"],"Bootle":["Business","Commercial","Finance"],"Liverpool":["Business","Commercial","Finance"],"Lytham St Annes":["Business","Commercial","Finance"],"Manchester":["Business","Commercial","Finance"],"Preston":["Business","Commercial","Finance"],"Salford":["Business","Commercial","Finance"],"Shipley":["Business","Commercial","Finance"]},"Scotland":{"Bathgate (Edinburgh)":["Business","Commercial","Finance"],"Cumbernauld":["Business","Commercial","Finance"],"Dundee":["Business","Commercial","Finance"],"East Kilbride":["Business","Commercial","Finance"],"Edinburgh":["Business","Commercial","Finance"],"Glasgow":["Business","Commercial","Finance"]},"South-east":{"Andover":["Business","Commercial","Finance"],"Aylesbury (Buckinghamshire)":["Business","Commercial","Finance"],"Chilton":["Business","Commercial","Finance"],"Hastings":["Business","Commercial","Finance"],"High Wycombe":["Business","Commercial","Finance"],"Kent (inc.Ramsgate)":["Business","Commercial","Finance"],"Oxford":["Business","Commercial","Finance"],"Reading":["Business","Commercial","Finance"],"Shrivenham":["Business","Commercial","Finance"],"Surrey":["Business","Commercial","Finance"],"Worthing":["Business","Commercial","Finance"]},"South-west":{"Bristol":["Business","Commercial","Finance"]},"Wales":{"Cardiff":["Business","Commercial","Finance"],"Merthyr Tydfil":["Business","Commercial","Finance"],"Swansea":["Business","Commercial","Finance"]},"West-midlands":{"Birmingham":["Business","Commercial","Finance"],"Cosford":["Business","Commercial","Finance"],"Coventry":["Business","Commercial","Finance"],"Handsworth":["Business","Commercial","Finance"],"Lichfield":["Business","Commercial","Finance"],"Stratford":["Business","Commercial","Finance"],"Sutton Coldfield":["Business","Commercial","Finance"],"Telford":["Business","Commercial","Finance"],"Walsall":["Business","Commercial","Finance"],"Wolverhampton":["Business","Commercial","Finance"]},"Yorkshire-humberside":{"Bradford":["Business","Commercial","Finance"],"Leeds":["Business","Commercial","Finance"],"Sheffield":["Business","Commercial","Finance"],"York":["Business","Commercial","Finance"]}};
-  var disabledLocation = '';
+  $(function() {
+    $('#preferredScheme').on('change', function() {
+      var thisVal = $(this).val(),
+          thisListItem = $('#' + thisVal).closest('li');
+
+      thisListItem.addClass('disabled');
+      $('#otherSchemes li').not(thisListItem).removeClass('disabled');
+
+      if(!$('#otherSchemesList').is(':visible')) {
+        $('#otherSchemes summary').trigger('click');
+      }
+    });
+  });
 </script>

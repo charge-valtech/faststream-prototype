@@ -41,13 +41,13 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                    includePaths: ['www/_assets/scss'],
+                    includePaths: ['../csr-assets/scss'],
                     outputStyle: 'compressed',
                     sourceMap: true
                 },
                 files: {
-                    'www/_assets/css/main.css': 'www/_assets/scss/main.scss',
-                    'www/_assets/css/main-ie8.css': 'www/_assets/scss/main-ie8.scss'
+                    'www/_assets/css/main.css': '../csr-assets/scss/main.scss',
+                    'www/_assets/css/main-ie8.css': '../csr-assets/scss/main-ie8.scss'
                 }
             }
         },
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
                 spawn: false
             },
             css: {
-                files: ['www/_assets/scss/**/*.scss'],
+                files: ['../csr-assets/scss/**/*.scss'],
                 tasks: ['sass']
             },
             js: {
@@ -102,7 +102,6 @@ module.exports = function(grunt) {
               cwd: 'www',
               src: [
                 '**/*',
-                '!_assets/scss/**/*',
                 '!_assets/js/**/*',
                 '!_templates/**/*',
                 '!_assets/css/*.map',
@@ -287,7 +286,7 @@ module.exports = function(grunt) {
     });
 
     [
-        'assemble',
+        'grunt-assemble',
         'grunt-modernizr',
         'grunt-contrib-uglify',
         'grunt-contrib-jshint',
@@ -299,7 +298,6 @@ module.exports = function(grunt) {
         'grunt-contrib-clean',
         'grunt-contrib-compress',
         'grunt-browser-sync',
-        'grunt-dev-update',
         'grunt-contrib-connect',
         'grunt-prettify',
         'grunt-build-control',
