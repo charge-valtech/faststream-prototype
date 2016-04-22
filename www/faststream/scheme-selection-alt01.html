@@ -155,11 +155,13 @@
     $('#schemesList input:checkbox').on('change', function() {
       var thisText = $(this).closest('li').text(),
           thisCheckbox = $(this),
-          thisID = $(this).attr('id');
+          thisID = $(this).attr('id'),
+          moveUp = '<a href="#" class="move-up"><span class="visuallyhidden">Move up</span><i class="fa fa-chevron-up"></i></a>',
+          moveDown = '<a href="#" class="move-down"><span class="visuallyhidden">Move down</span><i class="fa fa-chevron-down"></i></a>';
 
       if (thisCheckbox.prop('checked')) {
         $('#schemesWillAppear').addClass('toggle-content');
-        $('#selectedSchemesList').append('<li id="added-' + thisID + '">' + thisText + '</li>');
+        $('#selectedSchemesList').append('<li id="added-' + thisID + '">' + thisText + '<span class="inline-float-right">' + moveUp + moveDown + '</span></li>');
       } else {
         $('#added-' + thisID).remove();
       }
@@ -167,6 +169,26 @@
       if($('#selectedSchemesList li').length < 1) {
         $('#schemesWillAppear').removeClass('toggle-content');
       }
+
+    });
+
+    $('#selectedSchemesList').on('click', '.move-up', function(e) {
+      var thisRow = $(this).closest('li'),
+          rowAbove = thisRow.prev();
+
+      e.preventDefault();
+
+      rowAbove.before(thisRow);
+
+    });
+
+    $('#selectedSchemesList').on('click', '.move-down', function(e) {
+      var thisRow = $(this).closest('li'),
+          rowAbove = thisRow.next();
+
+      e.preventDefault();
+
+      rowAbove.after(thisRow);
 
     });
   });
