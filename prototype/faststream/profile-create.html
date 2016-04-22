@@ -148,7 +148,7 @@
               </div>
             </div>
           </section>
-          <section class="section-border">
+          <section class="section-border clearfix">
             <legend class="heading-large">Eligibility</legend>
             <div class="text">
               <h2 class="heading-medium">Confirm the following statements are true</h2>
@@ -166,11 +166,17 @@
                 Civil Service, I'm aware of the <a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-who-can-apply#conditions-for-existing-civil-servants"
                 rel="external" target="_blank">conditions that apply</a></li>
             </ul>
-            <div class="form-group">
-              <label for="accept-eligible" class="block-label">
-                <input type="checkbox" id="accept-eligible"> I confirm that I am eligible to apply
-              </label>
-            </div>
+            <fieldset>
+              <legend class="form-label">Are you eligible to apply?</legend>
+              <div class="form-group form-group-compound">
+                <label for="eligible-yes" class="block-label">
+                  <input name="eligible" type="radio" id="eligible-yes">Yes
+                </label>
+                <label for="eligible-no" class="block-label">
+                  <input name="eligible" type="radio" id="eligible-no">No
+                </label>
+              </div>
+            </fieldset>
           </section>
           <section>
             <legend class="heading-large">Terms and conditions</legend>
