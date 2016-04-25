@@ -177,7 +177,7 @@
 
       if (thisCheckbox.prop('checked')) {
         $('#schemesWillAppear').addClass('toggle-content');
-        $('#selectedSchemesList').append('<li class="item-withcontrols" id="added-' + thisID + '">' + thisText + '<span class="item-controls">' + moveUp + moveDown + '</span></li>');
+        $('#selectedSchemesList').append('<li class="item-withcontrols" id="added-' + thisID + '">' + thisText + '<span class="item-controls ta-right">' + moveUp + moveDown + '</span></li>');
       } else {
         $('#added-' + thisID).remove();
       }
@@ -188,15 +188,48 @@
 
     });
 
-    $('#selectedSchemesList').on('click', '.move-up', function(e) {
+    $('#selectedSchemesList').on('click', 'li:nth-child(1) .move-up', function(e) {
+      e.preventDefault();
+    });
+
+
+
+
+
+
+    $('#selectedSchemesList').on('click', 'li:nth-child(n+2) .move-up', function(e) {
       var thisRow = $(this).closest('li'),
-          rowAbove = thisRow.prev();
+          rowAbove = thisRow.prev(),
+          rowsBelow = thisRow.nextAll();
 
       e.preventDefault();
 
-      rowAbove.before(thisRow);
+      rowAbove.after('<li class="sortable-placeholder"></li>');
+
+      thisRow.animate({
+        "top": "-30px"
+      }, 0);
+
+      rowsBelow.animate({
+        "top": "-30px"
+      }, 0);
+
+      thisRow.addClass('ui-sortable-helper').animate({
+        "top": "-60px"
+      }, 500, "easeInOutQuad", function(){
+        thisRow.removeClass('ui-sortable-helper').removeAttr('style');
+        rowAbove.before($('#selectedSchemesList .sortable-placeholder'));
+        $('#selectedSchemesList .sortable-placeholder').replaceWith(thisRow);
+        rowsBelow.removeAttr('style');
+      });
+
 
     });
+
+
+
+
+
 
     $('#selectedSchemesList').on('click', '.move-down', function(e) {
       var thisRow = $(this).closest('li'),
