@@ -10,7 +10,8 @@ pageTitle: Choose your schemes
 </div>
 <section class="grid-wrapper">
   <div class="grid grid-1-2">
-    <div class="inner-block-padr">
+    <fieldset class="inner-block-padr">
+      <legend class="visuallyhidden">Choose preferred schemes</legend>
       <h2 class="heading-medium">Available schemes</h2>
       <p>Read <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes" rel="external" target="_blank">about the schemes<span class="visuallyhidden"> (link opens in a new window/tab)</span></a> that are on offer.</p>
       <ul class="list-text list-checkradio" id="schemesList">
@@ -32,7 +33,7 @@ pageTitle: Choose your schemes
         <li><input type="checkbox" name="schemePreferences" id="schemePref15"><label for="schemePref15">Science and Engineering</label></li>
         <li><input type="checkbox" name="schemePreferences" id="schemePref16"><label for="schemePref16">Houses of Parliament</label></li>
       </ul>
-    </div>
+    </fieldset>
   </div>
   <div class="grid grid-1-2">
     <h3 class="heading-medium">Schemes you'd like to apply for</h3>
@@ -57,9 +58,14 @@ pageTitle: Choose your schemes
 
 
 <a href="assistance.html" class="button">Save and continue</a>
-
+<script src="{{assets}}/js/vendor/jquery-ui-custom.js"></script>
 <script>
   $(function() {
+    $('#selectedSchemesList').sortable({
+      placeholder: "sortable-placeholder",
+      revert: true
+    });
+
     $('#schemesList input:checkbox').on('change', function() {
       var thisText = $(this).closest('li').text(),
           thisCheckbox = $(this),
@@ -69,7 +75,7 @@ pageTitle: Choose your schemes
 
       if (thisCheckbox.prop('checked')) {
         $('#schemesWillAppear').addClass('toggle-content');
-        $('#selectedSchemesList').append('<li id="added-' + thisID + '">' + thisText + '<span class="inline-float-right">' + moveUp + moveDown + '</span></li>');
+        $('#selectedSchemesList').append('<li class="item-withcontrols" id="added-' + thisID + '">' + thisText + '<span class="item-controls">' + moveUp + moveDown + '</span></li>');
       } else {
         $('#added-' + thisID).remove();
       }
