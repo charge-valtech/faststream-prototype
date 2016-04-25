@@ -188,14 +188,9 @@
 
     });
 
-    $('#selectedSchemesList').on('click', 'li:nth-child(1) .move-up', function(e) {
+    $('#selectedSchemesList').on('click', 'li:first-child .move-up, li:last-child .move-down', function(e) {
       e.preventDefault();
     });
-
-
-
-
-
 
     $('#selectedSchemesList').on('click', 'li:nth-child(n+2) .move-up', function(e) {
       var thisRow = $(this).closest('li'),
@@ -206,13 +201,9 @@
 
       rowAbove.after('<li class="sortable-placeholder"></li>');
 
-      thisRow.animate({
-        "top": "-30px"
-      }, 0);
-
-      rowsBelow.animate({
-        "top": "-30px"
-      }, 0);
+      $('#selectedSchemesList').css('margin-bottom', '-15px');
+      thisRow.css('top', '-30px');
+      rowsBelow.css('top', '-30px');
 
       thisRow.addClass('ui-sortable-helper').animate({
         "top": "-60px"
@@ -221,23 +212,37 @@
         rowAbove.before($('#selectedSchemesList .sortable-placeholder'));
         $('#selectedSchemesList .sortable-placeholder').replaceWith(thisRow);
         rowsBelow.removeAttr('style');
-      });
+        $('#selectedSchemesList').removeAttr('style');
 
+      });
 
     });
 
-
-
-
-
-
-    $('#selectedSchemesList').on('click', '.move-down', function(e) {
+    $('#selectedSchemesList').on('click', 'li:nth-last-child(n+2) .move-down', function(e) {
       var thisRow = $(this).closest('li'),
-          rowAbove = thisRow.next();
+          rowBelow = thisRow.next(),
+          rowsAbove = thisRow.prevAll();
 
       e.preventDefault();
 
-      rowAbove.after(thisRow);
+      rowBelow.before('<li class="sortable-placeholder"></li>');
+
+      $('#selectedSchemesList').css('margin-top', '-30px');
+      thisRow.css({
+        'bottom': '-30px',
+        'z-index': 1000
+      });
+      rowsAbove.css('bottom', '-30px');
+
+      thisRow.addClass('ui-sortable-helper').animate({
+        "bottom": "-60px"
+      }, 500, "easeInOutQuad", function(){
+        thisRow.removeClass('ui-sortable-helper').removeAttr('style');
+        rowBelow.after($('#selectedSchemesList .sortable-placeholder'));
+        $('#selectedSchemesList .sortable-placeholder').replaceWith(thisRow);
+        rowsAbove.removeAttr('style');
+        $('#selectedSchemesList').removeAttr('style');
+      });
 
     });
   });
