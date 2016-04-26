@@ -197,7 +197,7 @@
           <div class="grid grid-1-2">
             <h3 class="heading-medium">Schemes you'd like to apply for</h3>
             <p>Schemes listed in order of preference.</p>
-            <ol id="selectedSchemesList" class="list-number">
+            <ol id="selectedSchemesList" class="list-number-styled">
             </ol>
           </div>
         </section>
@@ -281,6 +281,7 @@
                 rowsBelow.removeAttr('style');
                 $('#selectedSchemesList').removeAttr('style');
               });
+              $(this).focus();
             });
           $('#selectedSchemesList').on('click',
             'li:nth-last-child(n+2) .move-down',
