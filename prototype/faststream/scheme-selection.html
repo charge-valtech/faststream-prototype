@@ -123,66 +123,80 @@
             <label class="form-label" for="preferredScheme">What is your preferred scheme?</label>
             <select name="" id="preferredScheme">
               <option value="">-- Choose one --</option>
-              <option value="schemePref01">Government Economic Service</option>
-              <option value="schemePref02">Government Statistical Service</option>
-              <option value="schemePref03">Government Social Researchers</option>
-              <option value="schemePref04">Government Operational Research Service</option>
+              <option value="schemePref13">Central Departments</option>
               <option value="schemePref05">Commercial</option>
-              <option value="schemePref06">Finance</option>
+              <option value="schemePref11">Digital and Technology</option>
+              <option value="schemePref14">Diplomatic Service</option>
               <option value="schemePref07">European</option>
+              <option value="schemePref06">Finance</option>
               <option value="schemePref08">Government Communication Services</option>
+              <option value="schemePref01">Government Economic Service</option>
+              <option value="schemePref04">Government Operational Research Service</option>
+              <option value="schemePref03">Government Social Researchers</option>
+              <option value="schemePref02">Government Statistical Service</option>
+              <option value="schemePref16">Houses of Parliament</option>
               <option value="schemePref09">Human Resources</option>
               <option value="schemePref10">Project Delivery</option>
-              <option value="schemePref11">Digital and Technology</option>
+              <option value="schemePref15">Science and Engineering</option>
               <option value="schemePref12">Tax</option>
-              <optgroup label="Generalist">
-                <option value="schemePref13">Central Departments</option>
-                <option value="schemePref14">Diplomatic Service</option>
-                <option value="schemePref15">Science and Engineering</option>
-                <option value="schemePref16">Houses of Parliament</option>
-              </optgroup>
             </select>
           </div>
           <div class="text">
             <p>Once you've selected your preferred scheme you can then select the
               other schemes that you'd like to be considered for.</p>
           </div>
-          <details class="text" id="otherSchemes">
+          <details class="text clearfix" id="otherSchemes">
             <summary>Select other schemes</summary>
             <fieldset>
               <legend class="visuallyhidden">Select other schemes</legend>
               <ul class="detail-content list-text list-checkradio" id="otherSchemesList">
                 <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref01">
-                  <label for="schemePref01">Government Economic Service</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref02">
-                  <label for="schemePref02">Government Statistical Service</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref03">
-                  <label for="schemePref03">Government Social Researchers</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref04">
-                  <label for="schemePref04">Government Operational Research Service</label>
+                  <input type="checkbox" name="schemePreferences" id="schemePref13">
+                  <label for="schemePref13">Central Departments</label>
                 </li>
                 <li>
                   <input type="checkbox" name="schemePreferences" id="schemePref05">
                   <label for="schemePref05">Commercial</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref06">
-                  <label for="schemePref06">Finance</label>
+                  <input type="checkbox" name="schemePreferences" id="schemePref11">
+                  <label for="schemePref11">Digital and Technology</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="schemePreferences" id="schemePref14">
+                  <label for="schemePref14">Diplomatic Service</label>
                 </li>
                 <li>
                   <input type="checkbox" name="schemePreferences" id="schemePref07">
                   <label for="schemePref07">European</label>
                 </li>
                 <li>
+                  <input type="checkbox" name="schemePreferences" id="schemePref06">
+                  <label for="schemePref06">Finance</label>
+                </li>
+                <li>
                   <input type="checkbox" name="schemePreferences" id="schemePref08">
                   <label for="schemePref08">Government Communication Services</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="schemePreferences" id="schemePref01">
+                  <label for="schemePref01">Government Economic Service</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="schemePreferences" id="schemePref04">
+                  <label for="schemePref04">Government Operational Research Service</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="schemePreferences" id="schemePref03">
+                  <label for="schemePref03">Government Social Researchers</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="schemePreferences" id="schemePref02">
+                  <label for="schemePref02">Government Statistical Service</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="schemePreferences" id="schemePref16">
+                  <label for="schemePref16">Houses of Parliament</label>
                 </li>
                 <li>
                   <input type="checkbox" name="schemePreferences" id="schemePref09">
@@ -193,29 +207,12 @@
                   <label for="schemePref10">Project Delivery</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref11">
-                  <label for="schemePref11">Digital and Technology</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref12">
-                  <label for="schemePref12">Tax</label>
-                </li>
-                <li class="bold-small">Generalist:</li>
-                <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref13">
-                  <label for="schemePref13">Central Departments</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref14">
-                  <label for="schemePref14">Diplomatic Service</label>
-                </li>
-                <li>
                   <input type="checkbox" name="schemePreferences" id="schemePref15">
                   <label for="schemePref15">Science and Engineering</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="schemePreferences" id="schemePref16">
-                  <label for="schemePref16">Houses of Parliament</label>
+                  <input type="checkbox" name="schemePreferences" id="schemePref12">
+                  <label for="schemePref12">Tax</label>
                 </li>
               </ul>
             </fieldset>
