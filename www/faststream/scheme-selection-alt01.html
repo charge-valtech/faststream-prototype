@@ -164,7 +164,10 @@
   $(function() {
     $('#selectedSchemesList').sortable({
       placeholder: "sortable-placeholder",
-      revert: true
+      revert: true,
+      start: function(e, ui ){
+        ui.placeholder.height(ui.helper.outerHeight());
+     }
     });
 
     $('#schemesList input:checkbox').on('change', function() {
