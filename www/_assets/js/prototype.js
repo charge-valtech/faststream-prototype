@@ -543,5 +543,18 @@ $(function() {
     $('#01-feedback').html($.jStorage.get('thisCandFeedback'));
   }
 
+  $('#schemeSaveBtn').on('click', function() {
+    var schemes = [];
+
+    $('input:checked').each(function() {
+      var schemeName = $(this).closest('section').find('.link-unimp').text();
+
+      schemes.push(schemeName);
+
+    });
+
+    $.jStorage.set('schemesSelected', schemes);
+  });
+
 // --------------- Not to be used in production -------------- //
 });

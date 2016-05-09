@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Create your account | Apply for Civil Service Fast Stream</title>
+  <title>Set scheme preferences | Apply for Civil Service Fast Stream</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -103,53 +103,139 @@
     </div>
     <main role="main" id="main">
       
-<div class="panel-success toggle-content" id="signedOut">
-  <p class="">You've successfully signed out. <a href="/feedback.html">Give feedback?</a> (30 second survey)</p>
-</div>
-
-<div class="panel-success toggle-content" id="withdrawnApplication">
-  <p class="">You've successfully withdrawn your application. <a href="/feedback.html">Give feedback?</a> (30 second survey)</p>
-</div>
-
-<div class="panel-success toggle-content" id="accountUnlocked">
-  <p class="">You've successfully unlocked your account. <a href="#signInHeading">Sign in to continue</a>.</p>
-</div>
-
-<h1 class="heading-xlarge">Create your account</h1>
-<div class="text" id="applicationsOpenedCreate">
-  <p class="small-btm-margin">
-      To apply for Civil Service Fast Stream you'll need to create an account.
-  </p>
-  <p>Before you start make sure:</p>
-  <ul class="list-bullet">
-      <li>you meet the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply" rel="external" target="_blank">eligibility</a> requirements to apply</li>
-      <li>you've read about the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes" rel="external" target="_blank">schemes</a></li>
-  </ul>
-
-  <div class="form-group">
-    <a href="profile-create.html" class="button">Create your account</a>
+<div class="grid-wrapper">
+  <div class="grid grid-2-3">
+    <h1 class="heading-xlarge" id="choosePrefLocFramHeading">Set scheme preferences</h1>
+  </div>
+  <div class="grid grid-1-3">
   </div>
 </div>
+<section class="text">
+  <p>Your application will be considered for each of your chosen schemes, in order of preference.</p>
+  <p>If you need to add or remove chosen schemes, you can <a class="inl-block" href="scheme-selection-start.html">&laquo; return to scheme selection</a>.</p>
+  <ol id="selectedSchemesList" class="list-text list-number-text">
 
-<div class="text">
-  <h2 class="heading-xlarge" id="signInHeading">Already have an account?</h2>
-  <h2 class="heading-large">Sign in</h2>
+  </ol>
+</section>
+
+<h2 class="heading-medium">Eligibility</h2>
+
+<div class="text panel-indent">
+  <p>Before you apply, make sure you're <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes" target="_blank" rel="external">eligible</a> for the scheme(s) that you've selected.</p>
 </div>
-<div class="form-group form-group-compound">
- <label class="form-label" for="email-add">Email</label>
- <input type="email" class="form-control" id="email-add"/>
-</div>
+
 <div class="form-group">
- <label class="form-label" for="signin-password">Password</label>
- <input type="password" class="form-control" id="signin-password" />
- <p><a href="profile-noaccess.html">I can't access my account</a></p>
-</div>
-
-<div class="form-group small-btm-margin">
- <a class="button" id="btnSignIn" href="profile-home.html">Sign in</a>
+  <label for="accept-eligible" class="block-label">
+    <input type="checkbox" id="accept-eligible"> I confirm that I'm eligible to apply
+  </label>
 </div>
 
 
+<a href="assistance.html" class="button">Save and continue</a>
+<script src="../_assets/js/vendor/jquery-ui-custom.js"></script>
+<script>
+  $(function() {
+    $('#selectedSchemesList').sortable({
+      placeholder: "sortable-placeholder",
+      revert: true,
+      start: function(e, ui ){
+        ui.placeholder.height(ui.helper.outerHeight());
+     }
+    });
+
+    var selectedSchemes = $.jStorage.get('schemesSelected');
+
+    $.each(selectedSchemes, function(key,value) {
+      var thisText = value,
+          thisID = $(this).attr('id'),
+          moveUp = '<a href="#" class="move-up"><span class="visuallyhidden">Move up</span><i class="fa fa-chevron-up"></i></a>',
+          moveDown = '<a href="#" class="move-down"><span class="visuallyhidden">Move down</span><i class="fa fa-chevron-down"></i></a>';
+
+      $('#selectedSchemesList').append('<li class="item-withcontrols"><h3 class="bold-small"><span class="number-text"></span></h3>' + thisText + '<span class="item-controls ta-right">' + moveUp + moveDown + '</span></li>');
+    });
+
+    $('#selectedSchemesList').on('click', 'li:first-child .move-up, li:last-child .move-down', function(e) {
+      e.preventDefault();
+    });
+
+    $('#selectedSchemesList').on( 'keydown', '.move-up', function(e) {
+      var thisControl = $(this).closest('li').find('.move-up');
+      if(e.which == 13) {
+        setTimeout(function() {
+          thisControl.focus();
+        }, 450);
+      }
+    });
+
+    $('#selectedSchemesList').on( 'keydown', '.move-down', function(e) {
+      var thisControl = $(this).closest('li').find('.move-down');
+      if(e.which == 13) {
+        setTimeout(function() {
+          thisControl.focus();
+        }, 450);
+      }
+    });
+
+    $('#selectedSchemesList').on('click', 'li:nth-child(n+2) .move-up', function(e) {
+      var thisRow = $(this).closest('li'),
+          thisHeightVal = thisRow.outerHeight(),
+          thisHeight = thisHeightVal+10 + 'px',
+          doubleHeight = thisHeightVal*2+20 + 'px',
+          rowAbove = thisRow.prev(),
+          rowsBelow = thisRow.nextAll();
+
+      e.preventDefault();
+
+      rowAbove.after('<li class="sortable-placeholder" style="height:' + thisHeightVal + 'px;"></li>');
+
+      $('#selectedSchemesList').css('margin-bottom', '-' + thisHeight);
+      thisRow.css('top', '-' + thisHeight);
+      rowsBelow.css('top', '-' + thisHeight);
+
+      thisRow.addClass('ui-sortable-helper').animate({
+        "top": '-' + doubleHeight
+      }, 400, "easeInOutQuad", function(){
+        thisRow.removeClass('ui-sortable-helper').removeAttr('style');
+        rowAbove.before($('#selectedSchemesList .sortable-placeholder'));
+        $('#selectedSchemesList .sortable-placeholder').replaceWith(thisRow);
+        rowsBelow.removeAttr('style');
+        $('#selectedSchemesList').removeAttr('style');
+      });
+
+    });
+
+    $('#selectedSchemesList').on('click', 'li:nth-last-child(n+2) .move-down', function(e) {
+      var thisRow = $(this).closest('li'),
+          thisHeightVal = thisRow.outerHeight(),
+          thisHeight = thisHeightVal+10 + 'px',
+          doubleHeight = thisHeightVal*2+20 + 'px',
+          rowBelow = thisRow.next(),
+          rowsAbove = thisRow.prevAll();
+
+      e.preventDefault();
+
+      rowBelow.before('<li class="sortable-placeholder" style="height:' + thisHeightVal + 'px;"></li>');
+
+      $('#selectedSchemesList').css('margin-top', '-' + thisHeight);
+      thisRow.css({
+        'bottom': '-' + thisHeight,
+        'z-index': 1000
+      });
+      rowsAbove.css('bottom', '-' + thisHeight);
+
+      thisRow.addClass('ui-sortable-helper').animate({
+        "bottom": '-' + doubleHeight
+      }, 400, "easeInOutQuad", function(){
+        thisRow.removeClass('ui-sortable-helper').removeAttr('style');
+        rowBelow.after($('#selectedSchemesList .sortable-placeholder'));
+        $('#selectedSchemesList .sortable-placeholder').replaceWith(thisRow);
+        rowsAbove.removeAttr('style');
+        $('#selectedSchemesList').removeAttr('style');
+      });
+
+    });
+  });
+</script>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">
