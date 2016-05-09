@@ -544,16 +544,33 @@ $(function() {
   }
 
   $('#schemeSaveBtn').on('click', function() {
-    var schemes = [];
+    var schemes = [],
+        schemeIDs = [];
 
     $('input:checked').each(function() {
-      var schemeName = $(this).closest('section').find('.link-unimp').text();
+      var schemeName = $(this).closest('section').find('.link-unimp').text(),
+          schemeID = '#' + $(this).attr('id');
 
       schemes.push(schemeName);
+      schemeIDs.push(schemeID);
 
     });
 
     $.jStorage.set('schemesSelected', schemes);
+    $.jStorage.set('schemesSelectedIDs', schemeIDs);
+  });
+
+  $('#saveSchemePrefBtn').on('click', function() {
+    var schemePreferences = [];
+
+    $('[data-schemename]').each(function() {
+      var schemeName = $(this).text();
+
+      schemePreferences.push(schemeName);
+
+    });
+
+    $.jStorage.set('schemePreferences', schemePreferences);
   });
 
 // --------------- Not to be used in production -------------- //

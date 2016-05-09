@@ -137,7 +137,7 @@
             <input type="checkbox" id="accept-eligible"> I confirm that I'm eligible to apply
           </label>
         </div>
-        <a href="assistance.html" class="button">Save and continue</a>
+        <a href="assistance.html" class="button" id="saveSchemePrefBtn">Save and continue</a>
         <script src="../_assets/js/vendor/jquery-ui-custom.js"></script>
         <script>
         $(function()
@@ -161,8 +161,9 @@
               moveDown =
               '<a href="#" class="move-down"><span class="visuallyhidden">Move down</span><i class="fa fa-chevron-down"></i></a>';
             $('#selectedSchemesList').append(
-              '<li class="item-withcontrols"><h3 class="bold-small"><span class="number-text"></span></h3>' +
-              thisText + '<span class="item-controls ta-right">' +
+              '<li class="item-withcontrols"><h3 class="bold-small"><span class="number-text"></span></h3><span data-schemename>' +
+              thisText +
+              '</span><span class="item-controls ta-right">' +
               moveUp + moveDown + '</span></li>');
           });
           $('#selectedSchemesList').on('click',

@@ -392,6 +392,17 @@
           </div>
         </section>
         <a href="scheme-preference.html" id="schemeSaveBtn" class="button">Save and continue</a>
+        <script>
+        $(function()
+        {
+          var selectedSchemeIDs = $.jStorage.get('schemesSelectedIDs');
+          $.each(selectedSchemeIDs, function(key, value)
+          {
+            var theSchemeID = value;
+            $(theSchemeID).prop('checked', true);
+          });
+        });
+        </script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
