@@ -236,6 +236,20 @@ $(function() {
     $('#address1').focus();
   });
 
+  $('#outside-uk').on('change', function() {
+
+    if($(this).is(':checked')) {
+      $('#addressManualInput').removeClass('disabled');
+      $('#address4').closest('.form-group').addClass('toggle-content');
+      $('#address4').closest('.form-group').prev('.form-group').removeClass('form-group-compound');
+      $('#address1').focus();
+    } else {
+      $('#address4').closest('.form-group').removeClass('toggle-content');
+      $('#address4').closest('.form-group').prev('.form-group').addClass('form-group-compound');
+    }
+
+  });
+
 
   //-- Errors on pattern library page
 
