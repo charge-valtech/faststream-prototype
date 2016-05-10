@@ -74,7 +74,7 @@
         </a>
       </div>
       <div class="global-header__nav">
-        <div class="global-header__title beta"><a href="profile-home.html">Apply for Civil Service Fast Stream</a></div>
+        <div class="global-header__title beta"><a href="profile-home.html">Apply for the Fast Stream</a></div>
       </div>
     </div>
   </header>  <div class="content-container">
@@ -387,11 +387,14 @@
   $(function(){
     var selectedSchemeIDs = $.jStorage.get('schemesSelectedIDs');
 
-    $.each(selectedSchemeIDs, function(key,value) {
-      var theSchemeID = value;
+    if (selectedSchemeIDs !== null) {
+      $.each(selectedSchemeIDs, function(key,value) {
+        var theSchemeID = value;
 
-      $(theSchemeID).prop('checked', true);
-    });
+        $(theSchemeID).prop('checked', true);
+      });
+    }
+
   });
 </script>
     </main>

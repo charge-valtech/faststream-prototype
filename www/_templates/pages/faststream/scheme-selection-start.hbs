@@ -285,10 +285,13 @@ pageTitle: Schemes and eligibility
   $(function(){
     var selectedSchemeIDs = $.jStorage.get('schemesSelectedIDs');
 
-    $.each(selectedSchemeIDs, function(key,value) {
-      var theSchemeID = value;
+    if (selectedSchemeIDs !== null) {
+      $.each(selectedSchemeIDs, function(key,value) {
+        var theSchemeID = value;
 
-      $(theSchemeID).prop('checked', true);
-    });
+        $(theSchemeID).prop('checked', true);
+      });
+    }
+
   });
 </script>
