@@ -107,6 +107,7 @@ module.exports = function(grunt) {
                 '!_assets/css/*.map',
                 '_assets/js/vendor/**/*',
                 '_assets/js/scripts.js',
+                '_assets/js/universities.js',
                 '_assets/js/region-selector.js',
                 '_assets/js/prototype.js'
               ],
