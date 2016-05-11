@@ -138,6 +138,14 @@ pageTitle: Diversity questions
            </td>
            <td>Accountant, solicitor, medical practitioner, scientist, civil/mechanical engineer </td>
          </tr>
+         <tr>
+           <td>
+             <label for="occupation-no" class="block-label">
+               <input type="radio" name="occupations" id="occupation-no">I don't know/prefer not to say
+             </label>
+           </td>
+           <td></td>
+         </tr>
        </tbody>
      </table>
    </div>
@@ -145,7 +153,7 @@ pageTitle: Diversity questions
    <div class="form-group form-group-compound">
      <label class="form-label" for="parentEmployList">Did they work as an employee or were they self employed?</label>
      <select name="" id="parentEmployList">
-       <option value="">-- Please select --</option>
+       <option value="">Select one</option>
        <option value="">Employee</option>
        <option value="">Self-employed with employees</option>
        <option value="">Self-employed/freelancer without employees</option>
@@ -161,37 +169,36 @@ pageTitle: Diversity questions
      </label>
    </div>
 
-   <div class="form-group form-group-compound">
-     <label class="form-label" for="companySizeList">Which size would best describe their place of work?</label>
-     <select name="" id="companySizeList">
-       <option value="">-- Please select --</option>
-       <option value="">Small (1 - 24 employees)</option>
-       <option value="">Large (over 24 employees)</option>
-       <option value="">Not applicable</option>
-     </select>
-   </div>
+   <fieldset>
+     <legend class="form-label">Which size would best describe their place of work?</legend>
+    <div class="form-group inline">
+      <label for="company-size-small" class="block-label">
+        <input name="company-size" type="radio" id="company-size-small">Small (1 - 24 employees)
+      </label>
+      <label for="company-size-large" class="block-label">
+        <input name="company-size" type="radio" id="company-size-large">Large (over 24 employees)
+      </label>
+      <label for="company-size-no" class="block-label">
+        <input name="company-size" type="radio" id="company-size-no">I don't know/prefer not to say
+      </label>
+    </div>
+   </fieldset>
 
-   <div class="form-group">
-     <label for="companySize-dontremember" class="block-label" data-distarget="companySizeList">
-       <input name="companySize" type="checkbox" id="companySize-dontremember">I don't know/prefer not to say
-     </label>
-   </div>
+   <fieldset>
+     <legend class="form-label">Did they supervise any other employees?</legend>
+    <div class="form-group inline">
+      <label for="supervise-yes" class="block-label">
+        <input name="supervise" type="radio" id="supervise-yes">Yes
+      </label>
+      <label for="supervise-no" class="block-label">
+        <input name="supervise" type="radio" id="supervise-no">No
+      </label>
+      <label for="supervise-dunno" class="block-label">
+        <input name="supervise" type="radio" id="supervise-dunno">I don't know/prefer not to say
+      </label>
+    </div>
+   </fieldset>
 
-   <div class="form-group form-group-compound">
-     <label class="form-label" for="superviseList">Did they supervise any other employees?</label>
-     <select name="" id="superviseList">
-       <option value="">-- Please select --</option>
-       <option value="">Yes</option>
-       <option value="">No</option>
-       <option value="">Not applicable</option>
-     </select>
-   </div>
-
-   <div class="form-group">
-     <label for="supervise-dontremember" class="block-label" data-distarget="superviseList">
-       <input type="checkbox" id="supervise-dontremember">I don't know/prefer not to say
-     </label>
-   </div>
  </div>
 </section>
 
