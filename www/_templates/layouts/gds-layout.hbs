@@ -53,8 +53,40 @@
   <div class="content-container">
     <div class="gov-border">
     </div>
+    <div class="breadcrumbs">
+      <ol>
+        <li><a href="/">{{ crumbFirst }}</a></li>
+        <li><a href="/">{{ crumbSecond }}</a></li>
+        <li>{{ crumbActive }}</li>
+      </ol>
+    </div>
     <main role="main" id="main">
-      {{> body }}
+      <div class="grid-wrapper">
+        <section class="grid grid-2-3">
+          <div class="inner-block-padr">
+            {{> body }}
+          </div>
+        </section>
+        <aside class="grid grid-1-3 gov-border">
+          <section>
+            <h2 class="heading-medium">Elsewhere in Civil Service Resourcing</h2>
+            <ul class="list-text">
+              <li>
+                <a href="#">Fast Track</a>
+              </li>
+              <li>
+                <a href="#">Working in the Civil Service</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2 class="heading-medium">Contact us</h2>
+            <p>Telephone (free): 0800 093498</p>
+            <p>Email: <a href="mailto:helpdesk@faststream.service.gov.uk">helpdesk@faststream.service.gov.uk</a></p>
+          </section>
+
+        </aside>
+      </div>
     </main>
   </div>
   {{> footer }}

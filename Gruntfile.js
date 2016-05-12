@@ -154,6 +154,7 @@ module.exports = function(grunt) {
             "prototype/_templates/",
             "prototype/alt/",
             "prototype/faststream/",
+            "prototype/inform/",
             "prototype/admin/",
             "prototype/tests/",
             "prototype/offline/",
@@ -192,7 +193,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'prototype/',
-                    src: ['alt/faststream/*.html', 'faststream/*.html', 'admin/*.html', 'tests/*.html', '*.html', '!pattern-library.html'],
+                    src: ['alt/faststream/*.html', 'faststream/*.html', 'inform/*.html', 'admin/*.html', 'tests/*.html', '*.html', '!pattern-library.html'],
                     dest: 'prototype/',
                     ext: '.html'
                 }]
