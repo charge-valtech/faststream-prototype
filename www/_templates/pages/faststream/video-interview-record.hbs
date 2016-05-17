@@ -1,0 +1,24 @@
+<div id="container">
+
+
+<!--  <div class="panel-indent text">
+    <p>This demo requires Firefox 29 or later, or Chrome 47 or later with <strong>Enable experimental Web Platform features</strong> enabled from chrome://flags.</p>
+ </div> -->
+
+  <video id="gum" autoplay muted></video>
+  <video id="recorded" autoplay loop></video>
+
+  <div>
+    <button id="record">Start Recording</button>
+    <button id="play" disabled>Play</button>
+  </div>
+
+  <div class="hidden">
+    <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+  </div>
+
+</div>
+
+<!-- include adapter for srcObject shim -->
+<script src="{{assets}}/js/gum/adapter.js"></script>
+<script src="{{assets}}/js/gum/main.js"></script>
