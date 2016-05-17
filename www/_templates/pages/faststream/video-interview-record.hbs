@@ -1,24 +1,58 @@
-<div id="container">
+---
+pageTitle: Video interview
+---
+
+<div class="hgroup">
+  <h1 class="heading-xlarge">{{ pageTitle }}</h1>
+</div>
 
 
 <!--  <div class="panel-indent text">
     <p>This demo requires Firefox 29 or later, or Chrome 47 or later with <strong>Enable experimental Web Platform features</strong> enabled from chrome://flags.</p>
  </div> -->
 
-  <video id="gum" autoplay muted></video>
-  <video id="recorded" autoplay loop></video>
-
-  <div>
-    <button id="record">Start Recording</button>
-    <button id="play" disabled>Play</button>
-  </div>
-
-  <div class="hidden">
-    <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
-  </div>
-
+<div class="panel-indent text">
+  <p class="lede" id="thinkingText">You now have <span id="timeCountdown">40</span> seconds to think before you record your answer.</p>
 </div>
+
+<p><a href=""></a></p>
+
+<div>
+  <button id="record" class="button">Record answer now</button>
+  <button id="play" disabled class="button">Play</button>
+</div>
+
+<div id="recordVideo">
+  <video id="gum" autoplay muted class="width-all-1-1"></video>
+  <video id="recorded" autoplay></video>
+</div>
+
+<div class="hidden">
+  <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+</div>
+
 
 <!-- include adapter for srcObject shim -->
 <script src="{{assets}}/js/gum/adapter.js"></script>
 <script src="{{assets}}/js/gum/main.js"></script>
+
+<script>
+
+  $(function () {
+    startCountdown();
+
+    function startCountdown() {
+      var counter = 4;
+      id = setInterval(function() {
+        counter--;
+        if(counter < 0) {
+          $('#record').trigger('click');
+          $('#thinkingText').text('Your answer is now recording');
+          clearInterval(id);
+        } else {
+            $('#timeCountdown').text(counter.toString());
+        }
+      }, 1000);
+    }
+  });
+</script>
