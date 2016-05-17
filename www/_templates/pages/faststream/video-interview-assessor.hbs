@@ -6,6 +6,63 @@ pageTitle: Video interview
   <h1 class="heading-xlarge">{{ pageTitle }}</h1>
 </div>
 
-<h2 class="heading-medium">Question 1 of 5</h2>
 
-<a href="video-interview-assessor.html" class="button">Start first question</a>
+<div class="grid-wrapper">
+  <div class="grid grid-2-3">
+    <h2 class="heading-medium">Question 1 of 5</h2>
+    <video class="width-all-1-1">
+      <source src="{{assets}}/img/video/question-01-short.webm" type="video/webm">
+    </video>
+    <a href="#" class="button-link" id="videoPlay"><i class="fa fa-play" aria-hidden="true"></i>Play question video</a>
+    <div class="disabled" id="recordAnswer">
+      <a href="video-interview-record.html" class="button">Record answer</a>
+      <p id="autoRedirect"></p>
+    </div>
+  </div>
+  <div class="grid grid-1-3">
+    &nbsp;
+  </div>
+</div>
+
+
+
+<script>
+
+  $(function() {
+    var video = document.querySelector('video');
+    var playButton = $('#videoPlay');
+
+    playButton.on('click', function(e) {
+      e.preventDefault();
+
+      video.play();
+
+      $(this).addClass('disabled').blur();
+
+    });
+
+
+    video.addEventListener('ended', function() {
+
+      $('#recordAnswer').removeClass('disabled');
+
+      $('#autoRedirect').html("You'll be redirected to record your answer in <span id='timeCountdown'>10</span> seconds.");
+
+      startCountdown();
+    });
+
+    function startCountdown() {
+      var counter = 10;
+      setInterval(function() {
+        counter--;
+        if(counter < 0) {
+            window.location.href = 'video-interview-record.html';
+        } else {
+            $('#timeCountdown').text(counter.toString());
+        }
+      }, 1000);
+    }
+
+  });
+
+</script>
