@@ -10,7 +10,7 @@ pageTitle: Order your scheme preferences
 </div>
 <section class="text">
   <p>Your application will be considered for each of your chosen schemes, in order of preference.</p>
-  <p>You can change the scheme preference order here. If you need to add or remove chosen schemes, you can <a class="inl-block" href="scheme-selection-start.html">&laquo; return to scheme selection</a>.</p>
+  <p>You can change the scheme preference order here. If you need to change your chosen schemes, you can <a class="inl-block" href="scheme-selection-start.html">&laquo; return to scheme selection</a>.</p>
   <ol id="selectedSchemesList" class="list-text list-number-text">
 
   </ol>
@@ -49,7 +49,7 @@ pageTitle: Order your scheme preferences
           moveUp = '<a href="#" class="move-up"><span class="visuallyhidden">Move up</span><i class="fa fa-chevron-up"></i></a>',
           moveDown = '<a href="#" class="move-down"><span class="visuallyhidden">Move down</span><i class="fa fa-chevron-down"></i></a>';
 
-      $('#selectedSchemesList').append('<li class="item-withcontrols"><h3 class="bold-small"><span class="number-text"></span></h3><span data-schemename>' + thisText + '</span><span class="item-controls ta-right">' + moveUp + moveDown + '</span></li>');
+      $('#selectedSchemesList').append('<li class="item-withcontrols"><i class="fa fa-bars drag-control" aria-hidden="true"></i><h3 class=""><span class="bold-small number-text small-right-margin"> -</span><a href="#" class="font-xsmall deleteItem">Delete</a></h3><span data-schemename>' + thisText + '</span><span class="item-controls ta-right">' + moveUp + moveDown + '</span></li>');
     });
 
     $('#selectedSchemesList').on('click', 'li:first-child .move-up, li:last-child .move-down', function(e) {
@@ -73,6 +73,13 @@ pageTitle: Order your scheme preferences
         }, 450);
       }
     });
+
+    $('#selectedSchemesList').on( 'click', '.deleteItem', function(e) {
+      var thisControl = $(this).closest('li').remove();
+
+      e.preventDefault();
+    });
+
 
     $('#selectedSchemesList').on('click', 'li:nth-child(n+2) .move-up', function(e) {
       var thisRow = $(this).closest('li'),
