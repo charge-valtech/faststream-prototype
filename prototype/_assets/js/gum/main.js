@@ -24,6 +24,8 @@
   var counter = document.getElementById("videoTime");
   var thinkingText = document.getElementById("thinkingText");
   var saveButton = document.getElementById("saveButton");
+  var startRecordingBtn = document.getElementById("startRecordingBtn");
+  var stopRecordingBtn = document.getElementById("stopRecordingBtn");
 
   // var playButton = document.querySelector('button#play');
   // var downloadButton = document.querySelector('button#download');
@@ -100,14 +102,12 @@
     console.log('Recorder stopped: ', event);
   }
 
-  // function toggleRecording() {
-  //   if (recordButton.textContent === 'Record answer now') {
-  //     startRecording();
-  //   } else {
-  //     stopRecording();
-  //     playButton.disabled = false;
-  //   }
-  // }
+  stopRecordingBtn.onclick = function(e) {
+    stopRecording();
+    stopRecordingBtn.blur();
+    stopRecordingBtn.className += 'toggle-content';
+    e.preventDefault();
+  }
 
   // The nested try blocks will be simplified when Chrome 47 moves to Stable
   function startRecording() {
@@ -135,7 +135,6 @@
     }
     console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
     thinkingText.textContent = 'The time to record your answer has started.';
-    // playButton.disabled = true;
     mediaRecorder.onstop = handleStop;
     mediaRecorder.ondataavailable = handleDataAvailable;
     mediaRecorder.start(10); // collect 10ms of data
@@ -156,6 +155,14 @@
           $('#timeCountdown').text(thinkingCounter.toString());
       }
     }, 1000);
+
+    startRecordingBtn.onclick = function(e) {
+      thinkingCounter = 0;
+      startRecordingBtn.className += 'toggle-content';
+      startRecordingBtn.blur();
+      stopRecordingBtn.className = '';
+      e.preventDefault();
+    }
   }
 
   function minuteCountdown(minutes) {
@@ -197,7 +204,6 @@
     gumVideo.removeAttribute('muted');
     gumVideo.className += ' disabled';
 
-    saveButton.className = 'button';
   }
 
   function playBackVideo() {
