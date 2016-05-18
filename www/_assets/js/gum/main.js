@@ -5,10 +5,6 @@
   *  tree.
   */
 
-  'use strict';
-
-  /* globals MediaRecorder */
-
   // This code is adapted from
   // https://rawgit.com/Miguelao/demos/master/mediarecorder.html
 
@@ -23,17 +19,14 @@
   var sourceBuffer;
 
   var gumVideo = document.querySelector('video#gum');
-  var recordedVideo = document.querySelector('video#recorded');
 
   var recordingTime = document.getElementById("timeToRecord");
   var counter = document.getElementById("videoTime");
   var thinkingText = document.getElementById("thinkingText");
 
-  var recordButton = document.querySelector('button#record');
   var playButton = document.querySelector('button#play');
   // var downloadButton = document.querySelector('button#download');
-  recordButton.onclick = toggleRecording;
-  playButton.onclick = play;
+  playButton.onclick = playBackVideo;
   // downloadButton.onclick = download;
 
   // window.isSecureContext could be used for Chrome
@@ -76,12 +69,11 @@
   startCountdown();
 
   function startCountdown() {
-    var thinkingCounter = 4;
+    var thinkingCounter = 40;
     var id = setInterval(function() {
       thinkingCounter--;
       if(thinkingCounter < 0) {
         startRecording();
-        minuteCountdown(1);
         clearInterval(id);
       } else {
           $('#timeCountdown').text(thinkingCounter.toString());
@@ -149,16 +141,14 @@
     console.log('Recorder stopped: ', event);
   }
 
-  function toggleRecording() {
-    if (recordButton.textContent === 'Record answer now') {
-      startRecording();
-    } else {
-      stopRecording();
-      recordButton.textContent = 'Record answer now';
-      playButton.disabled = false;
-      // downloadButton.disabled = false;
-    }
-  }
+  // function toggleRecording() {
+  //   if (recordButton.textContent === 'Record answer now') {
+  //     startRecording();
+  //   } else {
+  //     stopRecording();
+  //     playButton.disabled = false;
+  //   }
+  // }
 
   // The nested try blocks will be simplified when Chrome 47 moves to Stable
   function startRecording() {
@@ -185,8 +175,7 @@
       }
     }
     console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
-    recordButton.textContent = 'Recording answer ...';
-    thinkingText.textContent = 'The time to record you answer has now started.'
+    thinkingText.textContent = 'The time to record your answer has started. You can play back your answer afterwards.';
     playButton.disabled = true;
     mediaRecorder.onstop = handleStop;
     mediaRecorder.ondataavailable = handleDataAvailable;
@@ -198,9 +187,18 @@
   function stopRecording() {
     mediaRecorder.stop();
     console.log('Recorded Blobs: ', recordedBlobs);
+    thinkingText.textContent = 'Your recording has finished, you can now play back your answer, or proceed to the next question.';
+    playButton.disabled = false;
+
+    var superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
+    gumVideo.src = window.URL.createObjectURL(superBuffer);
+
+    gumVideo.removeAttribute('autoplay');
+    gumVideo.removeAttribute('muted');
   }
 
-  function play() {
-    var superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
-    recordedVideo.src = window.URL.createObjectURL(superBuffer);
+  function playBackVideo() {
+    recordingTime.textContent = 'Playing back your answer';
+    gumVideo.play();
+    playButton.disabled = true;
   }

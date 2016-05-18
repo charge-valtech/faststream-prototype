@@ -113,27 +113,22 @@
     <p>This demo requires Firefox 29 or later, or Chrome 47 or later with <strong>Enable experimental Web Platform features</strong> enabled from chrome://flags.</p>
  </div> -->
 
-<div class="panel-indent text">
-  <p class="lede" id="thinkingText">You now have <span id="timeCountdown">40</span> seconds to think before you record your answer.</p>
-</div>
+<section>
+  <div class="panel-indent text">
+    <p class="lede" id="thinkingText">You now have <span id="timeCountdown">40</span> seconds to think before you record your answer.</p>
+  </div>
 
-<p><a href=""></a></p>
+  <div>
+    <button id="play" disabled class="button-link">Playback your answer</button>
+  </div>
 
-<div>
-  <button id="record" class="button">Record answer now</button>
-  <button id="play" disabled class="button">Play</button>
-</div>
+  <div id="recordVideo" class="video-recording-container">
+    <span class="bold-small video-recording-indicator" id="timeToRecord"><i class="fa fa-video-camera" aria-hidden="true"></i>Time to record answer <span id="videoTime">2:00</span></span>
+    <video id="gum" autoplay muted class="width-all-1-1"></video>
+  </div>
+</section>
 
-<div id="recordVideo" class="video-recording-container">
-  <span class="bold-small video-recording-indicator" id="timeToRecord"><i class="fa fa-video-camera" aria-hidden="true"></i>Time to record answer <span id="videoTime">2:00</span></span>
-  <video id="gum" autoplay muted class="width-all-1-1"></video>
-  <video id="recorded" autoplay></video>
-</div>
-
-<div class="hidden">
-  <a href="https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
-</div>
-
+<a href="video-interview-assessor-2.html" class="button">Save and continue</a>
 
 <!-- include adapter for srcObject shim -->
 <script src="../_assets/js/gum/adapter.js"></script>
