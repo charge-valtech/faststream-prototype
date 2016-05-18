@@ -108,7 +108,7 @@
   <h1 class="heading-xlarge">Video interview</h1>
 </div>
 
-
+<h2 class="heading-medium">Question 1 of 5</h2>
 <!--  <div class="panel-indent text">
     <p>This demo requires Firefox 29 or later, or Chrome 47 or later with <strong>Enable experimental Web Platform features</strong> enabled from chrome://flags.</p>
  </div> -->
@@ -124,7 +124,8 @@
   <button id="play" disabled class="button">Play</button>
 </div>
 
-<div id="recordVideo">
+<div id="recordVideo" class="video-recording-container">
+  <span class="bold-small video-recording-indicator" id="timeToRecord"><i class="fa fa-video-camera" aria-hidden="true"></i>Time to record answer <span id="videoTime">2:00</span></span>
   <video id="gum" autoplay muted class="width-all-1-1"></video>
   <video id="recorded" autoplay></video>
 </div>
@@ -137,27 +138,6 @@
 <!-- include adapter for srcObject shim -->
 <script src="../_assets/js/gum/adapter.js"></script>
 <script src="../_assets/js/gum/main.js"></script>
-
-<script>
-
-  $(function () {
-    startCountdown();
-
-    function startCountdown() {
-      var counter = 4;
-      id = setInterval(function() {
-        counter--;
-        if(counter < 0) {
-          $('#record').trigger('click');
-          $('#thinkingText').text('Your answer is now recording');
-          clearInterval(id);
-        } else {
-            $('#timeCountdown').text(counter.toString());
-        }
-      }, 1000);
-    }
-  });
-</script>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">

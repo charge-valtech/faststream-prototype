@@ -25,6 +25,10 @@
   var gumVideo = document.querySelector('video#gum');
   var recordedVideo = document.querySelector('video#recorded');
 
+  var recordingTime = document.getElementById("timeToRecord");
+  var counter = document.getElementById("videoTime");
+  var thinkingText = document.getElementById("thinkingText");
+
   var recordButton = document.querySelector('button#record');
   var playButton = document.querySelector('button#play');
   // var downloadButton = document.querySelector('button#download');
@@ -49,7 +53,7 @@
 
   var constraints = {
     audio: true,
-    video: true
+    video: {width: 1280, height: 720}
   };
 
   navigator.mediaDevices.getUserMedia(
@@ -67,6 +71,49 @@
     } else {
       gumVideo.src = stream;
     }
+  }
+
+  startCountdown();
+
+  function startCountdown() {
+    var thinkingCounter = 4;
+    var id = setInterval(function() {
+      thinkingCounter--;
+      if(thinkingCounter < 0) {
+        startRecording();
+        minuteCountdown(1);
+        clearInterval(id);
+      } else {
+          $('#timeCountdown').text(thinkingCounter.toString());
+      }
+    }, 1000);
+  }
+
+  function minuteCountdown(minutes) {
+    var seconds = 60;
+    var mins = minutes;
+
+    function tick() {
+      var current_minutes = mins-1;
+      seconds--;
+      counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+      if( seconds > 0 ) {
+          setTimeout(tick, 1000);
+        } else {
+          if(current_minutes == 0) {
+            finishRecording();
+          }
+          if(mins > 1){
+            setTimeout(function () { minuteCountdown(mins - 1); }, 1000);
+          }
+        }
+      }
+    tick();
+  }
+
+  function finishRecording() {
+    recordingTime.textContent = 'Your recording has finished';
+    stopRecording();
   }
 
   function errorCallback(error) {
@@ -139,11 +186,13 @@
     }
     console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
     recordButton.textContent = 'Recording answer ...';
+    thinkingText.textContent = 'The time to record you answer has now started.'
     playButton.disabled = true;
     mediaRecorder.onstop = handleStop;
     mediaRecorder.ondataavailable = handleDataAvailable;
     mediaRecorder.start(10); // collect 10ms of data
     console.log('MediaRecorder started', mediaRecorder);
+    minuteCountdown(2);
   }
 
   function stopRecording() {
