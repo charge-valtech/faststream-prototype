@@ -108,27 +108,30 @@
   <h1 class="heading-xlarge">Video interview</h1>
 </div>
 
-<h2 class="heading-medium">Question 1 of 5</h2>
+<h2 class="heading-medium">Question 1 of 7</h2>
 <!--  <div class="panel-indent text">
     <p>This demo requires Firefox 29 or later, or Chrome 47 or later with <strong>Enable experimental Web Platform features</strong> enabled from chrome://flags.</p>
  </div> -->
 
 <section>
   <div class="panel-indent text">
-    <p class="lede" id="thinkingText">You now have <span id="timeCountdown">40</span> seconds to think before you record your answer.</p>
+    <p class="lede">"Give an example of when you've led a team"</p>
   </div>
 
+  <p id="thinkingText">You now have <span id="timeCountdown">30</span> seconds to think before you record your answer.</p>
+
+
   <div>
-    <button id="play" disabled class="button-link">Playback your answer</button>
+    <!-- <button id="play" disabled class="button-link">Playback your answer</button> -->
   </div>
 
   <div id="recordVideo" class="video-recording-container">
-    <span class="bold-small video-recording-indicator" id="timeToRecord"><i class="fa fa-video-camera" aria-hidden="true"></i>Time to record answer <span id="videoTime">2:00</span></span>
+    <span class="bold-small video-recording-indicator" id="timeToRecord"><i class="fa fa-video-camera" aria-hidden="true"></i><span id="recordingText">Time to record answer</span> <span id="videoTime">2:00</span></span>
     <video id="gum" autoplay muted class="width-all-1-1"></video>
   </div>
 </section>
 
-<a href="video-interview-assessor-2.html" class="button">Save and continue</a>
+<a href="video-interview-assessor-2.html" class="button disabled" id="saveButton">Save and continue</a>
 
 <!-- include adapter for srcObject shim -->
 <script src="../_assets/js/gum/adapter.js"></script>

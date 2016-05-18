@@ -23,10 +23,11 @@
   var recordingTime = document.getElementById("timeToRecord");
   var counter = document.getElementById("videoTime");
   var thinkingText = document.getElementById("thinkingText");
+  var saveButton = document.getElementById("saveButton");
 
-  var playButton = document.querySelector('button#play');
+  // var playButton = document.querySelector('button#play');
   // var downloadButton = document.querySelector('button#download');
-  playButton.onclick = playBackVideo;
+  // playButton.onclick = playBackVideo;
   // downloadButton.onclick = download;
 
   // window.isSecureContext could be used for Chrome
@@ -64,48 +65,6 @@
     } else {
       gumVideo.src = stream;
     }
-  }
-
-  startCountdown();
-
-  function startCountdown() {
-    var thinkingCounter = 40;
-    var id = setInterval(function() {
-      thinkingCounter--;
-      if(thinkingCounter < 0) {
-        startRecording();
-        clearInterval(id);
-      } else {
-          $('#timeCountdown').text(thinkingCounter.toString());
-      }
-    }, 1000);
-  }
-
-  function minuteCountdown(minutes) {
-    var seconds = 60;
-    var mins = minutes;
-
-    function tick() {
-      var current_minutes = mins-1;
-      seconds--;
-      counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-      if( seconds > 0 ) {
-          setTimeout(tick, 1000);
-        } else {
-          if(current_minutes == 0) {
-            finishRecording();
-          }
-          if(mins > 1){
-            setTimeout(function () { minuteCountdown(mins - 1); }, 1000);
-          }
-        }
-      }
-    tick();
-  }
-
-  function finishRecording() {
-    recordingTime.textContent = 'Your recording has finished';
-    stopRecording();
   }
 
   function errorCallback(error) {
@@ -175,8 +134,8 @@
       }
     }
     console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
-    thinkingText.textContent = 'The time to record your answer has started. You can play back your answer afterwards.';
-    playButton.disabled = true;
+    thinkingText.textContent = 'The time to record your answer has started.';
+    // playButton.disabled = true;
     mediaRecorder.onstop = handleStop;
     mediaRecorder.ondataavailable = handleDataAvailable;
     mediaRecorder.start(10); // collect 10ms of data
@@ -184,17 +143,61 @@
     minuteCountdown(2);
   }
 
+  startCountdown();
+
+  function startCountdown() {
+    var thinkingCounter = 30;
+    var id = setInterval(function() {
+      thinkingCounter--;
+      if(thinkingCounter < 0) {
+        startRecording();
+        clearInterval(id);
+      } else {
+          $('#timeCountdown').text(thinkingCounter.toString());
+      }
+    }, 1000);
+  }
+
+  function minuteCountdown(minutes) {
+    var seconds = 60;
+    var mins = minutes;
+
+    recordingText.textContent = 'Recording your answer';
+    recordingTime.className += ' recording-video';
+
+    function tick() {
+      var current_minutes = mins-1;
+      seconds--;
+      counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+      if( seconds > 0 ) {
+          setTimeout(tick, 1000);
+        } else {
+          if(current_minutes == 0) {
+            stopRecording();
+          }
+          if(mins > 1){
+            setTimeout(function () { minuteCountdown(mins - 1); }, 1000);
+          }
+        }
+      }
+    tick();
+  }
+
   function stopRecording() {
     mediaRecorder.stop();
     console.log('Recorded Blobs: ', recordedBlobs);
-    thinkingText.textContent = 'Your recording has finished, you can now play back your answer, or proceed to the next question.';
-    playButton.disabled = false;
+    thinkingText.textContent = 'Your recording has finished, you can now proceed to the next question.';
+    recordingTime.textContent = 'Your recording has finished';
+    // playButton.disabled = false;
 
     var superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
     gumVideo.src = window.URL.createObjectURL(superBuffer);
 
     gumVideo.removeAttribute('autoplay');
     gumVideo.removeAttribute('muted');
+    gumVideo.className += ' disabled';
+
+    saveButton.className = 'button';
   }
 
   function playBackVideo() {

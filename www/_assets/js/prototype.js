@@ -587,5 +587,46 @@ $(function() {
     $.jStorage.set('schemePreferences', schemePreferences);
   });
 
+
+  // Video interview stuff
+
+  if($('#questionVideo').length) {
+    var video = document.querySelector('video#questionVideo');
+    var playButton = $('#videoPlay');
+
+    playButton.on('click', function(e) {
+      e.preventDefault();
+
+      video.play();
+
+
+      $(this).addClass('disabled').blur();
+      $('#writtenQuestion').removeClass('toggle-content');
+
+    });
+
+
+    video.addEventListener('ended', function() {
+
+      $('#recordAnswer').removeClass('disabled');
+      $('#autoRedirect').removeClass("toggle-content");
+
+      startCountdown();
+    });
+
+    function startCountdown() {
+      var counter = 10,
+          nextURL = $('#recordAnswerButton').attr('href');
+      setInterval(function() {
+        counter--;
+        if(counter < 0) {
+            window.location.href = nextURL;
+        } else {
+            $('#timeCountdown').text(counter.toString());
+        }
+      }, 1000);
+    }
+  }
+
 // --------------- Not to be used in production -------------- //
 });
