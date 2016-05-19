@@ -135,7 +135,8 @@
     }
     console.log('Created MediaRecorder', mediaRecorder, 'with options', options);
     thinkingText.textContent = 'The time to record your answer has started.';
-    tartRecordingBtn.className += 'toggle-content';
+    startRecordingBtn.className += 'toggle-content';
+    console.log('Start');
     stopRecordingBtn.className = '';
     mediaRecorder.onstop = handleStop;
     mediaRecorder.ondataavailable = handleDataAvailable;
