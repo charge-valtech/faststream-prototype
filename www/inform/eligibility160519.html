@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Civil Service Fast Stream | Apply for Civil Service Fast Stream</title>
+  <title> | Apply for Civil Service Fast Stream</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -29,14 +29,39 @@
       document.documentElement.className += ' no-details';
     }
   </script>
+  <!--[if lte IE 8]>
+    <script>
+      var head = document.getElementsByTagName('head')[0],
+      style = document.createElement('style');
+
+      style.type = 'text/css';
+      style.styleSheet.cssText = ':before,:after{content:none !important';
+      head.appendChild(style);
+      setTimeout(function(){
+          head.removeChild(style);
+      }, 0);
+    </script>
+  <![endif]-->
   <script src="../_assets/js/vendor/modernizr-custom.js"></script>
+  <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="../_assets/js/vendor/jstorage.js"></script>
 </head>
 <body>
+  <div id="global-cookie-message" class="cookie-banner hidden">
+    <div class="content-container" role="alert" style="padding-top: 0px;">
+      <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="/faststream/privacy.html">Find out more about cookies</a></span>
+    </div>
+  </div>
   <div class="panel-ie">
     <img src="../_assets/img/logo-ie.png" height="50" alt="Not optimised for IE 9 and lower" align="left">
     <p>It looks like you're using a version of Internet Explorer that this prototype has not tested with - For the best experience, please switch to a modern browser.</p>
     <p><a href="" id="hideIEMessage">Hide this message</a></p>
-  </div>  <div class="skiplink-container">
+  </div>  <!-- <div id="global-cookie-message" class="cookie-banner">
+    <div class="content-container">
+        <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
+    </div>
+  </div> -->
+  <div class="skiplink-container header-skiplink">
     <div>
       <a href="#main" class="skiplink">Skip to main content</a>
     </div>
@@ -49,39 +74,56 @@
         </a>
       </div>
       <div class="global-header__nav">
-        <div class="global-header__title beta"><a href="/index.html"></a></div>
+        <div class="global-header__title beta"><a href="profile-home.html">Apply for the Fast Stream</a></div>
       </div>
     </div>
-  </header>
-  <div class="content-container">
-    <div class="gov-border">
-    </div>
-    <div class="breadcrumbs">
-      <ol>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Work and careers</a></li>
-        <li>Civil Service Fast Stream</li>
-      </ol>
+  </header>  <div class="content-container">
+    <div class="phase-notice gov-border grid-wrapper">
+      <div class="grid grid-2-3">
+        <div class="prototype-warning">
+          <strong class="beta__label">Beta</strong> <span>This is a prototype – your <a href="#" target="_blank" rel="external">feedback</a> will help to improve it.</span>
+        </div>
+      </div>
+      <div class="grid grid-1-3">
+        <div class="account-info sign-in" id="bannerSignedOut">
+          <div class="small-btm-margin">
+            <a href="/faststream/profile-signin.html"><i class="fa fa-sign-in"></i>Create an account</a> or <a href="/faststream/profile-signin.html#signInHeading">Sign in</a>
+          </div>
+        </div>
+        <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
+          <div class="small-btm-margin">
+            <span class="your-name" id="bannerUserName">PreferredName</span>
+          </div>
+          <div>
+            <a class="account-link" id="applicationsLink" href="/faststream/profile-home.html">Home</a>
+            <a class="account-link" href="/faststream/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+          </div>
+        </div>
+      </div>
     </div>
     <main role="main" id="main">
-      <div class="grid-wrapper">
-        <section class="grid grid-2-3">
-          <div class="inner-block-padr">
-            
+      
+---
+layout: gds-layout.hbs
+pageTitle: Civil Service Fast Stream
+crumbFirst: Home
+crumbSecond: Work and careers
+crumbActive: Civil Service Fast Stream
+---
 
 <div class="text">
-  <h1 class="heading-xlarge">Civil Service Fast Stream</h1>
+  <h1 class="heading-xlarge"></h1>
 </div>
 <nav role="navigation" class="guide-navigation">
   <ol>
     <li>
-      Overview
+      <a href="index.html">Overview</a>
     </li>
     <li>
       <a href="schemes.html">Schemes</a>
     </li>
     <li>
-      <a href="eligibility.html">Eligibility</a>
+      Eligibility
     </li>
   </ol>
   <ol>
@@ -93,67 +135,33 @@
     </li>
   </ol>
 </nav>
-<h1 class="heading-medium">1. Overview</h1>
-<p>The Fast Stream has been offering talented and ambitious graduates an accelerated route to leadership within the <a href="https://www.gov.uk/government/organisations/civil-service/about/recruitment">Civil Service</a>.</p>
-<p>Successful applicants will have the opportunity to take on some of the biggest social, economic, political and security challenges facing the UK today and the chance to make a real difference in people’s lives. </p>
-<p>The Fast Stream aims to have the UK’s best and brightest graduates in Civil Service leadership roles within 3 to 5 years and offers a wide range of supported learning and development, professional qualifications, formal training courses, mentoring and job-shadowing.</p>
-<h2 class="heading-small">Diveristy and inclusion</h2>
-<p>Whoever you are, and whatever your background, if you have the talent, commitment and strength of character we look for, the Fast Stream could be your route to real leadership.</p>
-<h2 class="heading-small">As a fast streamer you'll have the opportunity to:</h2>
+<h1 class="heading-medium">3. Eligibility</h1>
+<h2 class="heading-small">Check you're eligible for the Fast Stream:</h2>
 <ul>
-<li>do varied and interesting work - Read <a href="#">Piers Horner's blog</a> from Nandos to the Fast Stream</li>
-<li>progress your career quickly</li>
-<li>do social good and make a difference in the lives of people - Read about <a href="#">Clare's work in Ethiopia</a></li>
-<li>rapidly increase and develop your own skills and knowledge through training and development</li>
+<li><a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-who-can-apply#age">Age</a>: I’ll be aged 16 or older by 31 August 2017</li>
+<li><a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-who-can-apply#qualifications">Qualifications</a>: I hold a degree with a 2:2 grade or higher, or I expect to have this qualification by 31 August 2017. 
+(For some schemes you need a higher qualification or a qualification in a particular subject area (eg a science degree).)</li>
+<li><a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-who-can-apply#nationality">Nationality</a>: I’m eligible according to the Civil Service nationality rules</li>
+<li><a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-who-can-apply#where-you-live">Where you’ve lived</a>: I’ve been resident in the UK for at least 2 of the 10 years immediately before my application (and this includes at least one continuous 12-month period).</li>
+<li>I’m eligible to work in the UK</li>
+<li>I’m available to start work in September 2017.</li>
+<li><a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-who-can-apply#conditions-for-existing-civil-servants">Conditions for current civil servants</a>: If I’m currently a civil servant, or have previously worked for the Civil Service, I’m aware of the conditions that apply.</li>
 </ul>
 
-<p>&nbsp</p>
-<p>Find out from Rob Moore what it's like <a href="#">working in Operational Research</a> -- one of the Fast Stream schemes</p>
 
-<p>Ntokozo Moyo talks about life as a fast streamer and <a href="https://faststream.blog.gov.uk/2015/09/25/5-reasons-why-its-great-to-work-for-the-civil-service/">5 reasons why it's great to work for the Civil Service.</a></p>
-
-<p>&nbsp</p>
-<h2 class="heading-small">Fast Stream event calendar</h2>
-<div role="note" aria-label="Information" class="application-notice info-notice panel-indent">
-<p>Our next event is at the <a href="#">Camden graduate fair</a> on 21 June</p>
-</div>
-<p>See all <a href="#">events</a>.</p>
 
 <div class="page-navigation">
-  <a href="#" class="page-navigation__btn previous disabled">
-
-  </a>
-  <a href="schemes.html" class="page-navigation__btn next">
-    <i class="arrow-button fa fa-angle-right"></i>
-    <span class="description font-medium">Next</span>
+  <a href="schemes.html" class="page-navigation__btn previous">
+    <i class="arrow-button fa fa-angle-left"></i>
+    <span class="description font-medium">Previous</span>
     <span class="counter">Schemes</span>
   </a>
+  <a href="application-process.html" class="page-navigation__btn next">
+    <i class="arrow-button fa fa-angle-right"></i>
+    <span class="description font-medium">Next</span>
+    <span class="counter">Application process</span>
+  </a>
 </div>
-          </div>
-        </section>
-        <aside class="grid grid-1-3 gov-border">
-          <section>
-            <h2 class="heading-medium">Elsewhere in Civil Service Resourcing</h2>
-            <ul class="list-text">
-              <li>
-                <a href="/inform/index.html">Civil Service Fast Stream</a>
-              </li>
-              <li>
-                <a href="#">Civil Service Apprenticeships</a>
-              </li>
-              <li>
-                <a href="#">Working in the Civil Service</a>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2 class="heading-medium">Contact us</h2>
-            <p>Telephone (free): 0800 093498</p>
-            <p>Email: <a href="mailto:helpdesk@faststream.service.gov.uk">helpdesk@faststream.service.gov.uk</a></p>
-          </section>
-
-        </aside>
-      </div>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">
@@ -177,11 +185,9 @@
         </a>
       </div>
     </div>
-  </footer>  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
+  </footer>  <script src="../_assets/js/vendor/fastclick.js"></script>
   <script src="../_assets/js/vendor/chosen.jquery.js"></script>
   <script src="../_assets/js/scripts.js"></script>
-  <script src="../_assets/js/vendor/jstorage.js"></script>
   <!-- Prototype specific scripts -->
   <script src="../_assets/js/vendor/jquery.cookie.js"></script>
   <script src="../_assets/js/prototype.js"></script>
