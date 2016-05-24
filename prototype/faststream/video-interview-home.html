@@ -114,12 +114,17 @@
         <div class="hgroup">
           <h1 class="heading-xlarge">Video interview</h1>
         </div>
+        <section>
+          <video id="instructionsVideo" class="width-all-1-1" controls>
+            <source src="../_assets/img/video/Instructions.mp4" type="video/mp4">
+          </video>
+        </section>
         <div class="text">
           <p>On the following screens you'll be shown a video of an assessor reading
             out a question, you'll then record your answer using the webcam on
             your computer.</p>
-          <p>There are 7 questions in total and the whole process should take less
-            than 20 minutes.</p>
+          <p>There are 3 questions in total and the whole process should take less
+            than 10 minutes.</p>
           <p class="small-btm-margin">For each question, you'll have:</p>
           <ul>
             <li>1 minute to watch the assessor</li>
@@ -132,6 +137,16 @@
             and your camera and microphone are working correctly.</p>
         </div>
         <a href="video-interview-assessor.html" class="button">Start first question</a>
+        <script>
+        $(function()
+        {
+          var video = document.getElementById("instructionsVideo");
+          setTimeout(function()
+          {
+            video.play();
+          }, 5000);
+        });
+        </script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
