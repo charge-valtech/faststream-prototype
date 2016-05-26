@@ -111,9 +111,13 @@
         </div>
       </div>
       <main role="main" id="main">
+        <section class="page-progress">
+          <p><span class="lede">Page 1 of 8</span>
+            <br><a href="profile-home.html?Page=personalDetails">View the rest of your application</a></p>
+        </section>
         <h1 class="heading-xlarge" id="personalDetailsHeading">Personal details</h1>
-        <fieldset class="fieldset-with-border">
-          <legend class="heading-large">Name and date of birth</legend>
+        <section class="section-border">
+          <h2 class="heading-medium">Name and date of birth</h2>
           <div class="form-group form-group-compound">
             <label for="first-name" class="form-label">First name</label>
             <input id="first-name" type="text" class="form-control" autocorrect="off" value="Firstname">
@@ -142,9 +146,9 @@
               <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
             </div>
           </div>
-        </fieldset>
-        <fieldset>
-          <legend class="heading-large">Contact details</legend>
+        </section>
+        <section>
+          <h2 class="heading-medium">Contact details</h2>
           <div class="hide-nojs">
             <div class="form-group form-group-compound">
               <label for="post-code" class="form-label">Postcode</label>
@@ -202,7 +206,7 @@
             <span class="form-hint text">Enter your mobile or landline number</span>
             <input type="tel" class="form-control form-control-1-3 med-btm-margin" id="phone-input">
           </div>
-        </fieldset>
+        </section>
         <div class="form-group">
           <a id="detailsContinue" class="button" href="scheme-selection-start.html">Save and continue</a>
         </div>

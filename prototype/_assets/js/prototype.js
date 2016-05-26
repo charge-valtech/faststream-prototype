@@ -207,6 +207,20 @@ $(function() {
     $('#nameOnHome').text(storedFirstName + ' ' + storedLastName);
   }
 
+  if($('#nameOnHome').length) {
+    var thePage = gup('Page'),
+        prevItems = $('#' + thePage).prevAll(),
+        theHref = $('#' + thePage).attr('data-href')
+
+    prevItems.each(function(index) {
+      var prevHref = $(this).attr('data-href');
+      $(this).find('.the-icon').toggleClass('fa-minus fa-check');
+      $(this).contents().eq(1).wrap('<a href="' + prevHref + '" />');
+    });
+
+    $('#' + thePage).contents().eq(1).wrap('<a href="' + theHref + '" />');
+    $('#startAppBtn').removeClass('button').text('Continue your application').attr('href', theHref);
+  }
 
   //-- Find address mock behaviour
 
