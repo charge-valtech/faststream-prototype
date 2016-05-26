@@ -83,13 +83,53 @@ pageTitle: Check your application before you send it
   </section>
 </section>
 
+<section class="section-border">
+  <h2 class="heading-large">
+    Diversity questions
+  </h2>
+  <section class="text">
+    <p>You have completed the diversity questions, for security reasons you're unable to edit these.</p>
+  </section>
+</section>
 
-<a href="questionnaire.html" class="button">Save and continue</a>
+<section>
+<h2 class="heading-large">Submit your application</h2>
+  <div class="panel-indent text">
+    <p>Once you submit your application you can't change any of your details</p>
+  </div>
+
+  <div class="form-group">
+    <label for="accept-terms" class="block-label">
+      <input type="checkbox" id="accept-terms">I am ready to submit my application
+    </label>
+    <div class="toggle-content" id="submitError">
+      <div class="has-error">
+        <p>You must be ready to submit your application</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div>
+  <a href="submitted-application.html" class="button" id="submitApplicationBtn">Submit application</a>
+  <a href="profile-home-savedques.html" class="button-link">Save to submit later</a>
+</div>
+
 
 
 <script>
   $(function(){
     var schemePreferences = $.jStorage.get('schemePreferences');
+
+    $('#submitApplicationBtn').on('click', function(e) {
+      e.preventDefault();
+
+      if(!$('#accept-terms').is(':checked')) {
+        $('#submitError').removeClass('toggle-content');
+      } else {
+        window.location = 'submitted-application.html';
+      }
+    });
 
     $.each(schemePreferences, function(key,value) {
       var theScheme = value;
