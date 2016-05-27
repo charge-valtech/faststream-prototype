@@ -39,27 +39,74 @@
     </div>
   </div>
   <header role="banner" class="global-header">
-    <div class="global-header__wrapper">
-      <div class="global-header__logo">
-        <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
-          <img src="{{assets}}/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
-        </a>
+    <div class="global-header__wrapper grid-wrapper">
+      <div class="grid grid-1-3">
+        <div class="inner-block-padr">
+          <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
+            <img src="{{assets}}/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+          </a>
+        </div>
       </div>
-      <div class="global-header__nav">
-        <div class="global-header__title beta"><a href="/index.html"></a></div>
+      <div class="grid grid-1-3">
+        &nbsp;
+      </div>
+      <div class="grid grid-1-3">
+        <div class="inline-float-right width-all-1-1">
+          <div class="search-bar">
+            <input type="text" class="header-search" placeholder="Search">
+            <a href="" class="search-lens"><i class="fa fa-search" aria-hidden="true"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
   <div class="content-container">
     <section class="gov-border">
-      &nbsp;
     </section>
-    <section>
-      <a class="organisation-logo organisation-logo-stacked-single-identity organisation-logo-stacked-single-identity-medium" href="https://www.gov.uk/government/organisations/civil-service-fast-stream">
-        <span>Civil Service Fast Stream</span>
-      </a>
+    <section class="grid-wrapper">
+      <div class="grid grid-1-3">
+        <a class="organisation-logo organisation-logo-stacked-single-identity organisation-logo-stacked-single-identity-medium" href="https://www.gov.uk/government/organisations/civil-service-fast-stream">
+          <span>Civil Service Fast Stream</span>
+        </a>
+      </div>
+      <div class="grid grid-2-3">
+        <div class="page-link">
+          <a href="">See more information about this Guidance</a>
+        </div>
+      </div>
     </section>
-    {{> body }}
+
+    <header class="publication-header" id="contents">
+      <div class="hgroup">
+        <p class="lede med-btm-margin">Guidance</p>
+        <h1 class="heading-xlarge">Civil Service Fast Stream: {{ pageTitle }}</h1>
+      </div>
+      <p>Updated <time class="published-at date" datetime="2015-09-14T10:48:02+01:00">14 September 2015</time></p>
+
+      <nav class="in-page-navigation">
+        <h2 class="bold-small">Contents</h2>
+        <ul class="list-text contents-list">
+          <li><a class="link-unimp" href="#what-youll-do">What you’ll do</a></li>
+          <li><a class="link-unimp" href="#where-youll-work">Where you'll work</a></li>
+          <li><a class="link-unimp" href="#additional-assessment">Additional assessment</a></li>
+          <li><a class="link-unimp" href="#eligibility">Eligibility</a></li>
+          <li><a class="link-unimp" href="#training-and-development">Training and development</a></li>
+          <li><a class="link-unimp" href="#promotion-prospects">Promotion prospects</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="grid-wrapper">
+      <div class="grid grid-1-4">
+        <div class="inner-block-padr" id="jumpLinkCol">
+          &nbsp;
+          <a href="#contents" id="contentsJump" class="contents-link toggle-content"><i class="fa fa-long-arrow-up" aria-hidden="true"></i>Contents</a>
+        </div>
+      </div>
+      <article class="grid grid-3-4">
+        {{> body }}
+      </article>
+    </div>
+
   </div>
   {{> footer }}
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -70,6 +117,20 @@
   <!-- Prototype specific scripts -->
   <script src="{{assets}}/js/vendor/jquery.cookie.js"></script>
   <script src="{{assets}}/js/prototype.js"></script>
+  <script>
+    $(function() {
+      var jumpTop = $('#jumpLinkCol').offset().top;
+
+      $(window).on('scroll', function() {
+        var relToWindow = jumpTop - $(window).scrollTop();
+        if(relToWindow <= 0) {
+          $('#contentsJump').removeClass('toggle-content');
+        } else {
+          $('#contentsJump').addClass('toggle-content');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 
