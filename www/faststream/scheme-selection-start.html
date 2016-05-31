@@ -385,26 +385,39 @@
   </div>
 </section>
 
-<a href="scheme-preference.html" id="schemeSaveBtn" class="button">Save and continue</a>
+<section id="selectedPreferences" class="text">
+  <h2 class="heading-medium">Your scheme preferences</h2>
+  <p>You need to select at least one scheme preference. </p>
+  <ul id="selectedPrefList" class="list-text">
+    <li></li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="heading-medium">Eligibility</h2>
+
+  <div class="text panel-indent">
+    <p>Before you apply, make sure you're <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes" target="_blank" rel="external">eligible</a> for the scheme(s) that you've selected.</p>
+  </div>
+
+  <div class="form-group">
+    <label for="accept-eligible" class="block-label">
+      <input type="checkbox" id="accept-eligible"> I confirm that I'm eligible to apply
+    </label>
+  </div>
+
+  <a href="assistance.html" id="schemeSaveBtn" class="button">Save and continue</a>
+</section>
 
 <script>
   $(function(){
-    var selectedSchemeIDs = $.jStorage.get('schemesSelectedIDs'),
-        schemePrefArray = ['Empty'],
+    var schemePrefArray = ['Empty'],
         preferencesAsText = [
                               'First preference',
                               'Second preference',
                               'Third preference',
                               'Fourth preference'
                             ];
-
-    if (selectedSchemeIDs !== null) {
-      $.each(selectedSchemeIDs, function(key,value) {
-        var theSchemeID = value;
-
-        $(theSchemeID).prop('checked', true);
-      });
-    }
 
     $('[data-schemecheck]').on('change', function() {
       var $this = $(this),
@@ -423,11 +436,14 @@
         }
         var arrayPositionNow = $.inArray(thisSchemeID, schemePrefArray);
         $this.next('[data-selecttext]').text(preferencesAsText[arrayPositionNow]);
+
+        $('#selectedPrefList li').eq(arrayPositionNow).after('<li data-scheme-id="' + thisSchemeID + '"><h3 class="bold-small">' + preferencesAsText[arrayPositionNow] + '</h3>' + thisScheme);
       }
 
       if(!$this.is(':checked')) {
         schemePrefArray.splice(arrayPosition, 1, 'Empty');
         $this.next('[data-selecttext]').text('Select scheme');
+        $('#selectedPrefList').find('[data-scheme-id="' + thisSchemeID + '"]').remove();
       }
 
       console.log(schemePrefArray);
