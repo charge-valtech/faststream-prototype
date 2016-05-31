@@ -336,7 +336,7 @@ applicationPage: schemePreferences
         var arrayPositionNow = $.inArray(thisSchemeID, schemePrefArray);
         $this.next('[data-selecttext]').text(preferencesAsText[arrayPositionNow]);
 
-        $('#selectedPrefList li').eq(arrayPositionNow).after('<li data-scheme-id="' + thisSchemeID + '"><h3 class="bold-small">' + preferencesAsText[arrayPositionNow] + '</h3>' + thisScheme);
+        $('#selectedPrefList li').eq(arrayPositionNow).after('<li data-scheme-id="' + thisSchemeID + '"><h3 class="bold-small">' + preferencesAsText[arrayPositionNow] + '</h3><span>' + thisScheme + '</span>');
       }
 
       if(!$this.is(':checked')) {

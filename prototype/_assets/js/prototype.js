@@ -572,35 +572,21 @@ $(function() {
   }
 
   $('#schemeSaveBtn').on('click', function() {
-    var schemes = [],
-        schemeIDs = [];
-
-    $('input:checked').each(function() {
-      var schemeName = $(this).closest('section').find('.link-unimp').text(),
-          schemeID = '#' + $(this).attr('id');
-
-      schemes.push(schemeName);
-      schemeIDs.push(schemeID);
-
-    });
-
-    $.jStorage.set('schemesSelected', schemes);
-    $.jStorage.set('schemesSelectedIDs', schemeIDs);
-  });
-
-  $('#saveSchemePrefBtn').on('click', function() {
     var schemePreferences = [];
 
-    $('[data-schemename]').each(function() {
-      var schemeName = $(this).text();
+    $('[data-scheme-id]').each(function() {
+      var preferenceText = $(this).find('.bold-small').text(),
+          schemeName = $(this).find('span').text();
 
-      schemePreferences.push(schemeName);
+      schemePreferences.push({
+        preference: preferenceText,
+        name: schemeName
+      });
 
     });
 
     $.jStorage.set('schemePreferences', schemePreferences);
   });
-
 
   // Video interview stuff
 

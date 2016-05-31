@@ -53,13 +53,13 @@ pageTitle: Check your application before you send it
 <section class="section-border">
   <h2 class="heading-large">
     Scheme preference
-    <a class="icon-with-text" href="scheme-preference.html"><i class="the-icon fa fa-pencil"></i><span class="the-text">Edit section</span></a>
+    <a class="icon-with-text" href="scheme-selection-start.html"><i class="the-icon fa fa-pencil"></i><span class="the-text">Edit section</span></a>
   </h2>
 
   <section>
-    <ol id="schemePreferenceList" class="list-text list-number-text">
+    <ul id="schemePreferenceList" class="list-text">
 
-    </ol>
+    </ul>
   </section>
 
 </section>
@@ -135,7 +135,7 @@ pageTitle: Check your application before you send it
     $.each(schemePreferences, function(key,value) {
       var theScheme = value;
 
-      $('#schemePreferenceList').append('<li><h3 class="bold-small"><span class="number-text"></span></h3>'+ theScheme +'</li>');
+      $('#schemePreferenceList').append('<li><h3 class="bold-small">' + theScheme.preference +'</h3>'+ theScheme.name +'</li>');
     });
 
   });

@@ -458,7 +458,8 @@
               $('#selectedPrefList li').eq(arrayPositionNow).after(
                 '<li data-scheme-id="' + thisSchemeID +
                 '"><h3 class="bold-small">' + preferencesAsText[
-                  arrayPositionNow] + '</h3>' + thisScheme);
+                  arrayPositionNow] + '</h3><span>' + thisScheme +
+                '</span>');
             }
             if (!$this.is(':checked'))
             {
