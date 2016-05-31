@@ -367,7 +367,7 @@ applicationPage: schemePreferences
                               '4th preference'
                             ];
 
-    $('input[data-schemecheck]').on('change', function() {
+    $('[data-schemecheck]').on('change', function() {
       var $this = $(this),
           thisScheme = $this.closest('.grid-wrapper').find('[data-schemename]').text(),
           thisSchemeID = $this.attr('id'),
