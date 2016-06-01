@@ -67,7 +67,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree in any subject</p>
+        <p data-spec-scheme>2:1 degree in any subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-fast-stream-digital-and-technology/fast-stream-digital-and-technology#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
       </div>
     </div>
   </section>
@@ -127,7 +127,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree in any subject</p>
+        <p data-spec-scheme>2:1 degree in any subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-fast-stream-finance/fast-stream-finance#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
       </div>
     </div>
   </section>
@@ -147,7 +147,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree in any subject</p>
+        <p data-spec-scheme>2:1 degree in any subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-fast-stream-government-communication-service/fast-stream-government-communication-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
       </div>
     </div>
   </section>
@@ -167,7 +167,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree in economics or a 2:2 with a postgraduate qualification in economics</p>
+        <p data-spec-scheme>2:1 degree in economics or a 2:2 with a postgraduate qualification in economics <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-economic-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
       </div>
     </div>
   </section>
@@ -187,7 +187,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification</p>
+        <p data-spec-scheme>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-operational-research-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
       </div>
     </div>
   </section>
@@ -207,7 +207,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree in social science or a 2:2 with a postgraduate qualification in social research</p>
+        <p data-spec-scheme>2:1 degree in social science or a 2:2 with a postgraduate qualification in social research <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-social-research-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
       </div>
     </div>
   </section>
@@ -227,7 +227,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification</p>
+        <p data-spec-scheme>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-statistical-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
       </div>
     </div>
   </section>
@@ -307,7 +307,7 @@ applicationPage: schemePreferences
     </div>
     <div class="grid grid-1-2">
       <div class="inner-block-padr">
-        <p>2:1 degree, plus either chartered engineer status or a postgraduate degrepin a relevant subject</td>
+        <p data-spec-scheme>2:1 degree, plus either chartered engineer status or a postgraduate degree in a relevant subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-generalist-fast-stream/fast-stream-science-and-engineering#eligibility" rel="external" target="_blank">(Specific requirements)</a></td>
       </div>
     </div>
   </section>
@@ -335,10 +335,25 @@ applicationPage: schemePreferences
 
 <section id="selectedPreferences" class="text">
   <h2 class="heading-medium">Your scheme preferences</h2>
-  <p>You need to select at least one scheme preference. You can have upto four preferences in total.</p>
+  <p>You need to select at least one scheme preference. You can have upto 5 preferences in total.</p>
   <ol id="selectedPrefList" class="list-text">
     <li></li>
   </ol>
+</section>
+
+<section class="text clearfix">
+  <p>If your application is unsuccessful for your preferred schemes, we may suggest alternative schemes on the Fast Stream.</p>
+  <fieldset>
+    <legend class="form-label">Are you open to alternative schemes?</legend>
+    <div class="form-group form-group-compound">
+      <label for="alternatives-yes" class="block-label">
+        <input name="alternatives" type="radio" id="alternatives-yes">Yes
+      </label>
+      <label for="alternatives-no" class="block-label">
+        <input name="alternatives" type="radio" id="alternatives-no">No
+      </label>
+    </div>
+  </fieldset>
 </section>
 
 <section>
@@ -364,17 +379,19 @@ applicationPage: schemePreferences
                               '1st preference',
                               '2nd preference',
                               '3rd preference',
-                              '4th preference'
+                              '4th preference',
+                              '5th preference'
                             ];
 
     $('[data-schemecheck]').on('change', function() {
       var $this = $(this),
           thisScheme = $this.closest('.grid-wrapper').find('[data-schemename]').text(),
           thisSchemeID = $this.attr('id'),
+          isSpecial = $this.closest('.grid-wrapper').find('[data-spec-scheme]').length,
+          specialEligibility = isSpecial == 0 ? '' : '<div class="scheme-warning"><p class="font-xsmall">Requires: ' + $this.closest('.grid-wrapper').find('[data-spec-scheme]').html() + '</p></div>',
           arrayPosition = $.inArray(thisSchemeID, schemePrefArray),
           emptyPosition = $.inArray('Empty', schemePrefArray);
 
-      console.log('change');
 
       if(arrayPosition >= 0) {
         //Do nothing
@@ -385,9 +402,8 @@ applicationPage: schemePreferences
           schemePrefArray.splice(emptyPosition, 1, thisSchemeID);
         }
         var arrayPositionNow = $.inArray(thisSchemeID, schemePrefArray);
-        // $this.closest('.block-label').text('Selected scheme');
 
-        $('#selectedPrefList li').eq(arrayPositionNow).after('<li data-scheme-id="' + thisSchemeID + '"><h3 class="bold-small">' + preferencesAsText[arrayPositionNow] + '</h3><span>' + thisScheme + '</span>');
+        $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin" data-scheme-id="' + thisSchemeID + '"><h3 class="bold-small">' + preferencesAsText[arrayPositionNow] + '</h3><span>' + thisScheme + '</span>' + specialEligibility);
 
         $this.closest('.scheme-container').addClass('selected-scheme').find('.selected-preference h2').text(preferencesAsText[arrayPositionNow]).removeClass('invisible');
 
@@ -395,13 +411,12 @@ applicationPage: schemePreferences
 
       if(!$this.is(':checked')) {
         schemePrefArray.splice(arrayPosition, 1, 'Empty');
-        // $this.closest('.block-label').text('Select scheme');
         $('#selectedPrefList').find('[data-scheme-id="' + thisSchemeID + '"]').remove();
 
         $this.closest('.scheme-container').removeClass('selected-scheme').find('.selected-preference h2').text('Not selected').addClass('invisible');
       }
 
-      if($('input[data-schemecheck]:checked').length == 4) {
+      if($('input[data-schemecheck]:checked').length == 5) {
         $('input[data-schemecheck]:not(:checked)').attr('disabled', true).closest('.block-label').addClass('disabled');
       } else {
         $('input[data-schemecheck]:not(:checked)').attr('disabled', false).closest('.block-label').removeClass('disabled');
