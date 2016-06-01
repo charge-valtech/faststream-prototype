@@ -1,5 +1,5 @@
 ---
-pageTitle: More about you
+pageTitle: Your education
 applicationPart: 7
 applicationPage: diversityQuestions
 ---
@@ -10,46 +10,7 @@ applicationPage: diversityQuestions
   <h1 class="heading-xlarge">{{ pageTitle }}</h1>
 </div>
 
-<div class="panel-indent text">
-  <p class="">
-    Any information you give is treated in strict confidence and your answers don't affect your application.
-  </p>
-</div>
-<details class="text">
-  <summary id="link-why-collect-data">Why do we collect this information?</summary>
-  <div id="panel-why-collect-data" class="detail-content panel-indent">
-      <p>
-          The Civil Service is committed to promoting diversity, irrespective of ethnicity or nationality, gender, transgender, sexuality, disability, age, religion, marital status, working patterns and socio-economic status.</p>
-      <p>
-          We collect diversity and socio economic information for monitoring purposes only and this data is treated separately from the application process. Your answers in this section don't affect your results in any way and are treated in strict confidence.
-      </p>
-  </div>
-</details>
 <section>
-
-  <div class="form-group form-group-compound">
-    <label class="form-label text" for="schoolAttended">Aged 14, what was the name of the school you attended?</label>
-    <input type="text" id="schoolAttended" class="form-control">
-  </div>
-
-  <div class="form-group">
-    <label for="school-dontremember" class="block-label" data-distarget="schoolAttended">
-      <input type="checkbox" id="school-dontremember">I don't know/prefer not to say
-    </label>
-  </div>
-
-  <div class="form-group form-group-compound">
-    <label class="form-label text" for="universityAttended">What is the name of the university or college you received your degree from? (if applicable)</label>
-    <span class="form-hint text">If you haven't received your degree yet, enter the name of your current university or college</span>
-    <input type="text" id="universityAttended" class="form-control">
-  </div>
-
-  <div class="form-group">
-    <label for="school2-dontremember" class="block-label" data-distarget="universityAttended">
-      <input type="checkbox" id="school2-dontremember">I don't know/prefer not to say/not applicable
-    </label>
-  </div>
-
   <div class="form-group form-group-compound">
     <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
     <input type="text" id="homePostcode" class="form-control form-control-1-4">
@@ -60,7 +21,22 @@ applicationPage: diversityQuestions
       <input type="checkbox" id="postcode-dontremember">I don't know/prefer not to say
     </label>
   </div>
+</section>
 
+<section>
+  <div class="form-group form-group-compound">
+    <label class="form-label text" for="schoolAttended">Aged 14, what was the name of the school you attended?</label>
+    <input type="text" id="schoolAttended" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="school-dontremember" class="block-label" data-distarget="schoolAttended">
+      <input type="checkbox" id="school-dontremember">I don't know/prefer not to say
+    </label>
+  </div>
+</section>
+
+<section>
   <div class="text">
     <p class="form-label">During your school years, were you at any time eligible for free school meals? </p>
     <div class="form-group inline">
@@ -75,20 +51,19 @@ applicationPage: diversityQuestions
       </label>
     </div>
   </div>
+</section>
 
-  <div class="text">
-    <p class="form-label">Did any of your parent(s) or guardian(s) complete a university degree course or equivalent? </p>
-    <div class="form-group inline">
-      <label for="university-yes" class="block-label">
-        <input name="university" type="radio" id="university-yes">Yes
-      </label>
-      <label for="university-no" class="block-label">
-        <input name="university" type="radio" id="university-no">No
-      </label>
-      <label for="university-remember" class="block-label">
-        <input name="university" type="radio" id="university-remember">I don't know/prefer not to say
-      </label>
-    </div>
+<section>
+  <div class="form-group form-group-compound">
+    <label class="form-label text" for="universityAttended">What is the name of the university or college you received your degree from? (if applicable)</label>
+    <span class="form-hint text">If you haven't received your degree yet, enter the name of your current university or college</span>
+    <input type="text" id="universityAttended" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="school2-dontremember" class="block-label" data-distarget="universityAttended">
+      <input type="checkbox" id="school2-dontremember">I don't know/prefer not to say/not applicable
+    </label>
   </div>
 </section>
 
