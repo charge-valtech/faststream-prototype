@@ -111,78 +111,107 @@
   <h1 class="heading-xlarge">Your education</h1>
 </div>
 
-<div class="panel-warning standard-panel">
-  <h2 class="heading-medium">Why are we asking these questions?</h2>
-  <p>The following questions are:</p>
-  <ul class="no-btm-margin">
-    <li>for information monitoring only</li>
-    <li>not part of your application</li>
-    <li>treated in strict confidence</li>
-  </ul>
-  <p>Read more about <a href="https://www.gov.uk/government/organisations/civil-service/about/equality-and-diversity" rel="external" target="_blank">diversity in the civil service (opens in new tab)</a>.</p>
-
-</div>
-
-<section>
-  <div class="form-group form-group-compound">
-    <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
-    <input type="text" id="homePostcode" class="form-control form-control-1-4">
-  </div>
-
-  <div class="form-group">
-    <label for="postcode-dontremember" class="block-label" data-distarget="homePostcode">
-      <input type="checkbox" id="postcode-dontremember">I don't know/prefer not to say
+<fieldset>
+  <legend class="form-label">At the age of 14 did you live in the UK?</legend>
+  <div class="form-group form-group-compound inline">
+    <label data-target="education-uk-panel" for="education-uk-yes" class="block-label">
+      <input name="education-uk" type="radio" id="education-uk-yes" aria-controls="education-uk-panel" aria-expanded="false">Yes
+    </label>
+    <label data-target="education-ew-panel" for="education-uk-no" class="block-label">
+      <input name="education-uk" type="radio" id="education-uk-no" aria-controls="education-ew-panel" aria-expanded="false">No
     </label>
   </div>
-</section>
 
-<section>
-  <div class="form-group form-group-compound">
-    <label class="form-label text" for="schoolAttended">Aged 14, what was the name of the school you attended?</label>
-    <input type="text" id="schoolAttended" class="form-control">
-  </div>
+  <div id="education-uk-panel" class="toggle-content" aria-hidden="true">
+    <div class="panel-warning standard-panel">
+      <h2 class="heading-medium">Why are we asking these questions?</h2>
+      <p>The following questions are:</p>
+      <ul class="no-btm-margin">
+        <li>for information monitoring only</li>
+        <li>not part of your application</li>
+        <li>treated in strict confidence</li>
+      </ul>
+      <p>Read more about <a href="https://www.gov.uk/government/organisations/civil-service/about/equality-and-diversity" rel="external" target="_blank">diversity in the civil service (opens in new tab)</a>.</p>
+    
+    </div>
 
-  <div class="form-group">
-    <label for="school-dontremember" class="block-label" data-distarget="schoolAttended">
-      <input type="checkbox" id="school-dontremember">I don't know/prefer not to say
-    </label>
-  </div>
-</section>
+    <section>
+      <div class="form-group form-group-compound">
+        <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
+        <input type="text" id="homePostcode" class="form-control form-control-1-4">
+      </div>
 
-<section>
-  <div class="text">
-    <p class="form-label">During your school years, were you at any time eligible for free school meals? </p>
-    <div class="form-group inline">
-      <label for="freeSchoolMeals-yes" class="block-label">
-        <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-yes">Yes
-      </label>
-      <label for="freeSchoolMeals-no" class="block-label">
-        <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-no">No
-      </label>
-      <label for="freeSchoolMeals-remember" class="block-label">
-        <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-remember">I don't know/prefer not to say
-      </label>
+      <div class="form-group">
+        <label for="postcode-dontremember" class="block-label" data-distarget="homePostcode">
+          <input type="checkbox" id="postcode-dontremember">I don't know/prefer not to say
+        </label>
+      </div>
+    </section>
+
+    <section>
+      <div class="form-group form-group-compound">
+        <label class="form-label text" for="schoolAttended">What was the name of the school you attended when you were 14?</label>
+        <input type="text" id="schoolAttended" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="school-dontremember" class="block-label" data-distarget="schoolAttended">
+          <input type="checkbox" id="school-dontremember">I don't know/prefer not to say
+        </label>
+      </div>
+    </section>
+
+    <section>
+      <div class="text">
+        <p class="form-label">During your school years, were you at any time eligible for free school meals? </p>
+        <div class="form-group inline">
+          <label for="freeSchoolMeals-yes" class="block-label">
+            <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-yes">Yes
+          </label>
+          <label for="freeSchoolMeals-no" class="block-label">
+            <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-no">No
+          </label>
+          <label for="freeSchoolMeals-remember" class="block-label">
+            <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-remember">I don't know/prefer not to say
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="form-group form-group-compound">
+        <label class="form-label text" for="universityAttended">What is the name of the university or college you received your degree from? (if applicable)</label>
+        <span class="form-hint text">If you haven't received your degree yet, enter the name of your current university or college</span>
+        <input type="text" id="universityAttended" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="school2-dontremember" class="block-label" data-distarget="universityAttended">
+          <input type="checkbox" id="school2-dontremember">I don't know/prefer not to say/not applicable
+        </label>
+      </div>
+    </section>
+    <div>
+      <a href="questionnaire-03.html" class="button">Save and continue</a>
     </div>
   </div>
-</section>
 
-<section>
-  <div class="form-group form-group-compound">
-    <label class="form-label text" for="universityAttended">What is the name of the university or college you received your degree from? (if applicable)</label>
-    <span class="form-hint text">If you haven't received your degree yet, enter the name of your current university or college</span>
-    <input type="text" id="universityAttended" class="form-control">
+  <div id="education-ew-panel" class="toggle-content" aria-hidden="true">
+    <div class="text">
+      <h2 class="heading-medium">No more questions</h2>
+      <p>As you didn't live in the UK at the age of 14 we don't need to ask you any more questions.</p>
+      <p>You can now continue to the check your application page.</p>
+    </div>
+
+    <div>
+      <a href="apply-check.html" class="button">Save and continue</a>
+    </div>
   </div>
+</fieldset>
 
-  <div class="form-group">
-    <label for="school2-dontremember" class="block-label" data-distarget="universityAttended">
-      <input type="checkbox" id="school2-dontremember">I don't know/prefer not to say/not applicable
-    </label>
-  </div>
-</section>
 
-<div>
-  <a href="questionnaire-03.html" class="button">Save and continue</a>
-</div>
+
+
 
 <script src="../_assets/js/vendor/jquery-ui-custom.js"></script>
 <script src="../_assets/js/universities.js"></script>
