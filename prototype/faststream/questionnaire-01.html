@@ -118,113 +118,138 @@
         <div class="hgroup">
           <h1 class="heading-xlarge">About you</h1>
         </div>
-        <section>
-          <fieldset>
-            <legend class="form-label">What is your gender identity?</legend>
-            <div class="form-group">
-              <div>
-                <label for="gender-male" class="block-label">
-                  <input name="gender" type="radio" id="gender-male">Male
-                </label>
-              </div>
-              <div>
-                <label for="gender-female" class="block-label">
-                  <input name="gender" type="radio" id="gender-female">Female
-                </label>
-              </div>
-              <div>
-                <label for="gender-other" class="block-label">
-                  <input name="gender" type="radio" id="gender-other">Other
-                </label>
-              </div>
-              <div>
-                <label for="gender-dunno" class="block-label">
-                  <input name="gender" type="radio" id="gender-dunno" class="optionTrigger" data-optiontrigger="genderDescribe">I don't know/prefer not to say
-                </label>
-              </div>
+        <div class="grid-wrapper">
+          <div class="grid grid-2-3">
+            <div class="inner-block-padr">
+              <section>
+                <fieldset>
+                  <legend class="form-label">What is your gender identity?</legend>
+                  <div class="form-group">
+                    <div>
+                      <label for="gender-male" class="block-label">
+                        <input name="gender" type="radio" id="gender-male">Male
+                      </label>
+                    </div>
+                    <div>
+                      <label for="gender-female" class="block-label">
+                        <input name="gender" type="radio" id="gender-female">Female
+                      </label>
+                    </div>
+                    <div>
+                      <label for="gender-other" class="block-label">
+                        <input name="gender" type="radio" id="gender-other">Other
+                      </label>
+                    </div>
+                    <div>
+                      <label for="gender-dunno" class="block-label">
+                        <input name="gender" type="radio" id="gender-dunno" class="optionTrigger" data-optiontrigger="genderDescribe">I don't know/prefer not to say
+                      </label>
+                    </div>
+                  </div>
+                  <div class="toggle-content form-group form-group-compound" id="genderDescribe">
+                    <label for="genderDescribeControl" class="form-hint">Provide more information (optional)</label>
+                    <input type="text" id="genderDescribeControl" class="form-control">
+                  </div>
+                </fieldset>
+              </section>
+              <section>
+                <fieldset>
+                  <legend class="form-label">What is your sexual orientation?</legend>
+                  <div class="form-group">
+                    <div>
+                      <label for="sexual-hetero" class="block-label">
+                        <input name="sexual" type="radio" id="sexual-hetero">Heterosexual/straight
+                      </label>
+                    </div>
+                    <div>
+                      <label for="sexual-homo" class="block-label">
+                        <input name="sexual" type="radio" id="sexual-homo">Homosexual/gay
+                      </label>
+                    </div>
+                    <div>
+                      <label for="sexual-bisexual" class="block-label">
+                        <input name="sexual" type="radio" id="sexual-bisexual">Bisexual
+                      </label>
+                    </div>
+                    <div>
+                      <label for="sexual-other" class="block-label">
+                        <input name="sexual" type="radio" id="sexual-other">Other
+                      </label>
+                    </div>
+                    <div>
+                      <label for="sexual-dunno" class="block-label">
+                        <input name="sexual" type="radio" id="sexual-dunno" class="optionTrigger" data-optiontrigger="sexualDescribe">I don't know/prefer not to say
+                      </label>
+                    </div>
+                  </div>
+                  <div class="toggle-content form-group form-group-compound" id="sexualDescribe">
+                    <label for="genderDescribeControl" class="form-hint">Provide more information (optional)</label>
+                    <input type="text" id="genderDescribeControl" class="form-control">
+                  </div>
+                </fieldset>
+              </section>
+              <section>
+                <div class="form-group">
+                  <label for="ethnicList" class="form-label">What is your ethnic group?</label>
+                  <select name="" id="ethnicList" class="selectWithOptionTrigger">
+                    <option value="">I don't know/prefer not to say</option>
+                    <optgroup label="White">
+                      <option value="">English/Welsh/Scottish/Northern Irish/British </option>
+                      <option value="">Irish </option>
+                      <option value="">Gypsy or Irish Traveller </option>
+                      <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other White background</option>
+                    </optgroup>
+                    <optgroup label="Mixed/Multiple ethnic groups">
+                      <option value="">White and Black Caribbean </option>
+                      <option value="">White and Black African </option>
+                      <option value="">White and Asian </option>
+                      <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other mixed/multiple ethnic background </option>
+                    </optgroup>
+                    <optgroup label="Asian/Asian British">
+                      <option value="">Indian </option>
+                      <option value="">Pakistani </option>
+                      <option value="">Bangladeshi </option>
+                      <option value="">Chinese </option>
+                      <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other Asian background</option>
+                    </optgroup>
+                    <optgroup label="Black/African/Caribbean/Black British">
+                      <option value="">African </option>
+                      <option value="">Caribbean </option>
+                      <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other Black/African/Caribbean background</option>
+                    </optgroup>
+                    <optgroup label="Other ethnic group">
+                      <option value="">Arab</option>
+                      <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other ethnic group</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="toggle-content form-group" id="ethnicDescribe">
+                  <label for="ethnicDescribeControl" class="form-hint">Provide more information (optional)</label>
+                  <input type="text" id="ethnicDescribeControl" class="form-control">
+                </div>
+              </section>
             </div>
-            <div class="toggle-content form-group form-group-compound" id="genderDescribe">
-              <label for="genderDescribeControl" class="form-hint">Provide more information (optional)</label>
-              <input type="text" id="genderDescribeControl" class="form-control">
-            </div>
-          </fieldset>
-        </section>
-        <section>
-          <fieldset>
-            <legend class="form-label">What is your sexual orientation?</legend>
-            <div class="form-group">
-              <div>
-                <label for="sexual-hetero" class="block-label">
-                  <input name="sexual" type="radio" id="sexual-hetero">Heterosexual/straight
-                </label>
-              </div>
-              <div>
-                <label for="sexual-homo" class="block-label">
-                  <input name="sexual" type="radio" id="sexual-homo">Homosexual/gay
-                </label>
-              </div>
-              <div>
-                <label for="sexual-bisexual" class="block-label">
-                  <input name="sexual" type="radio" id="sexual-bisexual">Bisexual
-                </label>
-              </div>
-              <div>
-                <label for="sexual-other" class="block-label">
-                  <input name="sexual" type="radio" id="sexual-other">Other
-                </label>
-              </div>
-              <div>
-                <label for="sexual-dunno" class="block-label">
-                  <input name="sexual" type="radio" id="sexual-dunno" class="optionTrigger" data-optiontrigger="sexualDescribe">I don't know/prefer not to say
-                </label>
-              </div>
-            </div>
-            <div class="toggle-content form-group form-group-compound" id="sexualDescribe">
-              <label for="genderDescribeControl" class="form-hint">Provide more information (optional)</label>
-              <input type="text" id="genderDescribeControl" class="form-control">
-            </div>
-          </fieldset>
-        </section>
-        <section>
-          <div class="form-group">
-            <label for="ethnicList" class="form-label">What is your ethnic group?</label>
-            <select name="" id="ethnicList" class="selectWithOptionTrigger">
-              <option value="">I don't know/prefer not to say</option>
-              <optgroup label="White">
-                <option value="">English/Welsh/Scottish/Northern Irish/British </option>
-                <option value="">Irish </option>
-                <option value="">Gypsy or Irish Traveller </option>
-                <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other White background</option>
-              </optgroup>
-              <optgroup label="Mixed/Multiple ethnic groups">
-                <option value="">White and Black Caribbean </option>
-                <option value="">White and Black African </option>
-                <option value="">White and Asian </option>
-                <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other mixed/multiple ethnic background </option>
-              </optgroup>
-              <optgroup label="Asian/Asian British">
-                <option value="">Indian </option>
-                <option value="">Pakistani </option>
-                <option value="">Bangladeshi </option>
-                <option value="">Chinese </option>
-                <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other Asian background</option>
-              </optgroup>
-              <optgroup label="Black/African/Caribbean/Black British">
-                <option value="">African </option>
-                <option value="">Caribbean </option>
-                <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other Black/African/Caribbean background</option>
-              </optgroup>
-              <optgroup label="Other ethnic group">
-                <option value="">Arab</option>
-                <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other ethnic group</option>
-              </optgroup>
-            </select>
           </div>
-          <div class="toggle-content form-group" id="ethnicDescribe">
-            <label for="ethnicDescribeControl" class="form-hint">Provide more information (optional)</label>
-            <input type="text" id="ethnicDescribeControl" class="form-control">
+          <div class="grid grid-1-3">
+            <details id="stickySidePanel">
+              <summary>Why are we asking these questions?</summary>
+              <div class="detail-content">
+                <div class="panel-warning">
+                  <p>The Civil Service is committed to promoting diversity.
+                    <br> Read more about <a href="https://www.gov.uk/government/organisations/civil-service/about/equality-and-diversity"
+                    rel="external" target="_blank">diversity in the civil service (opens in new tab)</a>.</p>
+                  <ul>
+                    <li>we collect diversity and socio economic information for monitoring
+                      purposes only</li>
+                    <li>this data is treated separately from the application process</li>
+                    <li>your answers in this section don't affect your results in any
+                      way and are treated in strict confidence</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
           </div>
-        </section>
+        </div>
         <p>
           <a href="questionnaire-02.html" class="button">Save and continue</a>
         </p>
