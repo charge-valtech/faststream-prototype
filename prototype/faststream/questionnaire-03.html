@@ -335,7 +335,8 @@
         {
           $('input[name="occupations"]').on('change', function()
           {
-            if ($(this).is('#occupation-unemp'))
+            if ($(this).is('#occupation-unemp') || $(this).is(
+                '#occupation-no'))
             {
               $('#hideIfUnemp').addClass('toggle-content');
             }
