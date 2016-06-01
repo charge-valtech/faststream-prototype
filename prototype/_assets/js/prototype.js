@@ -575,8 +575,8 @@ $(function() {
     var schemePreferences = [];
 
     $('[data-scheme-id]').each(function() {
-      var preferenceText = $(this).find('.bold-small').text(),
-          schemeName = $(this).find('span').text();
+      var preferenceText = $(this).find('[data-schemeorder]').text(),
+          schemeName = $(this).find('[data-schemenameinlist]').text();
 
       schemePreferences.push({
         preference: preferenceText,

@@ -11,7 +11,7 @@ applicationPage: schemePreferences
 </div>
 
 <div class="panel-indent text">
-  <p>Select upto 5 preferences.<br> You can apply for any scheme that you're eligible for.</p>
+  <p>Select up to 5 preferences.<br> You can apply for any scheme that you're eligible for.</p>
 </div>
 
 
@@ -338,15 +338,19 @@ applicationPage: schemePreferences
   </section>
 </section>
 
-<section id="selectedPreferences" class="text">
+<section id="selectedPreferences">
   <h2 class="heading-medium">Your scheme preferences</h2>
-  <p>You need to select at least one scheme preference. You can have upto 5 preferences in total.</p>
+  <div class="panel-indent">
+    <p>You need to select at least one scheme preference.<br> You can have up to 5 preferences in total.</p>
+  </div>
   <ol id="selectedPrefList" class="list-text">
     <li></li>
   </ol>
+  &nbsp;
 </section>
 
 <section class="text clearfix">
+  <h2 class="heading-medium">Alternative schemes</h2>
   <p>If your application is unsuccessful for your preferred schemes, we may suggest alternative schemes on the Fast Stream.</p>
   <fieldset>
     <legend class="form-label">Are you open to alternative schemes?</legend>
@@ -393,7 +397,7 @@ applicationPage: schemePreferences
           thisScheme = $this.closest('.grid-wrapper').find('[data-schemename]').text(),
           thisSchemeID = $this.attr('id'),
           isSpecial = $this.closest('.grid-wrapper').find('[data-spec-scheme]').length,
-          specialEligibility = isSpecial == 0 ? '' : '<div class="scheme-warning"><p class="font-xsmall">Requires: ' + $this.closest('.grid-wrapper').find('[data-spec-scheme]').html() + '</p></div>',
+          specialEligibility = isSpecial == 0 ? '' : '<div class="scheme-warning text"><p class="font-xsmall">Requires: ' + $this.closest('.grid-wrapper').find('[data-spec-scheme]').html() + '</p></div>',
           arrayPosition = $.inArray(thisSchemeID, schemePrefArray),
           emptyPosition = $.inArray('Empty', schemePrefArray);
 
@@ -408,7 +412,7 @@ applicationPage: schemePreferences
         }
         var arrayPositionNow = $.inArray(thisSchemeID, schemePrefArray);
 
-        $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin" data-scheme-id="' + thisSchemeID + '"><h3 class="bold-small">' + preferencesAsText[arrayPositionNow] + '</h3><span>' + thisScheme + '</span>' + specialEligibility);
+        $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="para-btm-margin grid-wrapper" data-scheme-id="' + thisSchemeID + '"><div class="grid grid grid-1-4"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span></div><div class="grid grid-3-4"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span>' + specialEligibility + '</div>');
 
         $this.closest('.scheme-container').addClass('selected-scheme').find('.selected-preference h2').text(preferencesAsText[arrayPositionNow]).removeClass('invisible');
 
