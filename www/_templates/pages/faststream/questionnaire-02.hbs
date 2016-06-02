@@ -10,9 +10,12 @@ applicationPage: diversityQuestions
   <h1 class="heading-xlarge">{{ pageTitle }}</h1>
 </div>
 
+{{> diversity-panel }}
+
+
 <fieldset>
   <legend class="form-label">At the age of 14 did you live in the UK?</legend>
-  <div class="form-group form-group-compound inline">
+  <div class="form-group inline">
     <label data-target="education-uk-panel" for="education-uk-yes" class="block-label">
       <input name="education-uk" type="radio" id="education-uk-yes" aria-controls="education-uk-panel" aria-expanded="false">Yes
     </label>
@@ -22,8 +25,6 @@ applicationPage: diversityQuestions
   </div>
 
   <div id="education-uk-panel" class="toggle-content" aria-hidden="true">
-    {{> diversity-panel }}
-
     <section>
       <div class="form-group form-group-compound">
         <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>

@@ -1,5 +1,5 @@
 ---
-pageTitle: Choose your schemes
+pageTitle: Choose upto 5 schemes
 applicationPart: 2
 applicationPage: schemePreferences
 ---
@@ -10,338 +10,157 @@ applicationPage: schemePreferences
   <h1 class="heading-xlarge">{{ pageTitle }}</h1>
 </div>
 
-<div class="panel-indent text">
-  <p>Select up to 5 preferences.<br> You can apply for any scheme that you're eligible for.</p>
-</div>
-
-
-<section>
-  <section class="grid-wrapper scheme-container">
+<ul class="schemes-list">
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-01" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-01" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-generalist-fast-stream/fast-stream-central-departments">Central Departments</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-01" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-01" data-schemename>Central Departments
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-02" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-02" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-commercial-and-finance/civil-service-fast-stream-commercial">Commercial</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-02" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-02" data-schemename>Commercial
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-03" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-03" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-digital-and-technology/fast-stream-digital-and-technology">Digital and Technology</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree in any subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-fast-stream-digital-and-technology/fast-stream-digital-and-technology#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-03" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-03" data-schemename>Digital and Technology
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:1 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-04" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-04" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-generalist-fast-stream/fast-stream-diplomatic-service">Diplomatic Service</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-04" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-04" data-schemename>Diplomatic Service
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-05" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-05" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-europe/fast-stream-european">European</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-05" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-05" data-schemename>European
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-06" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-06" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-finance/fast-stream-finance">Finance</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree in any subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-fast-stream-finance/fast-stream-finance#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-06" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-06" data-schemename>Finance
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:1 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-07" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-07" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-government-communication-service/fast-stream-government-communication-service">Government Communication Service</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree in any subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-fast-stream-government-communication-service/fast-stream-government-communication-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-07" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-07" data-schemename>Government Communication Service
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:1 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-08" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-08" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-economic-service">Government Economic Service</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree in economics or a 2:2 with a postgraduate qualification in economics <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-economic-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-08" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-08" data-schemename>Government Economic Service
+    </label>
+    <span class="alwayshidden" data-scheme-req data-spec-scheme>2:1 degree in economics or a 2:2 with a postgraduate qualification in economics <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-economic-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-09" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-09" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-operational-research-service">Government Operational Research Service</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-operational-research-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-09" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-09" data-schemename>Government Operational Research Service
+    </label>
+    <span class="alwayshidden" data-scheme-req data-spec-scheme>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-operational-research-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-10" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-10" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-social-research-service">Government Social Research Service</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree in social science or a 2:2 with a postgraduate qualification in social research <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-social-research-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-10" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-10" data-schemename>Government Social Research Service
+    </label>
+    <span class="alwayshidden" data-scheme-req data-spec-scheme>2:1 degree in social science or a 2:2 with a postgraduate qualification in social research <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-social-research-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-11" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-11" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-statistical-service">Government Statistical Service</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-statistical-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-11" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-11" data-schemename>Government Statistical Service
+    </label>
+    <span class="alwayshidden" data-scheme-req data-spec-scheme>2:1 degree in a numerate subject or a 2:2 with a relevant postgraduate qualification <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-analytical-fast-streams/civil-service-fast-stream-government-statistical-service#eligibility" rel="external" target="_blank">(Specific requirements)</a></span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-12" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-12" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-generalist-fast-stream/fast-stream-houses-of-parliament">Houses of Parliament</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-12" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-12" data-schemename>Houses of Parliament
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-13" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-13" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-human-resources-profession/fast-stream-human-resources-profession">Human Resources</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-13" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-13" data-schemename>Human Resources
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-14" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-14" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-project-delivery/fast-stream-project-delivery">Project Delivery</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-14" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-14" data-schemename>Project Delivery
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-15" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-15" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-generalist-fast-stream/fast-stream-science-and-engineering">Science and Engineering</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p data-spec-scheme>2:1 degree, plus either chartered engineer status or a postgraduate degree in a relevant subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-generalist-fast-stream/fast-stream-science-and-engineering#eligibility" rel="external" target="_blank">(Specific requirements)</a></td>
-      </div>
-    </div>
-  </section>
-  <section class="grid-wrapper scheme-container">
+    <label for="scheme-15" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-15" data-schemename>Science and Engineering
+    </label>
+    <span class="alwayshidden" data-scheme-req data-spec-scheme>2:1 degree, plus either chartered engineer status or a postgraduate degree in a relevant subject <a class="font-xsmall inl-block" href="https://www.gov.uk/government/publications/civil-service-generalist-fast-stream/fast-stream-science-and-engineering#eligibility" rel="external" target="_blank">(Specific requirements)</a></span>
+  </li>
+  <li class="grid-wrapper scheme-container">
     <div class="selected-preference">
       <h2 class="heading-small small-btm-margin invisible">Not selected</h2>
     </div>
-    <div class="grid grid-1-4">
-      <label for="scheme-16" class="block-label block-label-slim">
-        <input type="checkbox" id="scheme-16" data-schemecheck>Select scheme
-      </label>
-    </div>
-    <div class="grid grid-1-4">
-      <div class="inner-block-padr">
-        <h2 class="heading-small" data-schemename><a rel="external" target="_blank" class="link-unimp" href="https://www.gov.uk/government/publications/civil-service-fast-stream-finance/fast-stream-finance">Tax</a></h2>
-      </div>
-    </div>
-    <div class="grid grid-1-2">
-      <div class="inner-block-padr">
-        <p>2:2 degree in any subject</p>
-      </div>
-    </div>
-  </section>
-</section>
+    <label for="scheme-16" class="block-label block-label-slim">
+      <input type="checkbox" id="scheme-16" data-schemename>Tax
+    </label>
+    <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
+  </li>
+</ul>
 
 <section id="selectedPreferences">
-  <h2 class="heading-medium">Your scheme preferences</h2>
+  <h2 class="heading-medium">Your chosen schemes</h2>
   <div class="panel-indent">
-    <p>You need to select at least one scheme preference.<br> You can have up to 5 preferences in total.</p>
+    <p>You can have up to 5 preferences in total.</p>
   </div>
   <ol id="selectedPrefList" class="list-text">
     <li></li>
@@ -350,10 +169,10 @@ applicationPage: schemePreferences
 </section>
 
 <section class="text clearfix">
-  <h2 class="heading-medium">Alternative schemes</h2>
+  <h2 class="heading-medium">Are you open to alternative schemes?</h2>
   <p>If your application is unsuccessful for your preferred schemes, we may suggest alternative schemes on the Fast Stream.</p>
   <fieldset>
-    <legend class="form-label">Are you open to alternative schemes?</legend>
+    <legend class="form-label visuallyhidden">Are you open to alternative schemes?</legend>
     <div class="form-group form-group-compound">
       <label for="alternatives-yes" class="block-label">
         <input name="alternatives" type="radio" id="alternatives-yes">Yes
@@ -392,12 +211,13 @@ applicationPage: schemePreferences
                               '5th preference'
                             ];
 
-    $('[data-schemecheck]').on('change', function() {
+    $('[data-schemename]').on('change', function() {
       var $this = $(this),
-          thisScheme = $this.closest('.grid-wrapper').find('[data-schemename]').text(),
+          thisScheme = $this.closest('.block-label').text(),
           thisSchemeID = $this.attr('id'),
+          schemeReq = $this.closest('.grid-wrapper').find('[data-scheme-req]').html(),
           isSpecial = $this.closest('.grid-wrapper').find('[data-spec-scheme]').length,
-          specialEligibility = isSpecial == 0 ? '' : '<div class="scheme-warning text"><p class="font-xsmall">Requires: ' + $this.closest('.grid-wrapper').find('[data-spec-scheme]').html() + '</p></div>',
+          specialEligibility = isSpecial == 0 ? '<p class="font-xsmall no-btm-margin">Requires at least a ' + schemeReq + '</p>' : '<div class="scheme-warning text"><p class="font-xsmall">Requires at least a ' + schemeReq + '</p></div>',
           arrayPosition = $.inArray(thisSchemeID, schemePrefArray),
           emptyPosition = $.inArray('Empty', schemePrefArray);
 
@@ -425,10 +245,10 @@ applicationPage: schemePreferences
         $this.closest('.scheme-container').removeClass('selected-scheme').find('.selected-preference h2').text('Not selected').addClass('invisible');
       }
 
-      if($('input[data-schemecheck]:checked').length == 5) {
-        $('input[data-schemecheck]:not(:checked)').attr('disabled', true).closest('.block-label').addClass('disabled');
+      if($('input[data-schemename]:checked').length == 5) {
+        $('input[data-schemename]:not(:checked)').attr('disabled', true).closest('.block-label').addClass('disabled');
       } else {
-        $('input[data-schemecheck]:not(:checked)').attr('disabled', false).closest('.block-label').removeClass('disabled');
+        $('input[data-schemename]:not(:checked)').attr('disabled', false).closest('.block-label').removeClass('disabled');
       }
 
 
