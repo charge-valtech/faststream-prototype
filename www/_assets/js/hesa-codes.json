@@ -1,0 +1,185 @@
+{ "subjects": {
+    "category": "Medicine & Dentistry",
+    "catsubjects": [
+      "(A1) Pre-clinical medicine",
+      "(A2) Pre-clinical dentistry",
+      "(A3) Clinical medicine",
+      "(A4) Clinical dentistry",
+      "(AZ) Balanced combination"
+    ]
+
+  Subjects Allied to Medicine
+  (B1) Anatomy & Physiology
+  (B2) Pharmacology
+  (B3) Pharmacy
+  (B4) Nutrition
+  (B5) Ophthalmics
+  (B6) Audiology
+  (B7) Nursing
+  (B8) Medical technology
+  (B9) Other medical subjects
+  (BZ) Balanced combination
+  Biological Sciences
+  (C1) Biology
+  (C2) Botany
+  (C3) Zoology
+  (C4) Genetics
+  (C5) Microbiology
+  (C6) Molecular biology & biophysics
+  (C7) Biochemistry
+  (C8) Psychology (not solely as social science)
+  (C9) Other biological sciences
+  (CZ) Balanced combination
+  Veterinary Sciences
+  (D1) Veterinary sciences
+  Agriculture & Related Subjects
+  (D2) Agriculture
+  (D3) Forestry
+  (D4) Food science
+  (D8) Agricultural sciences
+  (D9) Other agricultural subjects
+  (DZ) Balanced combination
+  Physical Science
+  (F1) Chemistry
+  (F2) Materials science
+  (F3) Physics
+  (F4) Archaeology as a physical science
+  (F5) Astronomy
+  (F6) Geology
+  (F7) Oceanography
+  (F8) Geography studies as a science
+  (F9) Environmental science & other physical sciences
+  (FZ) Balanced combination
+  Mathematical Science
+  (G1) Mathematics
+  (G4) Statistics
+  (G9) Other mathematical sciences
+  (GZ) Balanced combination
+  Computer Science
+  (G5) Computing science
+  Engineering & Technology
+  (H1) General engineering
+  (H2) Civil engineering
+  (H3) Mechanical engineering
+  (H4) Aeronautical engineering
+  (H5) Electrical engineering
+  (H6) Electronic engineering
+  (H7) Production engineering
+  (H8) Chemical engineering
+  (H9) Other engineering
+  (HZ) Balanced combinations
+  (J1) Minerals technology
+  (J2) Metallurgy
+  (J3) Ceramics & glasses
+  (J4) Polymers & textiles
+  (J5) Other materials technology
+  (J6) Maritime technology
+  (J8) Biotechnology
+  (J9) Other technologies
+  Architecture, Building & Planning
+  (K1) Architecture
+  (K2) Building
+  (K3) Environmental technologies
+  (K4) Town & country planning
+  (K9) Other architectural studies
+  (KZ) Balanced combination
+  Social, Economic & Political Studies
+  (L1) Economics
+  (L3) Sociology
+  (L4) Social policy & administration
+  (L5) Social work
+  (L6) Anthropology
+  (L7) Psychology (without significant element of biological science)
+  (L8) Geography (unless solely as a physical science)
+  (LZ) Balanced combination
+  (M1) Politics
+  (M9) Other social studies
+  Law
+  (M3) Law
+  Business & Administrative Studies
+  (N1) Business & management studies
+  (N2) Operational research
+  (N3) Financial management
+  (N4) Accountancy
+  (N5) Marketing & market research
+  (N6) Industrial relations
+  (N7) Catering & institutional management
+  (N8) Land & property management
+  (N9) Transport, other business & administrative studies
+  (NZ) Balanced combination
+  Librarianship & Information Science
+  (P1) Librarianship
+  (P2) Information science
+  (P3) Communication studies
+  (P4) Media studies
+  (P5) Publishing
+  (P6) Journalism
+  (PZ) Balanced combination
+  Languages
+  (Q1) Linguistics
+  (Q2) Comparative literature
+  (Q3) English
+  (Q4) American studies
+  (Q5) Celtic languages, literature & culture
+  (Q6) Latin language & literature
+  (Q7) Ancient Greek language & literature
+  (Q8) Classics
+  (Q9) Other ancient languages & related studies
+  (QZ) Balanced combination
+  (R1) French language, literature & culture
+  (R2) German language, literature & culture
+  (R3) Italian language, literature & culture
+  (R4) Spanish language, literature & culture
+  (R5) Portuguese language, literature & culture
+  (R6) Latin American languages, literature & culture
+  (R7) Scandinavian languages, literature & culture
+  (R8) Russian languages, literature & culture
+  (T1) Slavonic & East European languages, literature & culture
+  (T2) Other European languages, literature & culture
+  (T3) Chinese languages, literature & culture
+  (T4) Japanese languages, literature & culture
+  (T5) Other Asian languages, literature & culture
+  (T6) Modern Middle Eastern languages, literature & culture
+  (T7) African languages, literature & culture
+  (T8) Other language studies
+  (T9) Other or unspecified modern languages
+  Humanities
+  (V1) History
+  (V3) Economic & social history
+  (V4) History of art
+  (V5) History & philosophy of science
+  (V6) Archaeology
+  (V7) Philosophy
+  (V8) Theology & religious studies
+  (V9) Other humanities
+  (VZ) Balanced combination
+  Creative Arts & Design
+  (W1) Fine art
+  (W2) Design studies
+  (W3) Music
+  (W4) Drama
+  (W5) Cinematics
+  (W6) Crafts
+  (W8) Beauty & hairdressing
+  (W9) Art & design other
+  (WZ) Balanced combinations
+  Education
+  (X1) Teacher training
+  (X2) Physical education
+  (X3) Academic studies in education
+  (X4) Techniques in teaching children
+  (X5) Techniques in teaching adults
+  (X6) Education for those with special needs
+  (X7) Technology in education
+  (X8) Management & organisation of education
+  (X9) Other topics in education
+  (XZ) Balanced combination
+  Combined
+  (Y1) Combined or general science
+  (Y2) Combined or general social science
+  (Y3) Combined or general arts
+  (Y4) Other combined or general courses/modular courses
+  (Y5) Combined general & leisure courses not elsewhere specified
+  (Y6) Research methods
+  (YZ) Balanced combinations across different subject areas
+}}
