@@ -10,7 +10,7 @@ applicationPage: schemePreferences
   <h1 class="heading-xlarge">{{ pageTitle }}</h1>
 </div>
 
-<div class="text">
+<section class="text">
   <ul class="schemes-list">
     <li class="scheme-container">
       <span class="selected-preference invisible">N/A</span>
@@ -125,7 +125,8 @@ applicationPage: schemePreferences
       <span class="alwayshidden" data-scheme-req>2:2 degree in any subject</span>
     </li>
   </ul>
-</div>
+  &nbsp;
+</section>
 
 <section id="selectedPreferences">
   <h2 class="heading-medium">Your chosen schemes</h2>
@@ -203,7 +204,7 @@ applicationPage: schemePreferences
         }
         var arrayPositionNow = $.inArray(thisSchemeID, schemePrefArray);
 
-        $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin grid-wrapper" data-scheme-id="' + thisSchemeID + '"><div class="grid grid grid-1-4"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span></div><div class="grid grid-3-4"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span>' + specialEligibility + '</div>');
+        $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin scheme-prefcontainer" data-scheme-id="' + thisSchemeID + '"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span><div class="width-all-1-1"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span>' + specialEligibility + '</div>');
 
         $this.closest('.scheme-container').addClass('selected-scheme').find('.selected-preference').text(preferencesAs123[arrayPositionNow]).removeClass('invisible');
 
