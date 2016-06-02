@@ -240,10 +240,43 @@
           <div class="panel-indent">
             <p>You can have up to 5 preferences in total.</p>
           </div>
+          <div data-scheme-placeholder>
+            <div class="scheme-warning text">
+              <p>Your schemes will appear here as you select them from the list.</p>
+            </div>
+          </div>
           <ol id="selectedPrefList" class="list-text">
             <li></li>
           </ol>
           &nbsp;
+        </section>
+        <!--
+<section>
+  <h2 class="heading-medium">Eligibility</h2>
+  <div class="text panel-indent">
+    <p>Before you apply, make sure you're <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes" target="_blank" rel="external">eligible</a> for the scheme(s) that you've selected.</p>
+  </div>
+  <div class="form-group">
+    <label for="accept-eligible" class="block-label">
+      <input type="checkbox" id="accept-eligible"> I confirm that I'm eligible to apply
+    </label>
+  </div>
+</section> -->
+        <section class="text clearfix">
+          <h2 class="heading-medium">Are you eligible for your chosen schemes?</h2>
+          <p>Make sure you're <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes"
+            target="_blank" rel="external">eligible</a> for your chosen schemes.</p>
+          <fieldset>
+            <legend class="form-label visuallyhidden">Are you eligible for your chosen schemes?</legend>
+            <div class="form-group form-group-compound">
+              <label for="eligible-yes" class="block-label">
+                <input name="eligible" type="radio" id="eligible-yes">Yes
+              </label>
+              <label for="eligible-no" class="block-label">
+                <input name="eligible" type="radio" id="eligible-no">No
+              </label>
+            </div>
+          </fieldset>
         </section>
         <section class="text clearfix">
           <h2 class="heading-medium">Are you open to alternative schemes?</h2>
@@ -261,20 +294,7 @@
             </div>
           </fieldset>
         </section>
-        <section>
-          <h2 class="heading-medium">Eligibility</h2>
-          <div class="text panel-indent">
-            <p>Before you apply, make sure you're <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes"
-              target="_blank" rel="external">eligible</a> for the scheme(s) that
-              you've selected.</p>
-          </div>
-          <div class="form-group">
-            <label for="accept-eligible" class="block-label">
-              <input type="checkbox" id="accept-eligible"> I confirm that I'm eligible to apply
-            </label>
-          </div>
-          <a href="assistance.html" id="schemeSaveBtn" class="button">Save and continue</a>
-        </section>
+        <a href="assistance.html" id="schemeSaveBtn" class="button">Save and continue</a>
         <script>
         $(function()
         {
@@ -351,6 +371,16 @@
               $('input[data-schemename]:not(:checked)').attr(
                 'disabled', false).closest('.block-label').removeClass(
                 'disabled');
+            }
+            if ($('input[data-schemename]:checked').length > 0)
+            {
+              $('[data-scheme-placeholder]').addClass(
+                'toggle-content');
+            }
+            else
+            {
+              $('[data-scheme-placeholder]').removeClass(
+                'toggle-content');
             }
           });
         });
