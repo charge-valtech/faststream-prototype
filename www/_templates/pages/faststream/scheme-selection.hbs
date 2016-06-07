@@ -10,8 +10,8 @@ applicationPage: schemePreferences
   <h1 class="heading-xlarge">{{ pageTitle }}</h1>
 </div>
 
-<div class="grid-wrapper">
-  <section class="grid grid-2-3">
+<section class="grid-wrapper scheme-wrapper">
+  <div class="grid grid-2-3">
     <div class="inner-block-padr">
       <ul class="schemes-list">
         <li class="scheme-container">
@@ -128,14 +128,14 @@ applicationPage: schemePreferences
         </li>
       </ul>
     </div>
-    &nbsp;
-  </section>
-  <div class="grid grid-1-3">
+  </div>
+  <!-- <div class="grid grid-1-3 scheme-info-container">
+    <div id="sticky-anchor"></div>
     <div class="scheme-info-panel">
       <p class="bold-small">Choose your <span id="chooseNextPreference">1st preference</span></p>
     </div>
-  </div>
-</div>
+  </div> -->
+</section>
 
 <section id="selectedPreferences">
   <h2 class="heading-medium">Your chosen schemes</h2>
@@ -170,10 +170,10 @@ applicationPage: schemePreferences
 </section>
 
 <section class="text clearfix">
-  <h2 class="heading-medium">Are you open to alternative schemes?</h2>
-  <p>If your application is unsuccessful for your preferred schemes, we may suggest alternative schemes on the Fast Stream.</p>
+  <h2 class="heading-medium">Would you consider other schemes?</h2>
+  <p>If your application is unsuccessful for your chosen schemes, we may suggest other schemes on the Fast Stream.</p>
   <fieldset>
-    <legend class="form-label visuallyhidden">Are you open to alternative schemes?</legend>
+    <legend class="form-label visuallyhidden">Would you consider other schemes?</legend>
     <div class="form-group form-group-compound">
       <label for="alternatives-yes" class="block-label">
         <input name="alternatives" type="radio" id="alternatives-yes">Yes
@@ -209,7 +209,8 @@ applicationPage: schemePreferences
           isSpecial = $this.closest('.scheme-container').find('[data-spec-scheme]').length,
           specialEligibility = isSpecial == 0 ? '<p class="font-xsmall no-btm-margin">Requires at least a ' + schemeReq + '</p>' : '<div class="scheme-warning text"><p class="font-xsmall">Requires at least a ' + schemeReq + '</p></div>',
           arrayPosition = $.inArray(thisSchemeID, schemePrefArray),
-          emptyPosition = $.inArray('Empty', schemePrefArray);
+          emptyPosition = $.inArray('Empty', schemePrefArray),
+          nextPreference = schemePrefArray.length + 1;
 
 
       if(arrayPosition >= 0) {
@@ -217,13 +218,17 @@ applicationPage: schemePreferences
       } else if($this.is(':checked')) {
         if(emptyPosition < 0) {
           schemePrefArray.push(thisSchemeID);
+          // $('#chooseNextPreference').text(preferencesAsText[nextPreference]);
         } else {
           schemePrefArray.splice(emptyPosition, 1, thisSchemeID);
+          // $('#chooseNextPreference').text(preferencesAsText[emptyPosition]);
         }
         var arrayPositionNow = $.inArray(thisSchemeID, schemePrefArray);
 
+        // console.log(nextPreference);
+
         if(isCivilServant === true) {
-          $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin scheme-prefcontainer" data-scheme-id="' + thisSchemeID + '"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span><div class="width-all-1-1"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span><p>You\'re eligibile as a current civil servant</p></div>');
+          $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin scheme-prefcontainer" data-scheme-id="' + thisSchemeID + '"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span><div class="width-all-1-1"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span><p>You\'re eligible as a current civil servant</p></div>');
         } else {
           $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin scheme-prefcontainer" data-scheme-id="' + thisSchemeID + '"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span><div class="width-all-1-1"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span>' + specialEligibility + '</div>');
         }
@@ -255,6 +260,33 @@ applicationPage: schemePreferences
 
 
     });
+
+    // function sticky_relocate() {
+    //   if($('.global-header__title').css('font-size') !== '16px') {
+    //     var window_top = $(window).scrollTop(),
+    //       div_top = $('#sticky-anchor').offset().top,
+    //       li_top = $('.schemes-list li:last-child .block-label').offset().top,
+    //       li_bottom = li_top + $('.schemes-list li:last-child .block-label').outerHeight(),
+    //       el_height = $('.scheme-info-panel').outerHeight(),
+    //       bottomThreshold = window_top + el_height + 5;
+
+    //     if (window_top > div_top) {
+    //       $('.scheme-info-panel').addClass('fixed-panel');
+    //       $('#sticky-anchor').height(el_height);
+    //       if(li_bottom <= bottomThreshold) {
+    //         $('.scheme-info-panel').removeClass('fixed-panel').addClass('bottom-panel').css('bottom', '12px');
+    //       } else {
+    //         $('.scheme-info-panel').removeClass('bottom-panel').addClass('fixed-panel').removeAttr('style');
+    //       }
+    //     } else {
+    //       $('.scheme-info-panel').removeClass('fixed-panel');
+    //       $('#sticky-anchor').height(0);
+    //     }
+    //   }
+    // }
+
+    // $(window).scroll(sticky_relocate);
+    // sticky_relocate();
 
   });
 </script>

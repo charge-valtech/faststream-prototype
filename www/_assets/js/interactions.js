@@ -95,7 +95,7 @@ $(function() {
   $('.block-label').on('click', 'input[type=radio], input[type=checkbox]', function() {
     var $this   = $(this),
         $target = $this.parent().attr('data-target'),
-        $siblingTarget = $this.parent().siblings().attr('data-target'),
+        $siblingTarget = $this.closest('.form-group').find('.block-label').not($this.parent()).attr('data-target'),
         $disTarget = $this.parent().attr('data-distarget'),
         $theTargetControl = $('#' + $disTarget);
 

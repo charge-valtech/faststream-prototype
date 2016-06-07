@@ -44,8 +44,10 @@ $(function() {
     $.jStorage.set('firstName', $('#first-name').val());
     $.jStorage.set('lastName', $('#last-name').val());
     $.jStorage.set('emailAddress', $('#email-input').val());
-    if($('#civilservant-yes').is(':checked')) {
+    if($('#civilservant-current').is(':checked')) {
       $.jStorage.set('civilServant', true);
+    } else {
+      $.jStorage.set('civilServant', false);
     }
 
   });

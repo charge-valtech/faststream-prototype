@@ -178,54 +178,52 @@
         </label>
       </div>
     </fieldset>
-
-    <div class="text">
-      <h2 class="heading-medium">Civil servant applicants</h2>
-
-      <p>If you're currently a civil servant, or have previously worked for the Civil Service, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant" rel="external" target="_blank">conditions that apply</a> (this includes applicants on the Fast Track).</p>
-    </div>
-
-    <fieldset>
-      <legend class="form-label">Are you currently a civil servant?</legend>
-      <div class="form-group">
-        <label for="civilservant-yes" class="block-label">
-          <input name="civilservant" type="radio" id="civilservant-yes">Yes
-        </label>
-        <label for="civilservant-no" class="block-label">
-          <input name="civilservant" type="radio" id="civilservant-no">No
-        </label>
-      </div>
-    </fieldset>
-
   </section>
 
   <section class="section-border clearfix">
-    <div class="text">
-      <h2 class="heading-large">Fast pass</h2>
-      <p>If you've completed the <a rel="external" target="_blank" href="https://www.gov.uk/guidance/civil-service-fast-stream-summer-diversity-internship-programme">Summer Diversity Internship Programme (SDIP)</a> you won't be asked to do the online assessments again. You'll need to have a valid Fast pass certificate in order to do this.</p>
-    </div>
+    <h2 class="heading-large">Civil Service</h2>
     <fieldset>
-      <legend class="form-label">Do you have a Fast pass?</legend>
-      <div class="form-group inline">
-        <label data-target="fastpass-panel" for="fastpass-yes" class="block-label">
-          <input name="fastpass" type="radio" id="fastpass-yes" aria-controls="fastpass-panel" aria-expanded="false">Yes
-        </label>
-        <label for="fastpass-no" class="block-label">
-          <input name="fastpass" type="radio" id="fastpass-no">No
-        </label>
+      <legend class="form-label">Have you worked with the Civil Service?</legend>
+      <div class="form-group">
+        <div>
+          <label data-target="civilservants-panel" for="civilservants-current" class="block-label">
+            <input name="civilservants" type="radio" id="civilservants-current" aria-controls="civilservants-panel" aria-expanded="false">Yes, I'm currently a civil servant
+          </label>
+        </div>
+        <div>
+          <label data-target="sdip-panel" for="civilservants-sdip" class="block-label">
+            <input name="civilservants" type="radio" id="civilservants-sdip" aria-controls="sdip-panel" aria-expanded="false">Yes, I've done the Summer Diversity Internship Programme (SDIP)
+          </label>
+        </div>
+        <div>
+          <label for="civilservants-no" class="block-label">
+            <input name="civilservants" type="radio" id="civilservants-no">No
+          </label>
+        </div>
       </div>
 
-      <div id="fastpass-panel" class="toggle-content" aria-hidden="true">
-        <div class="form-group">
-          <label for="fastpass-number" class="form-label">Enter your certificate number</label>
-          <input type="text" class="form-control" id="fastpass-number">
-        </div>
+      <div id="civilservants-panel" class="toggle-content" aria-hidden="true">
+        <h3 class="heading-medium">Current civil servants</h3>
         <div class="panel-indent text">
-          <p>You can find this at the top of the certificate you received on completion of SDIP.</p>
+          <p>If you're currently a civil servant, or have previously worked for the Civil Service, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant" rel="external" target="_blank">conditions that apply</a> (this includes applicants on the Fast Track).</p>
         </div>
       </div>
+
+      <div id="sdip-panel" class="toggle-content" aria-hidden="true">
+        <h3 class="heading-medium">Fast pass</h3>
+        <div class="panel-indent text">
+          <p>If you've completed the <a rel="external" target="_blank" href="https://www.gov.uk/guidance/civil-service-fast-stream-summer-diversity-internship-programme">Summer Diversity Internship Programme (SDIP)</a> you won't be asked to do the online assessments again.</p>
+        </div>
+        <div class="form-group">
+          <label for="fastpass-number" class="form-label">Enter your certificate number</label>
+          <span class="form-hint text">You can find this at the top of the certificate</span>
+          <input type="text" class="form-control" id="fastpass-number">
+        </div>
+      </div>
+
     </fieldset>
   </section>
+
 
   <section>
     <h2 class="heading-large">Terms and conditions</h2>
