@@ -44,6 +44,10 @@ $(function() {
     $.jStorage.set('firstName', $('#first-name').val());
     $.jStorage.set('lastName', $('#last-name').val());
     $.jStorage.set('emailAddress', $('#email-input').val());
+    if($('#civilservant-yes').is(':checked')) {
+      $.jStorage.set('civilServant', true);
+    }
+
   });
 
   if($('#personalDetailsHeading').length && storedFirstName != undefined) {

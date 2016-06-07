@@ -62,13 +62,12 @@ pageTitle: Create your account
       <li>I have a <a href="#" rel="external">relevant degree</a> or qualify as a current civil servant</li>
       <li>I'm eligible according to the <a href="https://www.gov.uk/government/publications/nationality-rules" target="_blank" rel="external">Civil Service nationality rules</a></li>
       <li>I'm available to start work in January 2017</li>
-      <li>If I'm currently a civil servant, or have previously worked for the Civil Service, I'm aware of the <a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-who-can-apply#conditions-for-existing-civil-servants" rel="external" target="_blank">conditions that apply</a></li>
       <li>I'm aware that some schemes have <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes" rel="external" target="_blank">additional eligibility</a> requirements</li>
     </ul>
 
     <fieldset>
       <legend class="form-label">Are you eligible to apply?</legend>
-      <div class="form-group form-group-compound">
+      <div class="form-group">
         <label for="eligible-yes" class="block-label">
           <input name="eligible" type="radio" id="eligible-yes">Yes
         </label>
@@ -78,6 +77,52 @@ pageTitle: Create your account
       </div>
     </fieldset>
 
+    <div class="text">
+      <h2 class="heading-medium">Civil servant applicants</h2>
+
+      <p>If you're currently a civil servant, or have previously worked for the Civil Service, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant" rel="external" target="_blank">conditions that apply</a> (this includes applicants on the Fast Track).</p>
+    </div>
+
+    <fieldset>
+      <legend class="form-label">Are you currently a civil servant?</legend>
+      <div class="form-group">
+        <label for="civilservant-yes" class="block-label">
+          <input name="civilservant" type="radio" id="civilservant-yes">Yes
+        </label>
+        <label for="civilservant-no" class="block-label">
+          <input name="civilservant" type="radio" id="civilservant-no">No
+        </label>
+      </div>
+    </fieldset>
+
+  </section>
+
+  <section class="section-border clearfix">
+    <div class="text">
+      <h2 class="heading-large">Fast pass</h2>
+      <p>If you've completed the <a rel="external" target="_blank" href="https://www.gov.uk/guidance/civil-service-fast-stream-summer-diversity-internship-programme">Summer Diversity Internship Programme (SDIP)</a> you won't be asked to do the online assessments again. You'll need to have a valid Fast pass certificate in order to do this.</p>
+    </div>
+    <fieldset>
+      <legend class="form-label">Do you have a Fast pass?</legend>
+      <div class="form-group inline">
+        <label data-target="fastpass-panel" for="fastpass-yes" class="block-label">
+          <input name="fastpass" type="radio" id="fastpass-yes" aria-controls="fastpass-panel" aria-expanded="false">Yes
+        </label>
+        <label for="fastpass-no" class="block-label">
+          <input name="fastpass" type="radio" id="fastpass-no">No
+        </label>
+      </div>
+
+      <div id="fastpass-panel" class="toggle-content" aria-hidden="true">
+        <div class="form-group">
+          <label for="fastpass-number" class="form-label">Enter your certificate number</label>
+          <input type="text" class="form-control" id="fastpass-number">
+        </div>
+        <div class="panel-indent text">
+          <p>You can find this at the top of the certificate you received on completion of SDIP.</p>
+        </div>
+      </div>
+    </fieldset>
   </section>
 
   <section>
