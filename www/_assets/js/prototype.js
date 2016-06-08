@@ -44,10 +44,15 @@ $(function() {
     $.jStorage.set('firstName', $('#first-name').val());
     $.jStorage.set('lastName', $('#last-name').val());
     $.jStorage.set('emailAddress', $('#email-input').val());
-    if($('#civilservant-current').is(':checked')) {
+    if($('#civilservants-current').is(':checked')) {
       $.jStorage.set('civilServant', true);
     } else {
       $.jStorage.set('civilServant', false);
+    }
+    if($('#civilservants-sdip').is(':checked')) {
+      $.jStorage.set('doneSdip', true);
+    } else {
+      $.jStorage.set('doneSdip', false);
     }
 
   });
@@ -216,7 +221,8 @@ $(function() {
   if($('#nameOnHome').length) {
     var thePage = gup('Page'),
         prevItems = $('#' + thePage).prevAll(),
-        theHref = $('#' + thePage).attr('data-href')
+        theHref = $('#' + thePage).attr('data-href'),
+        doneSdip = $.jStorage.get('doneSdip');
 
     prevItems.each(function(index) {
       var prevHref = $(this).attr('data-href');
@@ -226,6 +232,14 @@ $(function() {
 
     $('#' + thePage).contents().eq(1).wrap('<a href="' + theHref + '" />');
     $('#startAppBtn').removeClass('button').text('Continue your application').attr('href', theHref);
+
+    if(doneSdip === true) {
+      $('#hideIfSdip').addClass('toggle-content');
+      $('#showIfSdip').removeClass('toggle-content');
+    } else {
+      $('#showIfSdip').addClass('toggle-content');
+      $('#hideIfSdip').removeClass('toggle-content');
+    }
   }
 
   //-- Find address mock behaviour

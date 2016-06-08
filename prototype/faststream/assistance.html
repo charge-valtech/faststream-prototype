@@ -120,10 +120,6 @@
         </div>
         <section class="section-border">
           <p class="form-label">Will you need adjustments or support for your assessment?</p>
-          <p class="form-hint text">
-            If you need extra support with your assessment we can offer reasonable adjustments,
-            eg extra time.
-          </p>
           <div class="form-group form-group-compound inline">
             <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
               <input name="adjustment" type="radio" id="adjustment-yes" aria-controls="adjustment-panel"
@@ -133,19 +129,19 @@
               <input name="adjustment" type="radio" id="adjustment-no">No
             </label>
           </div>
+          <div class="panel-indent">
+            <p>Some examples of adjustments are</p>
+            <ul>
+              <li>time extension, eg 25% or 30% </li>
+              <li>coloured paper</li>
+              <li>braille test paper</li>
+              <li>room alone</li>
+              <li>rest breaks</li>
+              <li>reader/assistant</li>
+              <li>stand up and move around</li>
+            </ul>
+          </div>
           <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
-            <div class="form-group">
-              <p class="form-hint">Some examples of adjustments are</p>
-              <ul class="form-hint">
-                <li>time extension, eg 25% or 30% </li>
-                <li>coloured paper</li>
-                <li>braille test paper</li>
-                <li>room alone</li>
-                <li>rest breaks</li>
-                <li>reader/assistant</li>
-                <li>stand up and move around</li>
-              </ul>
-            </div>
             <div class="form-group">
               <label id="adj-other" class="form-label">What adjustments will you need?</label>
               <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
@@ -162,19 +158,7 @@
           </div>
         </section>
         <section>
-          <div class="text">
-            <h2 class="heading-large">Guaranteed interview scheme</h2>
-            <div class="panel-indent">
-              <img src="../_assets/img/logo-ticks-small-2x.png" width="38" alt="Two ticks - Positive about disabled people logo"
-              class="image-left">
-              <p>If you have a registered disability you may be eligible for the
-                <a
-                href="https://www.gov.uk/government/publications/civil-service-fast-track-apprenticeship-promoting-diversity-and-inclusion/civil-service-fast-track-apprenticeship-promoting-diversity-and-inclusion#guaranteed-interview-scheme"
-                target="_blank" rel="external">guaranteed interview scheme</a>.</p>
-              <p>If you choose to apply, we may ask you for supporting documents,
-                if available, at a later stage eg medical documents.</p>
-            </div>
-          </div>
+          <h2 class="heading-large">Guaranteed interview scheme</h2>
           <p class="form-label">Would you like to apply under the guaranteed interview scheme?</p>
           <div class="form-group form-group-compound inline">
             <label for="gis-yes" class="block-label">
@@ -183,6 +167,16 @@
             <label for="gis-no" class="block-label">
               <input name="gis" type="radio" id="gis-no">No
             </label>
+          </div>
+          <div class="panel-indent text">
+            <img src="../_assets/img/logo-ticks-small-2x.png" width="38" alt="Two ticks - Positive about disabled people logo"
+            class="image-left">
+            <p>If you have a registered disability you may be eligible for the
+              <a
+              href="https://www.gov.uk/government/publications/civil-service-fast-track-apprenticeship-promoting-diversity-and-inclusion/civil-service-fast-track-apprenticeship-promoting-diversity-and-inclusion#guaranteed-interview-scheme"
+              target="_blank" rel="external">guaranteed interview scheme</a>.</p>
+            <p>If you choose to apply, we may ask you for supporting documents, if
+              available, at a later stage eg medical documents.</p>
           </div>
         </section>
         <div class="form-group">

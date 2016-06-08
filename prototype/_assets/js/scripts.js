@@ -103,7 +103,7 @@ $(function() {
     $('input:checked').parent().addClass('selected');
 
     if($target == undefined) {
-      $this.closest('.form-group').next('.toggle-content').hide().attr('aria-hidden', true);
+      $this.closest('.form-group').siblings('.toggle-content').hide().attr('aria-hidden', true);
       $this.closest('.form-group').find('[aria-expanded]').attr('aria-expanded', false);
     } else {
       $('#' + $target).show();
