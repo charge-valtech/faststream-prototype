@@ -301,6 +301,11 @@ $(function() {
           var keywords = acData.term.split(' ').join('|');
           me.html(me.text().replace(new RegExp("(" + keywords + ")", "gi"), '<b>$1</b>'));
        });
+    },
+    select: function(e, ui) {
+      $('#universityName').val(ui.item.label);
     }
+  }).on('keydown', function() {
+    $('#universityName').val('');
   });
 });

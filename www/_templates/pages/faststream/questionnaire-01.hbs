@@ -13,9 +13,33 @@ applicationPage: diversityQuestions
 {{> diversity-panel }}
 
 <section>
-  <fieldset>
+  <fieldset class="form-group">
+    <legend class="form-label">Do you consider yourself to have a disability?</legend>
+    <div class="form-group no-btm-margin">
+      <label data-target="support-panel" for="support-yes" class="block-label">
+        <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
+      </label>
+      <label for="support-no" class="block-label">
+        <input name="support" type="radio" id="support-no">No
+      </label>
+      <label for="support-prefer" class="block-label">
+        <input name="support" type="radio" id="support-prefer">I don't know/prefer not to say
+      </label>
+    </div>
+    <div id="support-panel" class="toggle-content" aria-hidden="true">
+      <div class="form-group">
+        <label id="question4" class="form-hint">Provide more information (optional)</label>
+        <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+      </div>
+    </div>
+
+  </fieldset>
+</section>
+
+<section>
+  <fieldset class="form-group">
     <legend class="form-label">What is your gender identity?</legend>
-    <div class="form-group">
+    <div class="form-group no-btm-margin">
       <div>
         <label for="gender-male" class="block-label">
           <input name="gender" type="radio" id="gender-male">Male
@@ -27,13 +51,13 @@ applicationPage: diversityQuestions
         </label>
       </div>
       <div>
-        <label for="gender-other" class="block-label">
-          <input name="gender" type="radio" id="gender-other">Other
+        <label data-target="genderDescribe" for="gender-other" class="block-label">
+          <input name="gender" type="radio" id="gender-other" aria-controls="genderDescribe">Other
         </label>
       </div>
       <div>
         <label for="gender-dunno" class="block-label">
-          <input name="gender" type="radio" id="gender-dunno" class="optionTrigger" data-optiontrigger="genderDescribe">I don't know/prefer not to say
+          <input name="gender" type="radio" id="gender-dunno">I don't know/prefer not to say
         </label>
       </div>
     </div>
@@ -46,9 +70,9 @@ applicationPage: diversityQuestions
 </section>
 
 <section>
-  <fieldset>
+  <fieldset class="form-group">
     <legend class="form-label">What is your sexual orientation?</legend>
-    <div class="form-group">
+    <div class="form-group no-btm-margin">
       <div>
         <label for="sexual-hetero" class="block-label">
           <input name="sexual" type="radio" id="sexual-hetero">Heterosexual/straight
@@ -65,13 +89,13 @@ applicationPage: diversityQuestions
         </label>
       </div>
       <div>
-        <label for="sexual-other" class="block-label">
-          <input name="sexual" type="radio" id="sexual-other">Other
+        <label data-target="sexualDescribe" for="sexual-other" class="block-label">
+          <input name="sexual" type="radio" id="sexual-other" aria-controls="sexualDescribe">Other
         </label>
       </div>
       <div>
         <label for="sexual-dunno" class="block-label">
-          <input name="sexual" type="radio" id="sexual-dunno" class="optionTrigger" data-optiontrigger="sexualDescribe">I don't know/prefer not to say
+          <input name="sexual" type="radio" id="sexual-dunno">I don't know/prefer not to say
         </label>
       </div>
     </div>

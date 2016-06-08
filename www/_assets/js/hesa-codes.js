@@ -204,9 +204,14 @@ $(function() {
       {category: "Combined", subcode: "YZ", label: "Balanced combinations across different subject areas"}
     ];
 
-    $( "#subjectCode" ).catcomplete({
+    $( "#subjectName" ).catcomplete({
       delay: 0,
-      source: subjects
+      source: subjects,
+      select: function( event, ui ) {
+        $('#subjectCode').val(ui.item.subcode);
+      }
+    }).on('keydown', function() {
+      $('#subjectCode').val('');
     });
 
 });
