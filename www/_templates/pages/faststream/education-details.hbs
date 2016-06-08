@@ -1,0 +1,54 @@
+---
+pageTitle: Your qualifications
+applicationPart: 2
+applicationPage: personalDetails
+---
+
+{{> progress-indicator }}
+
+<div class="hgroup">
+  <h1 class="heading-xlarge">{{ pageTitle }}</h1>
+</div>
+
+<section>
+  <div class="form-group">
+    <label class="form-label text" for="universityAttended">What is the name of the university or college you received your degree from?</label>
+    <span class="form-hint text">If you haven't received your degree yet, enter the name of your current university or college</span>
+    <input type="text" id="universityAttended" class="form-control">
+  </div>
+</section>
+
+
+<section>
+  <fieldset>
+    <legend class="form-label">What class of degree did you receive?</legend>
+    <div class="form-group">
+      <div>
+        <label for="degree-22" class="block-label">
+          <input name="degree" type="radio" id="degree-22">2:2 (Second-class honours, lower division)
+        </label>
+      </div>
+      <div>
+        <label for="degree-21" class="block-label">
+          <input name="degree" type="radio" id="degree-21">2:1 (Second-class honours, upper division)
+        </label>
+      </div>
+      <div>
+        <label for="degree-first" class="block-label">
+          <input name="degree" type="radio" id="degree-first">1st (First-class honours)
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</section>
+
+<div>
+  <a href="scheme-selection.html" class="button">Save and continue</a>
+</div>
+
+
+
+<script src="{{assets}}/js/vendor/jquery-ui-custom.js"></script>
+<script src="{{assets}}/js/universities.js"></script>
+
+
