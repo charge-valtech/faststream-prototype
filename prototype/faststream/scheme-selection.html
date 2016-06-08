@@ -297,6 +297,8 @@
         {
           var isCivilServant = $.jStorage.get('civilServant'),
             schemePrefArray = ['Empty'],
+            firstEmptyPosition = $.inArray('Empty', schemePrefArray),
+            arrayOfSelectedPrefs = [],
             preferencesAs123 = ['1st', '2nd', '3rd', '4th', '5th'],
             preferencesAsText = [
               '1st preference',
@@ -305,6 +307,7 @@
               '4th preference',
               '5th preference'
             ];
+          console.log(preferencesAsText[firstEmptyPosition]);
           $('[data-schemename]').on('change', function()
           {
             var $this = $(this),
@@ -320,8 +323,7 @@
               '<div class="scheme-warning text"><p class="font-xsmall">Requires at least a ' +
               schemeReq + '</p></div>',
               arrayPosition = $.inArray(thisSchemeID, schemePrefArray),
-              emptyPosition = $.inArray('Empty', schemePrefArray),
-              nextPreference = schemePrefArray.length + 1;
+              emptyPosition = $.inArray('Empty', schemePrefArray);
             if (arrayPosition >= 0)
             {
               //Do nothing
@@ -331,16 +333,13 @@
               if (emptyPosition < 0)
               {
                 schemePrefArray.push(thisSchemeID);
-                // $('#chooseNextPreference').text(preferencesAsText[nextPreference]);
               }
               else
               {
                 schemePrefArray.splice(emptyPosition, 1, thisSchemeID);
-                // $('#chooseNextPreference').text(preferencesAsText[emptyPosition]);
               }
               var arrayPositionNow = $.inArray(thisSchemeID,
                 schemePrefArray);
-              // console.log(nextPreference);
               if (isCivilServant === true)
               {
                 $('#selectedPrefList li').eq(arrayPositionNow).after(
@@ -366,6 +365,8 @@
                 'selected-scheme').find('.selected-preference').text(
                 preferencesAs123[arrayPositionNow]).removeClass(
                 'invisible');
+              arrayOfSelectedPrefs.push(preferencesAsText[
+                arrayPositionNow]);
             }
             if (!$this.is(':checked'))
             {
@@ -375,7 +376,13 @@
               $this.closest('.scheme-container').removeClass(
                 'selected-scheme').find('.selected-preference').text(
                 'N/A').addClass('invisible');
+              arrayOfSelectedPrefs.splice(arrayPosition, 1);
             }
+            // console.log(arrayOfSelectedPrefs);
+            // var nextPreference = $.grep(arrayOfSelectedPrefs, function(v) {
+            //     return v === "1st";
+            // });
+            // console.log(nextPreference);
             if ($('input[data-schemename]:checked').length == 5)
             {
               $('input[data-schemename]:not(:checked)').attr(
