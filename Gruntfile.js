@@ -6,7 +6,7 @@ module.exports = function(grunt) {
                 separator: ';'
             },
             dev: {
-                src: ['www/_assets/js/*.js', '!www/_assets/js/prototype.js', '!www/_assets/js/universities.js', '!www/_assets/js/region-selector.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
+                src: ['www/_assets/js/*.js', '!www/_assets/js/prototype.js', '!www/_assets/js/universities.js', '!www/_assets/js/hesa-codes.js', '!www/_assets/js/region-selector.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
                 dest: 'www/_assets/js/scripts.js'
             }
         },
@@ -108,6 +108,7 @@ module.exports = function(grunt) {
                 '_assets/js/vendor/**/*',
                 '_assets/js/scripts.js',
                 '_assets/js/universities.js',
+                '_assets/js/hesa-codes.js',
                 '_assets/js/gum/adapter.js',
                 '_assets/js/gum/main.js',
                 '_assets/js/region-selector.js',
