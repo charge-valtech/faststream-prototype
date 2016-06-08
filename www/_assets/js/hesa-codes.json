@@ -1,185 +1,220 @@
-{ "subjects": {
-    "category": "Medicine & Dentistry",
-    "catsubjects": [
-      "(A1) Pre-clinical medicine",
-      "(A2) Pre-clinical dentistry",
-      "(A3) Clinical medicine",
-      "(A4) Clinical dentistry",
-      "(AZ) Balanced combination"
-    ]
-
-  Subjects Allied to Medicine
-  (B1) Anatomy & Physiology
-  (B2) Pharmacology
-  (B3) Pharmacy
-  (B4) Nutrition
-  (B5) Ophthalmics
-  (B6) Audiology
-  (B7) Nursing
-  (B8) Medical technology
-  (B9) Other medical subjects
-  (BZ) Balanced combination
-  Biological Sciences
-  (C1) Biology
-  (C2) Botany
-  (C3) Zoology
-  (C4) Genetics
-  (C5) Microbiology
-  (C6) Molecular biology & biophysics
-  (C7) Biochemistry
-  (C8) Psychology (not solely as social science)
-  (C9) Other biological sciences
-  (CZ) Balanced combination
-  Veterinary Sciences
-  (D1) Veterinary sciences
-  Agriculture & Related Subjects
-  (D2) Agriculture
-  (D3) Forestry
-  (D4) Food science
-  (D8) Agricultural sciences
-  (D9) Other agricultural subjects
-  (DZ) Balanced combination
-  Physical Science
-  (F1) Chemistry
-  (F2) Materials science
-  (F3) Physics
-  (F4) Archaeology as a physical science
-  (F5) Astronomy
-  (F6) Geology
-  (F7) Oceanography
-  (F8) Geography studies as a science
-  (F9) Environmental science & other physical sciences
-  (FZ) Balanced combination
-  Mathematical Science
-  (G1) Mathematics
-  (G4) Statistics
-  (G9) Other mathematical sciences
-  (GZ) Balanced combination
-  Computer Science
-  (G5) Computing science
-  Engineering & Technology
-  (H1) General engineering
-  (H2) Civil engineering
-  (H3) Mechanical engineering
-  (H4) Aeronautical engineering
-  (H5) Electrical engineering
-  (H6) Electronic engineering
-  (H7) Production engineering
-  (H8) Chemical engineering
-  (H9) Other engineering
-  (HZ) Balanced combinations
-  (J1) Minerals technology
-  (J2) Metallurgy
-  (J3) Ceramics & glasses
-  (J4) Polymers & textiles
-  (J5) Other materials technology
-  (J6) Maritime technology
-  (J8) Biotechnology
-  (J9) Other technologies
-  Architecture, Building & Planning
-  (K1) Architecture
-  (K2) Building
-  (K3) Environmental technologies
-  (K4) Town & country planning
-  (K9) Other architectural studies
-  (KZ) Balanced combination
-  Social, Economic & Political Studies
-  (L1) Economics
-  (L3) Sociology
-  (L4) Social policy & administration
-  (L5) Social work
-  (L6) Anthropology
-  (L7) Psychology (without significant element of biological science)
-  (L8) Geography (unless solely as a physical science)
-  (LZ) Balanced combination
-  (M1) Politics
-  (M9) Other social studies
-  Law
-  (M3) Law
-  Business & Administrative Studies
-  (N1) Business & management studies
-  (N2) Operational research
-  (N3) Financial management
-  (N4) Accountancy
-  (N5) Marketing & market research
-  (N6) Industrial relations
-  (N7) Catering & institutional management
-  (N8) Land & property management
-  (N9) Transport, other business & administrative studies
-  (NZ) Balanced combination
-  Librarianship & Information Science
-  (P1) Librarianship
-  (P2) Information science
-  (P3) Communication studies
-  (P4) Media studies
-  (P5) Publishing
-  (P6) Journalism
-  (PZ) Balanced combination
-  Languages
-  (Q1) Linguistics
-  (Q2) Comparative literature
-  (Q3) English
-  (Q4) American studies
-  (Q5) Celtic languages, literature & culture
-  (Q6) Latin language & literature
-  (Q7) Ancient Greek language & literature
-  (Q8) Classics
-  (Q9) Other ancient languages & related studies
-  (QZ) Balanced combination
-  (R1) French language, literature & culture
-  (R2) German language, literature & culture
-  (R3) Italian language, literature & culture
-  (R4) Spanish language, literature & culture
-  (R5) Portuguese language, literature & culture
-  (R6) Latin American languages, literature & culture
-  (R7) Scandinavian languages, literature & culture
-  (R8) Russian languages, literature & culture
-  (T1) Slavonic & East European languages, literature & culture
-  (T2) Other European languages, literature & culture
-  (T3) Chinese languages, literature & culture
-  (T4) Japanese languages, literature & culture
-  (T5) Other Asian languages, literature & culture
-  (T6) Modern Middle Eastern languages, literature & culture
-  (T7) African languages, literature & culture
-  (T8) Other language studies
-  (T9) Other or unspecified modern languages
-  Humanities
-  (V1) History
-  (V3) Economic & social history
-  (V4) History of art
-  (V5) History & philosophy of science
-  (V6) Archaeology
-  (V7) Philosophy
-  (V8) Theology & religious studies
-  (V9) Other humanities
-  (VZ) Balanced combination
-  Creative Arts & Design
-  (W1) Fine art
-  (W2) Design studies
-  (W3) Music
-  (W4) Drama
-  (W5) Cinematics
-  (W6) Crafts
-  (W8) Beauty & hairdressing
-  (W9) Art & design other
-  (WZ) Balanced combinations
-  Education
-  (X1) Teacher training
-  (X2) Physical education
-  (X3) Academic studies in education
-  (X4) Techniques in teaching children
-  (X5) Techniques in teaching adults
-  (X6) Education for those with special needs
-  (X7) Technology in education
-  (X8) Management & organisation of education
-  (X9) Other topics in education
-  (XZ) Balanced combination
-  Combined
-  (Y1) Combined or general science
-  (Y2) Combined or general social science
-  (Y3) Combined or general arts
-  (Y4) Other combined or general courses/modular courses
-  (Y5) Combined general & leisure courses not elsewhere specified
-  (Y6) Research methods
-  (YZ) Balanced combinations across different subject areas
-}}
+{
+  "Medicine & Dentistry" :
+  [
+    {"subcode" : "A1", "subname" : "Pre-clinical medicine"},
+    {"subcode" : "A2", "subname" : "Pre-clinical dentistry"},
+    {"subcode" : "A3", "subname" : "Clinical medicine"},
+    {"subcode" : "A4", "subname" : "Clinical dentistry"},
+    {"subcode" : "AZ", "subname" : "Balanced combination"}
+  ],
+  "Subjects Allied to Medicine" :
+  [
+    {"subcode" : "B1", "subname" : "Anatomy & Physiology"},
+    {"subcode" : "B2", "subname" : "Pharmacology"},
+    {"subcode" : "B3", "subname" : "Pharmacy"},
+    {"subcode" : "B4", "subname" : "Nutrition"},
+    {"subcode" : "B5", "subname" : "Ophthalmics"},
+    {"subcode" : "B6", "subname" : "Audiology"},
+    {"subcode" : "B7", "subname" : "Nursing"},
+    {"subcode" : "B8", "subname" : "Medical technology"},
+    {"subcode" : "B9", "subname" : "Other medical subjects"},
+    {"subcode" : "BZ", "subname" : "Balanced combination"}
+  ],
+  "Biological Sciences" :
+  [
+    {"subcode" : "C1", "subname" : "Biology"},
+    {"subcode" : "C2", "subname" : "Botany"},
+    {"subcode" : "C3", "subname" : "Zoology"},
+    {"subcode" : "C4", "subname" : "Genetics"},
+    {"subcode" : "C5", "subname" : "Microbiology"},
+    {"subcode" : "C6", "subname" : "Molecular biology & biophysics"},
+    {"subcode" : "C7", "subname" : "Biochemistry"},
+    {"subcode" : "C8", "subname" : "Psychology (not solely as social science)"},
+    {"subcode" : "C9", "subname" : "Other biological sciences"},
+    {"subcode" : "CZ", "subname" : "Balanced combination"}
+  ],
+  "Veterinary Sciences" :
+  [
+    {"subcode" : "D1", "subname" : "Veterinary sciences"}
+  ],
+  "Agriculture & Related Subjects" :
+  [
+    {"subcode" : "D2", "subname" : "Agriculture"},
+    {"subcode" : "D3", "subname" : "Forestry"},
+    {"subcode" : "D4", "subname" : "Food science"},
+    {"subcode" : "D8", "subname" : "Agricultural sciences"},
+    {"subcode" : "D9", "subname" : "Other agricultural subjects"},
+    {"subcode" : "DZ", "subname" : "Balanced combination"}
+  ],
+  "Physical Science" :
+  [
+    {"subcode" : "F1", "subname" : "Chemistry"},
+    {"subcode" : "F2", "subname" : "Materials science"},
+    {"subcode" : "F3", "subname" : "Physics"},
+    {"subcode" : "F4", "subname" : "Archaeology as a physical science"},
+    {"subcode" : "F5", "subname" : "Astronomy"},
+    {"subcode" : "F6", "subname" : "Geology"},
+    {"subcode" : "F7", "subname" : "Oceanography"},
+    {"subcode" : "F8", "subname" : "Geography studies as a science"},
+    {"subcode" : "F9", "subname" : "Environmental science & other physical sciences"},
+    {"subcode" : "FZ", "subname" : "Balanced combination"}
+  ],
+  "Mathematical Science" :
+  [
+    {"subcode" : "G1", "subname" : "Mathematics"},
+    {"subcode" : "G4", "subname" : "Statistics"},
+    {"subcode" : "G9", "subname" : "Other mathematical sciences"},
+    {"subcode" : "GZ", "subname" : "Balanced combination"}
+  ],
+  "Computer Science" :
+  [
+    {"subcode" : "G5", "subname" : "Computing science"}
+  ],
+  "Engineering & Technology" :
+  [
+    {"subcode" : "H1", "subname" : "General engineering"},
+    {"subcode" : "H2", "subname" : "Civil engineering"},
+    {"subcode" : "H3", "subname" : "Mechanical engineering"},
+    {"subcode" : "H4", "subname" : "Aeronautical engineering"},
+    {"subcode" : "H5", "subname" : "Electrical engineering"},
+    {"subcode" : "H6", "subname" : "Electronic engineering"},
+    {"subcode" : "H7", "subname" : "Production engineering"},
+    {"subcode" : "H8", "subname" : "Chemical engineering"},
+    {"subcode" : "H9", "subname" : "Other engineering"},
+    {"subcode" : "HZ", "subname" : "Balanced combinations"},
+    {"subcode" : "J1", "subname" : "Minerals technology"},
+    {"subcode" : "J2", "subname" : "Metallurgy"},
+    {"subcode" : "J3", "subname" : "Ceramics & glasses"},
+    {"subcode" : "J4", "subname" : "Polymers & textiles"},
+    {"subcode" : "J5", "subname" : "Other materials technology"},
+    {"subcode" : "J6", "subname" : "Maritime technology"},
+    {"subcode" : "J8", "subname" : "Biotechnology"},
+    {"subcode" : "J9", "subname" : "Other technologies"}
+  ],
+  "Architecture, Building & Planning" :
+  [
+    {"subcode" : "K1", "subname" : "Architecture"},
+    {"subcode" : "K2", "subname" : "Building"},
+    {"subcode" : "K3", "subname" : "Environmental technologies"},
+    {"subcode" : "K4", "subname" : "Town & country planning"},
+    {"subcode" : "K9", "subname" : "Other architectural studies"},
+    {"subcode" : "KZ", "subname" : "Balanced combination"}
+  ],
+  "Social, Economic & Political Studies" :
+  [
+    {"subcode" : "L1", "subname" : "Economics"},
+    {"subcode" : "L3", "subname" : "Sociology"},
+    {"subcode" : "L4", "subname" : "Social policy & administration"},
+    {"subcode" : "L5", "subname" : "Social work"},
+    {"subcode" : "L6", "subname" : "Anthropology"},
+    {"subcode" : "L7", "subname" : "Psychology (without significant element of biological science)"},
+    {"subcode" : "L8", "subname" : "Geography (unless solely as a physical science)"},
+    {"subcode" : "LZ", "subname" : "Balanced combination"},
+    {"subcode" : "M1", "subname" : "Politics"},
+    {"subcode" : "M9", "subname" : "Other social studies"}
+  ],
+  "Law" :
+  [
+    {"subcode" : "M3", "subname" : "Law"}
+  ],
+  "Business & Administrative Studies" :
+  [
+    {"subcode" : "N1", "subname" : "Business & management studies"},
+    {"subcode" : "N2", "subname" : "Operational research"},
+    {"subcode" : "N3", "subname" : "Financial management"},
+    {"subcode" : "N4", "subname" : "Accountancy"},
+    {"subcode" : "N5", "subname" : "Marketing & market research"},
+    {"subcode" : "N6", "subname" : "Industrial relations"},
+    {"subcode" : "N7", "subname" : "Catering & institutional management"},
+    {"subcode" : "N8", "subname" : "Land & property management"},
+    {"subcode" : "N9", "subname" : "Transport, other business & administrative studies"},
+    {"subcode" : "NZ", "subname" : "Balanced combination"}
+  ],
+  "Librarianship & Information Science" :
+  [
+    {"subcode" : "P1", "subname" : "Librarianship"},
+    {"subcode" : "P2", "subname" : "Information science"},
+    {"subcode" : "P3", "subname" : "Communication studies"},
+    {"subcode" : "P4", "subname" : "Media studies"},
+    {"subcode" : "P5", "subname" : "Publishing"},
+    {"subcode" : "P6", "subname" : "Journalism"},
+    {"subcode" : "PZ", "subname" : "Balanced combination"}
+  ],
+  "Languages" :
+  [
+    {"subcode" : "Q1", "subname" : "Linguistics"},
+    {"subcode" : "Q2", "subname" : "Comparative literature"},
+    {"subcode" : "Q3", "subname" : "English"},
+    {"subcode" : "Q4", "subname" : "American studies"},
+    {"subcode" : "Q5", "subname" : "Celtic languages, literature & culture"},
+    {"subcode" : "Q6", "subname" : "Latin language & literature"},
+    {"subcode" : "Q7", "subname" : "Ancient Greek language & literature"},
+    {"subcode" : "Q8", "subname" : "Classics"},
+    {"subcode" : "Q9", "subname" : "Other ancient languages & related studies"},
+    {"subcode" : "QZ", "subname" : "Balanced combination"},
+    {"subcode" : "R1", "subname" : "French language, literature & culture"},
+    {"subcode" : "R2", "subname" : "German language, literature & culture"},
+    {"subcode" : "R3", "subname" : "Italian language, literature & culture"},
+    {"subcode" : "R4", "subname" : "Spanish language, literature & culture"},
+    {"subcode" : "R5", "subname" : "Portuguese language, literature & culture"},
+    {"subcode" : "R6", "subname" : "Latin American languages, literature & culture"},
+    {"subcode" : "R7", "subname" : "Scandinavian languages, literature & culture"},
+    {"subcode" : "R8", "subname" : "Russian languages, literature & culture"},
+    {"subcode" : "T1", "subname" : "Slavonic & East European languages, literature & culture"},
+    {"subcode" : "T2", "subname" : "Other European languages, literature & culture"},
+    {"subcode" : "T3", "subname" : "Chinese languages, literature & culture"},
+    {"subcode" : "T4", "subname" : "Japanese languages, literature & culture"},
+    {"subcode" : "T5", "subname" : "Other Asian languages, literature & culture"},
+    {"subcode" : "T6", "subname" : "Modern Middle Eastern languages, literature & culture"},
+    {"subcode" : "T7", "subname" : "African languages, literature & culture"},
+    {"subcode" : "T8", "subname" : "Other language studies"},
+    {"subcode" : "T9", "subname" : "Other or unspecified modern languages"}
+  ],
+  "Humanities" :
+  [
+    {"subcode" : "V1", "subname" : "History"},
+    {"subcode" : "V3", "subname" : "Economic & social history"},
+    {"subcode" : "V4", "subname" : "History of art"},
+    {"subcode" : "V5", "subname" : "History & philosophy of science"},
+    {"subcode" : "V6", "subname" : "Archaeology"},
+    {"subcode" : "V7", "subname" : "Philosophy"},
+    {"subcode" : "V8", "subname" : "Theology & religious studies"},
+    {"subcode" : "V9", "subname" : "Other humanities"},
+    {"subcode" : "VZ", "subname" : "Balanced combination"}
+  ],
+  "Creative Arts & Design" :
+  [
+    {"subcode" : "W1", "subname" : "Fine art"},
+    {"subcode" : "W2", "subname" : "Design studies"},
+    {"subcode" : "W3", "subname" : "Music"},
+    {"subcode" : "W4", "subname" : "Drama"},
+    {"subcode" : "W5", "subname" : "Cinematics"},
+    {"subcode" : "W6", "subname" : "Crafts"},
+    {"subcode" : "W8", "subname" : "Beauty & hairdressing"},
+    {"subcode" : "W9", "subname" : "Art & design other"},
+    {"subcode" : "WZ", "subname" : "Balanced combinations"}
+  ],
+  "Education" :
+  [
+    {"subcode" : "X1", "subname" : "Teacher training"},
+    {"subcode" : "X2", "subname" : "Physical education"},
+    {"subcode" : "X3", "subname" : "Academic studies in education"},
+    {"subcode" : "X4", "subname" : "Techniques in teaching children"},
+    {"subcode" : "X5", "subname" : "Techniques in teaching adults"},
+    {"subcode" : "X6", "subname" : "Education for those with special needs"},
+    {"subcode" : "X7", "subname" : "Technology in education"},
+    {"subcode" : "X8", "subname" : "Management & organisation of education"},
+    {"subcode" : "X9", "subname" : "Other topics in education"},
+    {"subcode" : "XZ", "subname" : "Balanced combination"}
+  ],
+  "Combined" :
+  [
+    {"subcode" : "Y1", "subname" : "Combined or general science"},
+    {"subcode" : "Y2", "subname" : "Combined or general social science"},
+    {"subcode" : "Y3", "subname" : "Combined or general arts"},
+    {"subcode" : "Y4", "subname" : "Other combined or general courses/modular courses"},
+    {"subcode" : "Y5", "subname" : "Combined general & leisure courses not elsewhere specified"},
+    {"subcode" : "Y6", "subname" : "Research methods"},
+    {"subcode" : "YZ", "subname" : "Balanced combinations across different subject areas"}
+  ]
+}
