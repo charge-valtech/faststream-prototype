@@ -17,6 +17,17 @@ $.widget( "custom.catcomplete", $.ui.autocomplete, {
           li.attr( "aria-label", item.category + " : " + item.label );
         }
       });
+    },
+    _renderItem: function( ul, item ) {
+      var re = new RegExp( "(" + this.term + ")", "gi" ),
+          template = "<b>$1</b>",
+          label = item.label.replace( re, template ),
+          $li = $( "<li/>" ).appendTo( ul );
+
+      $( "<span/>" ).html( label ).appendTo( $li );
+
+      return $li;
+
     }
   });
 
@@ -210,8 +221,10 @@ $(function() {
       select: function( event, ui ) {
         $('#subjectCode').val(ui.item.subcode);
       }
-    }).on('keydown', function() {
-      $('#subjectCode').val('');
+    }).on('keydown', function(e) {
+      if(e.which !== 13) {
+        $('#subjectCode').val('');
+      }
     });
 
 });

@@ -298,7 +298,6 @@
           var isCivilServant = $.jStorage.get('civilServant'),
             schemePrefArray = ['Empty'],
             firstEmptyPosition = $.inArray('Empty', schemePrefArray),
-            arrayOfSelectedPrefs = [],
             preferencesAs123 = ['1st', '2nd', '3rd', '4th', '5th'],
             preferencesAsText = [
               '1st preference',
@@ -365,8 +364,6 @@
                 'selected-scheme').find('.selected-preference').text(
                 preferencesAs123[arrayPositionNow]).removeClass(
                 'invisible');
-              arrayOfSelectedPrefs.push(preferencesAsText[
-                arrayPositionNow]);
             }
             if (!$this.is(':checked'))
             {
@@ -376,13 +373,7 @@
               $this.closest('.scheme-container').removeClass(
                 'selected-scheme').find('.selected-preference').text(
                 'N/A').addClass('invisible');
-              arrayOfSelectedPrefs.splice(arrayPosition, 1);
             }
-            // console.log(arrayOfSelectedPrefs);
-            // var nextPreference = $.grep(arrayOfSelectedPrefs, function(v) {
-            //     return v === "1st";
-            // });
-            // console.log(nextPreference);
             if ($('input[data-schemename]:checked').length == 5)
             {
               $('input[data-schemename]:not(:checked)').attr(

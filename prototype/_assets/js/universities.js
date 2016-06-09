@@ -305,7 +305,9 @@ $(function() {
     select: function(e, ui) {
       $('#universityName').val(ui.item.label);
     }
-  }).on('keydown', function() {
-    $('#universityName').val('');
+  }).on('keydown', function(e) {
+    if(e.which !== 13) {
+      $('#universityName').val('');
+    }
   });
 });
