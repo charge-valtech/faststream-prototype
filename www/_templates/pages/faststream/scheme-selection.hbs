@@ -212,7 +212,8 @@ applicationPage: schemePreferences
           isSpecial = $this.closest('.scheme-container').find('[data-spec-scheme]').length,
           specialEligibility = isSpecial == 0 ? '<p class="font-xsmall no-btm-margin">Requires at least a ' + schemeReq + '</p>' : '<div class="scheme-warning text"><p class="font-xsmall">Requires at least a ' + schemeReq + '</p></div>',
           arrayPosition = $.inArray(thisSchemeID, schemePrefArray),
-          emptyPosition = $.inArray('Empty', schemePrefArray);
+          emptyPosition = $.inArray('Empty', schemePrefArray),
+          chosenPreferences = [];
 
       if(arrayPosition >= 0) {
         //Do nothing
@@ -237,6 +238,16 @@ applicationPage: schemePreferences
         $('#selectedPrefList').find('[data-scheme-id="' + thisSchemeID + '"]').remove();
         $this.closest('.scheme-container').removeClass('selected-scheme').find('.selected-preference').text('N/A').addClass('invisible');
       }
+
+      chosenPreferences = $('[data-schemeorder]').map(function() {
+                            return $( this ).text();
+                          })
+                          .get();
+
+      var arrayOfChosen = $.makeArray(chosenPreferences);
+
+      console.log(arrayOfChosen);
+
 
       if($('input[data-schemename]:checked').length == 5) {
         $('input[data-schemename]:not(:checked)').attr('disabled', true).closest('.block-label').addClass('disabled');
