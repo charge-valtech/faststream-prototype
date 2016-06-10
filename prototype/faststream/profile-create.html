@@ -183,45 +183,54 @@
           <section class="section-border clearfix">
             <h2 class="heading-large">Civil Service</h2>
             <fieldset>
-              <legend class="form-label">Have you worked with the Civil Service?</legend>
+              <legend class="form-label">Have you worked with the civil service?</legend>
               <div class="form-group">
-                <div>
-                  <label data-target="civilservants-panel" for="civilservants-current" class="block-label">
-                    <input name="civilservants" type="radio" id="civilservants-current" aria-controls="civilservants-panel"
-                    aria-expanded="false">Yes, I'm currently a civil servant
-                  </label>
-                </div>
-                <div>
-                  <label data-target="sdip-panel" for="civilservants-sdip" class="block-label">
-                    <input name="civilservants" type="radio" id="civilservants-sdip" aria-controls="sdip-panel"
-                    aria-expanded="false">Yes, I've done the Summer Diversity Internship Programme (SDIP)
-                  </label>
-                </div>
-                <div>
-                  <label for="civilservants-no" class="block-label">
-                    <input name="civilservants" type="radio" id="civilservants-no">No
-                  </label>
-                </div>
+                <label data-target="civilservice-panel" for="civilservice-current" class="block-label">
+                  <input name="civilservice" type="radio" id="civilservice-current" aria-controls="civilservice-panel"
+                  aria-expanded="false">Yes
+                </label>
+                <label for="civilservice-no" class="block-label">
+                  <input name="civilservice" type="radio" id="civilservice-no">No
+                </label>
               </div>
-              <div id="civilservants-panel" class="toggle-content" aria-hidden="true">
-                <h3 class="heading-medium">Current civil servants</h3>
-                <div class="panel-indent text">
-                  <p>If you're currently a civil servant, or have previously worked
-                    for the Civil Service, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant"
-                    rel="external" target="_blank">conditions that apply</a> (this
-                    includes applicants on the Fast Track).</p>
-                </div>
-              </div>
-              <div id="sdip-panel" class="toggle-content" aria-hidden="true">
-                <h3 class="heading-medium">Fast pass</h3>
-                <div class="panel-indent text">
-                  <p>If you've completed the <a rel="external" target="_blank" href="https://www.gov.uk/guidance/civil-service-fast-stream-summer-diversity-internship-programme">Summer Diversity Internship Programme (SDIP)</a>                    you won't be asked to do the online assessments again.</p>
-                </div>
-                <div class="form-group">
-                  <label for="fastpass-number" class="form-label">Enter your certificate number</label>
-                  <span class="form-hint text">You can find this at the top of the certificate</span>
-                  <input type="text" class="form-control" id="fastpass-number">
-                </div>
+              <div id="civilservice-panel" class="toggle-content" aria-hidden="true">
+                <fieldset>
+                  <legend class="form-label">Which of these applies to you?</legend>
+                  <div class="form-group">
+                    <div>
+                      <label data-target="civilservants-panel" for="civilservants-current" class="block-label">
+                        <input name="civilservants" type="radio" id="civilservants-current" aria-controls="civilservants-panel"
+                        aria-expanded="false">Currently a civil servant
+                      </label>
+                    </div>
+                    <div>
+                      <label data-target="sdip-panel" for="civilservants-sdip" class="block-label">
+                        <input name="civilservants" type="radio" id="civilservants-sdip" aria-controls="sdip-panel"
+                        aria-expanded="false">Did the Summer Diversity Internship Programme (SDIP)
+                      </label>
+                    </div>
+                  </div>
+                  <div id="civilservants-panel" class="toggle-content" aria-hidden="true">
+                    <h3 class="heading-medium">Current civil servants</h3>
+                    <div class="panel-indent text">
+                      <p>If you're currently a civil servant, or have previously worked
+                        for the Civil Service, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant"
+                        rel="external" target="_blank">conditions that apply</a>                        (this includes applicants on the Fast Track).</p>
+                    </div>
+                  </div>
+                  <div id="sdip-panel" class="toggle-content" aria-hidden="true">
+                    <h3 class="heading-medium">Fast pass</h3>
+                    <div class="panel-indent text">
+                      <p>If you've completed the <a rel="external" target="_blank"
+                        href="https://www.gov.uk/guidance/civil-service-fast-stream-summer-diversity-internship-programme">Summer Diversity Internship Programme (SDIP)</a>                        you won't be asked to do the online assessments again.</p>
+                    </div>
+                    <div class="form-group">
+                      <label for="fastpass-number" class="form-label">Enter your certificate number</label>
+                      <span class="form-hint text">You can find this at the top of the certificate</span>
+                      <input type="text" class="form-control" id="fastpass-number">
+                    </div>
+                  </div>
+                </fieldset>
               </div>
             </fieldset>
           </section>
