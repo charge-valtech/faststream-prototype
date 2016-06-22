@@ -12,8 +12,8 @@ applicationPage: educationDetails
 
 <section>
   <div class="form-group">
-    <label class="form-label text" for="universityAttended">What is the name of the university or college you received your degree from?</label>
-    <span class="form-hint text">If you haven't received your degree yet, enter the name of your current university or college</span>
+    <label class="form-label text" for="universityAttended">What is the name of the university you received your degree from?</label>
+    <span class="form-hint text">Or enter your current university if you haven't finished yet</span>
     <input type="text" id="universityAttended" class="form-control">
     <input type="hidden" class="alwayshidden" value="" id="universityName">
   </div>
@@ -45,20 +45,49 @@ applicationPage: educationDetails
 
 <section>
   <div class="form-group">
-    <label class="form-label text" for="subjectName">What subject area best describes your degree?</label>
-    <input type="text" id="subjectName" class="form-control">
-    <input type="hidden" class="alwayshidden" value="" id="subjectCode">
+    <label class="form-label text" for="subjectName">Which category best describes your degree?</label>
+    <select name="" id="">
+      <option value="">Select one</option>
+      <option value="(5)">Agriculture &amp; Related Subjects</option>
+      <option value="(A)">Architecture, Building &amp; Planning</option>
+      <option value="(3)">Biological Sciences</option>
+      <option value="(D)">Business &amp; Administrative Studies</option>
+      <option value="(H)">Creative Arts &amp; Design</option>
+      <option value="(8)">Computer Science</option>
+      <option value="(I)">Education</option>
+      <option value="(9)">Engineering &amp; Technology</option>
+      <option value="(G)">Humanities</option>
+      <option value="(F)">Languages</option>
+      <option value="(C)">Law</option>
+      <option value="(E)">Librarianship &amp; Information Science</option>
+      <option value="(7)">Mathematical Science</option>
+      <option value="(1)">Medicine &amp; Dentistry</option>
+      <option value="(2)">Subjects Allied to Medicine</option>
+      <option value="(6)">Physical Science</option>
+      <option value="(B)">Social, Economic &amp; Political Studies</option>
+      <option value="(4)">Veterinary Sciences</option>
+      <option value="(J)">Combined</option>
+    </select>
   </div>
 </section>
+
+<details class="text">
+  <summary>What category is my subject?</summary>
+  <div class="detail-content">
+    {{> hesa-table }}
+  </div>
+</details>
+
+
 
 <div class="form-group">
   <a href="scheme-selection.html" class="button">Save and continue</a>
 </div>
 
-
+<!--
 
 <script src="{{assets}}/js/vendor/jquery-ui-custom.js"></script>
 <script src="{{assets}}/js/universities.js"></script>
-<script src="{{assets}}/js/hesa-codes.js"></script>
+<script src="{{assets}}/js/hesa-codes.js"></script> -->
 
 
