@@ -282,9 +282,17 @@ $(function() {
         lowerCase = new RegExp('[a-z]'),
         numbers = new RegExp('[0-9]'),
         passInput = $('.new-password'),
-        confirmPass = $('.confirm-password');
+        confirmPass = $('.confirm-password'),
+        requiresUppercase = $('#includesUppercase'),
+        requiresLowercase = $('#includesLowercase'),
+        requiresNumber = $('#includesNumber'),
+        requires9Characters = $('#includes9Characters'),
+        upperIcon = requiresUppercase.find('.the-icon'),
+        lowerIcon = requiresLowercase.find('.the-icon'),
+        numberIcon = requiresNumber.find('.the-icon'),
+        char9Icon = requires9Characters.find('.the-icon');
 
-    passInput.after('<p class="form-hint text strength-indicator hide-nojs">Password validation: <span id="pass_meter"></span></p>');
+    // passInput.after('<p class="form-hint text strength-indicator hide-nojs">Password validation: <span id="pass_meter"></span></p>');
     confirmPass.after('<p class="form-hint">Password matching: <span id="pass_match"></span></p>')
 
     passInput.keyup(function () {
@@ -292,32 +300,44 @@ $(function() {
           passMeter = $("#pass_meter"),
           matchVal = confirmPass.val();
 
-      passMeter.removeClass();
-
-      if(passVal.length < minChars) {
-        passMeter.addClass('strength-weak').text('Must be at least ' + minChars + ' characters');
+      if(passVal.match(upperCase)) {
+        requiresUppercase.addClass('strength-strong');
+        upperIcon.removeClass('fa-minus fa-times');
+        upperIcon.addClass('fa-check');
       } else {
-        if(!passVal.match(upperCase) && !passVal.match(lowerCase) && !passVal.match(numbers)) {
-          passMeter.addClass('strength-weak').text('Requires upper and lowercase letters and at least one number');
-        }
-        if(passVal.match(upperCase) && !passVal.match(lowerCase) && !passVal.match(numbers)) {
-          passMeter.addClass('strength-weak').text('Requires lowercase letters and at least one number');
-        }
-        if(!passVal.match(upperCase) && passVal.match(lowerCase) && !passVal.match(numbers)) {
-          passMeter.addClass('strength-weak').text('Requires uppercase letters and at least one number');
-        }
-        if(!passVal.match(upperCase) && !passVal.match(lowerCase) && passVal.match(numbers)) {
-          passMeter.addClass('strength-weak').text('Requires upper and lowercase letters');
-        }
-        if(!passVal.match(upperCase) && passVal.match(lowerCase) && passVal.match(numbers)) {
-          passMeter.addClass('strength-weak').text('Requires uppercase letters');
-        }
-        if(passVal.match(upperCase) && passVal.match(lowerCase) && !passVal.match(numbers)) {
-          passMeter.addClass('strength-weak').text('Requires at least one number');
-        }
-        if(passVal.match(upperCase) && passVal.match(lowerCase) && passVal.match(numbers)) {
-          passMeter.addClass('strength-strong').text('Your password is valid');
-        }
+        requiresUppercase.removeClass('strength-strong strength-weak');
+        upperIcon.removeClass('fa-check');
+        upperIcon.addClass('fa-minus');
+      }
+
+      if(passVal.match(lowerCase)) {
+        requiresLowercase.addClass('strength-strong');
+        lowerIcon.removeClass('fa-minus fa-times');
+        lowerIcon.addClass('fa-check');
+      } else {
+        requiresLowercase.removeClass('strength-strong strength-weak');
+        lowerIcon.removeClass('fa-check');
+        lowerIcon.addClass('fa-minus');
+      }
+
+      if(passVal.match(numbers)) {
+        requiresNumber.addClass('strength-strong');
+        numberIcon.removeClass('fa-minus fa-times');
+        numberIcon.addClass('fa-check');
+      } else {
+        requiresNumber.removeClass('strength-strong strength-weak');
+        numberIcon.removeClass('fa-check');
+        numberIcon.addClass('fa-minus');
+      }
+
+      if(passVal.length >= minChars) {
+        requires9Characters.addClass('strength-strong');
+        char9Icon.removeClass('fa-minus fa-times');
+        char9Icon.addClass('fa-check');
+      } else {
+        requires9Characters.removeClass('strength-strong strength-weak');
+        char9Icon.removeClass('fa-check');
+        char9Icon.addClass('fa-minus');
       }
 
       if(matchVal.length >= minChars) {
@@ -331,6 +351,14 @@ $(function() {
           $('#pass_match').removeClass('strength-strong').addClass('strength-weak').text("Your passwords don't match");
         }
       }
+    });
+
+    passInput.on('blur', function() {
+      $('#passwordRequirements li').each(function() {
+        if(!$(this).hasClass('strength-strong')) {
+          $(this).addClass('strength-weak').find('.the-icon').removeClass('fa-minus').addClass('fa-times');
+        }
+      });
     });
 
     confirmPass.keyup(function() {
