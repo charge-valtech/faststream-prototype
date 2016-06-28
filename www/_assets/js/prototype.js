@@ -44,7 +44,7 @@ $(function() {
     $.jStorage.set('firstName', $('#first-name').val());
     $.jStorage.set('lastName', $('#last-name').val());
     $.jStorage.set('emailAddress', $('#email-input').val());
-    if($('#civilservants-current').is(':checked')) {
+    if($('#inservice-yes').is(':checked') || $('#ft-inservice-yes').is(':checked')) {
       $.jStorage.set('civilServant', true);
     } else {
       $.jStorage.set('civilServant', false);
