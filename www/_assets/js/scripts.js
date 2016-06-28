@@ -95,9 +95,15 @@ $(function() {
   $('.block-label').on('click', 'input[type=radio], input[type=checkbox]', function() {
     var $this   = $(this),
         $target = $this.parent().attr('data-target'),
-        $siblingTarget = $this.closest('.form-group').find('.block-label').not($this.parent()).attr('data-target'),
+        $siblingArray = [],
+        $siblingTarget = '',
         $disTarget = $this.parent().attr('data-distarget'),
         $theTargetControl = $('#' + $disTarget);
+
+    $this.closest('.form-group').find('.block-label').not($this.parent()).each(function() {
+      $siblingArray.push('#' + $(this).attr('data-target'));
+      $siblingTarget = $siblingArray.join(", ");
+    });
 
     $('input:not(:checked)').parent().removeClass('selected');
     $('input:checked').parent().addClass('selected');
@@ -107,8 +113,7 @@ $(function() {
       $this.closest('.form-group').find('[aria-expanded]').attr('aria-expanded', false);
     } else {
       $('#' + $target).show();
-      $('#' + $siblingTarget).hide().attr('aria-hidden', true);
-
+      $($siblingTarget).hide().attr('aria-hidden', true);
 
       if($this.closest('.form-group').hasClass('blocklabel-single')) {
 
@@ -293,7 +298,11 @@ $(function() {
         char9Icon = requires9Characters.find('.the-icon');
 
     // passInput.after('<p class="form-hint text strength-indicator hide-nojs">Password validation: <span id="pass_meter"></span></p>');
-    confirmPass.after('<p class="form-hint">Password matching: <span id="pass_match"></span></p>')
+    confirmPass.after('<div id="matchingHint" class="invisible"><p class="form-hint">Password matching: <span id="pass_match"></span></p></div>');
+
+    confirmPass.on('blur', function() {
+      $('#matchingHint').removeClass('invisible');
+    });
 
     passInput.keyup(function () {
       var passVal = $(this).val(),
