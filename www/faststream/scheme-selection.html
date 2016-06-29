@@ -327,7 +327,7 @@
         }
         var arrayPositionNow = $.inArray(thisSchemeID, schemePrefArray);
 
-        if(isCivilServant === true) {
+        if(isCivilServant === true && isSpecial == 0) {
           $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin scheme-prefcontainer" data-scheme-id="' + thisSchemeID + '"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span><div class="width-all-1-1"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span><p>You\'re eligible as a current civil servant</p></div>');
         } else {
           $('#selectedPrefList li').eq(arrayPositionNow).after('<li class="med-btm-margin scheme-prefcontainer" data-scheme-id="' + thisSchemeID + '"><span data-schemeorder>' + preferencesAsText[arrayPositionNow] + '</span><div class="width-all-1-1"><span class="bold-small" data-schemenameinlist>' + thisScheme + '</span>' + specialEligibility + '</div>');
