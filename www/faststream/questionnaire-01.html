@@ -191,7 +191,7 @@
       </div>
       <div>
         <label for="sexual-homo" class="block-label">
-          <input name="sexual" type="radio" id="sexual-homo">Homosexual/gay
+          <input name="sexual" type="radio" id="sexual-homo">Gay/lesbian
         </label>
       </div>
       <div>
@@ -219,10 +219,10 @@
 </section>
 
 <section>
-  <div class="form-group">
+  <div class="form-group form-group-compound">
     <label for="ethnicList" class="form-label">What is your ethnic group?</label>
     <select name="" id="ethnicList" class="selectWithOptionTrigger">
-      <option value="">I don't know/prefer not to say</option>
+      <option value="">Select one</option>
       <optgroup label="White">
         <option value="">English/Welsh/Scottish/Northern Irish/British </option>
         <option value="">Irish </option>
@@ -254,9 +254,15 @@
     </select>
   </div>
 
-  <div class="toggle-content form-group" id="ethnicDescribe">
+  <div class="toggle-content form-group form-group-compound" id="ethnicDescribe">
     <label for="ethnicDescribeControl" class="form-hint">Provide more information (optional)</label>
     <input type="text" id="ethnicDescribeControl" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="ethnic-prefernot" class="block-label" data-distarget="ethnicList">
+      <input type="checkbox" id="ethnic-prefernot">I don't know/prefer not to say
+    </label>
   </div>
 </section>
 
