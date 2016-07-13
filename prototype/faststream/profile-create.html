@@ -118,191 +118,206 @@
           <p>If you've already created an account on this site for the Civil Service
             Fast Stream, you can return to <a href="profile-signin.html">sign in</a>.</p>
         </section>
-        <form action="">
-          <section class="section-border">
-            <h2 class="heading-large">Name and email</h2>
-            <div class="form-group form-group-compound">
-              <label for="first-name" class="form-label">First name</label>
-              <input id="first-name" type="text" class="form-control" autocorrect="off" value="">
+        <section class="section-border">
+          <h2 class="heading-large">Name and email</h2>
+          <div class="form-group form-group-compound">
+            <label for="first-name" class="form-label">First name</label>
+            <input id="first-name" type="text" class="form-control" autocorrect="off" value="">
+          </div>
+          <div class="form-group">
+            <label for="last-name" class="form-label">Last name</label>
+            <input id="last-name" type="text" class="form-control" autocorrect="off" value="">
+          </div>
+          <div class="form-group form-group-compound">
+            <label for="email-input" class="form-label" id="emailInput">Email</label>
+            <span class="form-hint text">You'll need this to sign in to your account</span>
+            <input type="email" class="form-control" id="email-input" spellcheck="false">
+          </div>
+          <div class="form-group">
+            <label for="emailInputConfirm" class="form-label">Confirm your email</label>
+            <input type="email" class="form-control" id="emailInputConfirm" spellcheck="false">
+          </div>
+        </section>
+        <section class="section-border">
+          <h2 class="heading-large">Set your password</h2>
+          <div class="form-group">
+            <label for="password" class="form-label">Create password</label>
+            <div class="form-hint text">
+              <p class="no-btm-margin">Must have:</p>
+              <ul id="passwordRequirements" class="list-withicons list-text">
+                <li id="includesUppercase"><i class="fa fa-minus the-icon"></i>uppercase letters</li>
+                <li id="includesLowercase"><i class="fa fa-minus the-icon"></i>lowercase letters</li>
+                <li id="includesNumber"><i class="fa fa-minus the-icon"></i>a number</li>
+                <li id="includes9Characters"><i class="fa fa-minus the-icon"></i>at least 9 characters</li>
+              </ul>
             </div>
+            <div class="form-group password-wrapper">
+              <input type="password" class="form-control new-password" id="password">
+            </div>
+            <div class="password-second form-group">
+              <label for="confirm-password" class="form-label">Confirm password</label>
+              <input type="password" class="form-control confirm-password">
+            </div>
+          </div>
+        </section>
+        <section class="section-border clearfix">
+          <h2 class="heading-large">Eligibility</h2>
+          <div class="text">
+            <h2 class="heading-medium">Confirm the following statements are true</h2>
+          </div>
+          <ul id="eligibility-list" class="para-btm-margin text">
+            <li>I'm <a href="http://neves.io/faststream-marketing/eligibility/" target="_blank"
+              rel="external">eligible to work in the UK</a></li>
+            <li>I have a relevant degree or qualify as a current civil servant</li>
+            <li>I'm available to start work in January 2017</li>
+            <li>I meet my schemes eligibility requirements</li>
+          </ul>
+          <fieldset>
+            <legend class="form-label">Are you eligible to apply?</legend>
             <div class="form-group">
-              <label for="last-name" class="form-label">Last name</label>
-              <input id="last-name" type="text" class="form-control" autocorrect="off" value="">
-            </div>
-            <div class="form-group form-group-compound">
-              <label for="email-input" class="form-label" id="emailInput">Email</label>
-              <span class="form-hint text">You'll need this to sign in to your account</span>
-              <input type="email" class="form-control" id="email-input" spellcheck="false">
-            </div>
-            <div class="form-group">
-              <label for="emailInputConfirm" class="form-label">Confirm your email</label>
-              <input type="email" class="form-control" id="emailInputConfirm" spellcheck="false">
-            </div>
-          </section>
-          <section class="section-border">
-            <h2 class="heading-large">Set your password</h2>
-            <div class="form-group">
-              <label for="password" class="form-label">Create password</label>
-              <div class="form-hint text">
-                <p class="no-btm-margin">Must have:</p>
-                <ul id="passwordRequirements" class="list-withicons list-text">
-                  <li id="includesUppercase"><i class="fa fa-minus the-icon"></i>uppercase letters</li>
-                  <li id="includesLowercase"><i class="fa fa-minus the-icon"></i>lowercase letters</li>
-                  <li id="includesNumber"><i class="fa fa-minus the-icon"></i>a number</li>
-                  <li id="includes9Characters"><i class="fa fa-minus the-icon"></i>at least 9 characters</li>
-                </ul>
-              </div>
-              <div class="form-group password-wrapper">
-                <input type="password" class="form-control new-password" id="password">
-              </div>
-              <div class="password-second form-group">
-                <label for="confirm-password" class="form-label">Confirm password</label>
-                <input type="password" class="form-control confirm-password">
-              </div>
-            </div>
-          </section>
-          <section class="section-border clearfix">
-            <h2 class="heading-large">Eligibility</h2>
-            <div class="text">
-              <h2 class="heading-medium">Confirm the following statements are true</h2>
-            </div>
-            <ul id="eligibility-list" class="para-btm-margin text">
-              <li>I'm <a href="http://neves.io/faststream-marketing/eligibility/" target="_blank"
-                rel="external">eligible to work in the UK</a></li>
-              <li>I have a relevant degree or qualify as a current civil servant</li>
-              <li>I'm available to start work in January 2017</li>
-              <li>I meet my schemes eligibility requirements</li>
-            </ul>
-            <fieldset>
-              <legend class="form-label">Are you eligible to apply?</legend>
-              <div class="form-group">
-                <label for="eligible-yes" class="block-label">
-                  <input name="eligible" type="radio" id="eligible-yes">Yes
-                </label>
-                <label data-target="eligible-panel" for="eligible-no" class="block-label">
-                  <input name="eligible" type="radio" id="eligible-no" aria-controls="eligible-panel"
-                  aria-expanded="false">No
-                </label>
-              </div>
-              <div id="eligible-panel" class="toggle-content">
-                <div class="panel-danger">
-                  <p>You must be eligible to apply for the Civil Service Fast Stream</p>
-                </div>
-              </div>
-            </fieldset>
-          </section>
-          <section class="section-border clearfix">
-            <div class="text">
-              <h2 class="heading-large">Civil servants and internship placements</h2>
-            </div>
-            <fieldset>
-              <legend class="form-label">Have you worked with the civil service or been on an internship?</legend>
-              <div class="form-group">
-                <label data-target="civilservice-panel" for="civilservice-current" class="block-label">
-                  <input name="civilservice" type="radio" id="civilservice-current" aria-controls="civilservice-panel"
-                  aria-expanded="false">Yes
-                </label>
-                <label for="civilservice-no" class="block-label">
-                  <input name="civilservice" type="radio" id="civilservice-no">No
-                </label>
-              </div>
-              <div id="civilservice-panel" class="toggle-content">
-                <fieldset>
-                  <legend class="form-label">Which of these applies?</legend>
-                  <div class="form-group">
-                    <div>
-                      <label data-target="civilservants-panel" for="civilservants-current" class="block-label">
-                        <input name="civilservants" type="radio" id="civilservants-current" aria-controls="civilservants-panel"
-                        aria-expanded="false">I'm currently a civil servant
-                      </label>
-                    </div>
-                    <div>
-                      <label data-target="fasttrack-panel" for="civilservants-fasttrack" class="block-label">
-                        <input name="civilservants" type="radio" id="civilservants-fasttrack" aria-controls="fasttrack-panel"
-                        aria-expanded="false">I've either completed or am about to complete the Fast
-                        Track
-                      </label>
-                    </div>
-                    <div>
-                      <label data-target="sdip-panel" for="civilservants-sdip" class="block-label">
-                        <input name="civilservants" type="radio" id="civilservants-sdip" aria-controls="sdip-panel"
-                        aria-expanded="false">I've either completed or am about to complete an internship
-                      </label>
-                    </div>
-                  </div>
-                  <div id="civilservants-panel" class="toggle-content" aria-hidden="true">
-                    <h3 class="heading-medium">Current civil servants</h3>
-                    <div class="text">
-                      <p>As a current civil servant or Fast Track applicant you're
-                        eligible for most of the schemes without a degree.</p>
-                      <p>The schemes you'll need specific qualifications for are:</p>
-                      <ul>
-                        <li>Government Economic Service</li>
-                        <li>Government Operational Research Service</li>
-                        <li>Government Social Research Service</li>
-                        <li>Government Statistical Service</li>
-                        <li>Science and Engineering</li>
-                      </ul>
-                      <p>Check the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes"
-                        rel="external" target="_blank">eligibility requirements</a>                        for more information.</p>
-                    </div>
-                    <div class="panel-indent text">
-                      <p>If you're currently a civil servant, or have previously worked
-                        for the Civil Service, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant"
-                        rel="external" target="_blank">conditions that apply</a>.</p>
-                    </div>
-                  </div>
-                  <div id="fasttrack-panel" class="toggle-content" aria-hidden="true">
-                    <h3 class="heading-medium">Fast Track</h3>
-                    <div class="text">
-                      <p>As a current civil servant or Fast Track applicant you're
-                        eligible for most of the schemes without a degree.</p>
-                      <p>The schemes you'll need specific qualifications for are:</p>
-                      <ul>
-                        <li>Government Economic Service</li>
-                        <li>Government Operational Research Service</li>
-                        <li>Government Social Research Service</li>
-                        <li>Government Statistical Service</li>
-                        <li>Science and Engineering</li>
-                      </ul>
-                      <p>Check the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes"
-                        rel="external" target="_blank">eligibility requirements</a>                        for more information.</p>
-                    </div>
-                    <div class="panel-indent text">
-                      <p>If you're currently on the Fast Track, or have completed
-                        the Fast Track, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant"
-                        rel="external" target="_blank">conditions that apply</a>                        .</p>
-                    </div>
-                  </div>
-                  <div id="sdip-panel" class="toggle-content" aria-hidden="true">
-                    <h3 class="heading-medium">Fast pass</h3>
-                    <div class="panel-indent text">
-                      <p>If you've completed either the <a rel="external" target="_blank"
-                        href="https://www.gov.uk/guidance/civil-service-fast-stream-summer-diversity-internship-programme">Summer Diversity Internship Programme (SDIP)</a>                        or the <a rel="external" target="_blank" href="https://www.gov.uk/guidance/civil-service-fast-stream-early-diversity-internship-programme">Early Diversity Internship Programme (EDIP)</a>                        you get a fast pass and don't need to complete the online
-                        assessments.</p>
-                    </div>
-                    <div class="form-group">
-                      <label for="fastpass-number" class="form-label">Enter your certificate number</label>
-                      <span class="form-hint text">You can find this at the top of the certificate</span>
-                      <input type="text" class="form-control" id="fastpass-number">
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </fieldset>
-          </section>
-          <section>
-            <h2 class="heading-large">Terms and conditions</h2>
-            <div class="form-group">
-              <label for="accept-terms" class="block-label">
-                <input type="checkbox" id="accept-terms">I accept the <a href="terms.html" target="_blank" id="">terms and conditions</a>
+              <label for="eligible-yes" class="block-label">
+                <input name="eligible" type="radio" id="eligible-yes">Yes
+              </label>
+              <label data-target="eligible-panel" for="eligible-no" class="block-label">
+                <input name="eligible" type="radio" id="eligible-no" aria-controls="eligible-panel"
+                aria-expanded="false">No
               </label>
             </div>
-          </section>
-          <div class="form-group">
-            <a id="createAccountBtn" class="button" href="profile-success.html">Create account</a>
+            <div id="eligible-panel" class="toggle-content">
+              <div class="panel-danger">
+                <p>You must be eligible to apply for the Civil Service Fast Stream</p>
+              </div>
+            </div>
+          </fieldset>
+        </section>
+        <section class="section-border clearfix">
+          <div class="text">
+            <h2 class="heading-large">Civil servants and internship placements</h2>
           </div>
-        </form>
+          <fieldset>
+            <legend class="form-label">Have you worked with the civil service or been on an internship?</legend>
+            <div class="form-group">
+              <label data-target="civilservice-panel" for="civilservice-current" class="block-label">
+                <input name="civilservice" type="radio" id="civilservice-current" aria-controls="civilservice-panel"
+                aria-expanded="false">Yes
+              </label>
+              <label for="civilservice-no" class="block-label">
+                <input name="civilservice" type="radio" id="civilservice-no">No
+              </label>
+            </div>
+            <div id="civilservice-panel" class="toggle-content">
+              <fieldset>
+                <legend class="form-label">Which of these applies?</legend>
+                <div class="form-group">
+                  <div>
+                    <label data-target="civilservants-panel" for="civilservants-current" class="block-label">
+                      <input name="civilservants" type="radio" id="civilservants-current" aria-controls="civilservants-panel"
+                      aria-expanded="false">I'm currently a civil servant
+                    </label>
+                  </div>
+                  <div>
+                    <label data-target="fasttrack-panel" for="civilservants-fasttrack" class="block-label">
+                      <input name="civilservants" type="radio" id="civilservants-fasttrack" aria-controls="fasttrack-panel"
+                      aria-expanded="false">I've either completed or am about to complete the Fast Track
+                    </label>
+                  </div>
+                  <div>
+                    <label data-target="sdip-panel" for="civilservants-sdip" class="block-label">
+                      <input name="civilservants" type="radio" id="civilservants-sdip" aria-controls="sdip-panel"
+                      aria-expanded="false">I've either completed or am about to complete an internship
+                    </label>
+                  </div>
+                </div>
+                <div id="civilservants-panel" class="toggle-content" aria-hidden="true">
+                  <h3 class="heading-medium">Current civil servants</h3>
+                  <div class="text">
+                    <p>As a current civil servant or Fast Track applicant you're eligible
+                      for most of the schemes without a degree.</p>
+                    <p>The schemes you'll need specific qualifications for are:</p>
+                    <ul>
+                      <li>Government Economic Service</li>
+                      <li>Government Operational Research Service</li>
+                      <li>Government Social Research Service</li>
+                      <li>Government Statistical Service</li>
+                      <li>Science and Engineering</li>
+                    </ul>
+                    <p>Check the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes"
+                      rel="external" target="_blank">eligibility requirements</a>                      for more information.</p>
+                  </div>
+                  <div class="panel-indent text">
+                    <p>If you're currently a civil servant, or have previously worked
+                      for the Civil Service, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant"
+                      rel="external" target="_blank">conditions that apply</a>.</p>
+                  </div>
+                </div>
+                <div id="fasttrack-panel" class="toggle-content" aria-hidden="true">
+                  <h3 class="heading-medium">Fast Track</h3>
+                  <div class="text">
+                    <p>As a current civil servant or Fast Track applicant you're eligible
+                      for most of the schemes without a degree.</p>
+                    <p>The schemes you'll need specific qualifications for are:</p>
+                    <ul>
+                      <li>Government Economic Service</li>
+                      <li>Government Operational Research Service</li>
+                      <li>Government Social Research Service</li>
+                      <li>Government Statistical Service</li>
+                      <li>Science and Engineering</li>
+                    </ul>
+                    <p>Check the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-graduate-schemes"
+                      rel="external" target="_blank">eligibility requirements</a>                      for more information.</p>
+                  </div>
+                  <div class="panel-indent text">
+                    <p>If you're currently on the Fast Track, or have completed the
+                      Fast Track, make sure you read the <a href="https://www.gov.uk/guidance/civil-service-fast-stream-who-can-apply#applying-to-the-fast-stream-as-a-civil-servant"
+                      rel="external" target="_blank">conditions that apply</a>                      .</p>
+                  </div>
+                </div>
+                <div id="sdip-panel" class="toggle-content" aria-hidden="true">
+                  <h3 class="heading-medium">Fast pass</h3>
+                  <div class="panel-indent text">
+                    <p>If you've completed either the <a rel="external" target="_blank"
+                      href="https://www.gov.uk/guidance/civil-service-fast-stream-summer-diversity-internship-programme">Summer Diversity Internship Programme (SDIP)</a>                      or the <a rel="external" target="_blank" href="https://www.gov.uk/guidance/civil-service-fast-stream-early-diversity-internship-programme">Early Diversity Internship Programme (EDIP)</a>                      you get a fast pass and don't need to complete the online
+                      assessments.</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="fastpass-number" class="form-label">Enter your certificate number</label>
+                    <span class="form-hint text">You can find this at the top of the certificate</span>
+                    <input type="text" class="form-control" id="fastpass-number">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+        </section>
+        <section class="section-border">
+          <h2 class="heading-large">How did you hear about us?</h2>
+          <div class="form-group">
+            <label for="hearAboutUs" class="form-label">How did you hear about the Fast Stream? (optional)</label>
+            <select name="campaignReferrer" id="campaignReferrer" class="form-group-compound">
+              <option value="">Select one</option>
+              <option value="National apprenticeship service">National apprenticeship service</option>
+              <option value="notgoingtouni.co.uk">notgoingtouni.co.uk</option>
+              <option value="Social media(Twitter/Facebook)">Social media(Twitter/Facebook)</option>
+              <option value="Teachers/careers advisors">Teachers/careers advisors</option>
+              <option value="Parent/friends/family">Parent/friends/family</option>
+              <option value="Current apprentice/current civil servant">Current apprentice/current civil servant</option>
+              <option value="Careers fair">Careers fair</option>
+              <option value="Google">Google</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </section>
+        <section>
+          <h2 class="heading-large">Terms and conditions</h2>
+          <div class="form-group">
+            <label for="accept-terms" class="block-label">
+              <input type="checkbox" id="accept-terms">I accept the <a href="terms.html" target="_blank" id="">terms and conditions</a>
+            </label>
+          </div>
+        </section>
+        <div class="form-group">
+          <a id="createAccountBtn" class="button" href="profile-success.html">Create account</a>
+        </div>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

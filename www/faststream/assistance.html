@@ -105,91 +105,97 @@
       
 
 <section class="page-progress">
-  <p><span class="lede">Page 4 of 8</span></p>
+  <p><span class="lede">Page 3 of 7</span></p>
 </section>
 <div class="text">
   <h1 class="heading-xlarge">Disability and health conditions</h1>
 </div>
 
-<fieldset>
-  <legend class="form-label">Will you need any support with assessments?</legend>
-  <p class="form-hint">Either online or at the assessment centre</p>
-  <div class="form-group inline">
-    <label data-target="support-panel" for="support-yes" class="block-label">
-      <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
-    </label>
-    <label for="support-no" class="block-label">
-      <input name="support" type="radio" id="support-no">No
-    </label>
-  </div>
-
-  <div class="toggle-content" id="support-panel">
-    <section class="section-border">
-      <h2 class="heading-large">Support for assessments</h2>
-      <section>
-        <p class="form-label">Will you need extra support for your online exercises?</p>
-        <p class="form-hint">For example, time extension</p>
-        <div class="form-group form-group-compound inline">
-          <label data-target="adjustment-online-panel" for="adjustment-online-yes" class="block-label">
-            <input name="adjustment-online" type="radio" id="adjustment-online-yes" aria-controls="adjustment-online-panel" aria-expanded="false">Yes
-          </label>
-          <label for="adjustment-online-no" class="block-label">
-            <input name="adjustment-online" type="radio" id="adjustment-online-no">No
-          </label>
-        </div>
-        <div id="adjustment-online-panel" class="toggle-content" aria-hidden="true">
-          <div class="form-group">
-            <label id="adj-other" class="form-label">What adjustments will you need?</label>
-            <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
-            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
-          </div>
-          <div class="panel-indent text">
-            <p>If you want to talk about your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
-            <p>It's important you let us know this information now, as there won't be another opportunity to do this unless your situation changes.</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <p class="form-label">Will you need extra support at the assessment centre?</p>
-        <p class="form-hint">For example, time extension or rest breaks</p>
-        <div class="form-group form-group-compound inline">
-          <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
-            <input name="adjustment" type="radio" id="adjustment-yes" aria-controls="adjustment-panel" aria-expanded="false">Yes
-          </label>
-          <label for="adjustment-no" class="block-label">
-            <input name="adjustment" type="radio" id="adjustment-no">No
-          </label>
-        </div>
-        <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
-          <div class="form-group">
-            <label id="adj-other" class="form-label">What adjustments will you need?</label>
-            <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
-            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
-          </div>
-          <div class="panel-indent text">
-            <p>If you want to talk about your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
-            <p>It's important you let us know this information now, as there won't be another opportunity to do this unless your situation changes.</p>
-          </div>
-        </div>
-      </section>
-    </section>
-
-    <section>
-      <h2 class="heading-large">Guaranteed interview scheme</h2>
-      <p class="form-label">Would you like to apply under the guaranteed interview scheme?</p>
-      <p class="form-hint">Find out <a href="https://www.gov.uk/guidance/civil-service-fast-stream-how-to-apply#applicants-with-disabilities" rel="external" target="_blank">more about this scheme</a></p>
-      <div class="form-group form-group-compound inline">
-        <label for="gis-yes" class="block-label">
-          <input name="gis" type="radio" id="gis-yes">Yes
-        </label>
-        <label for="gis-no" class="block-label">
-          <input name="gis" type="radio" id="gis-no">No
-        </label>
+<section>
+  <fieldset class="form-group">
+    <legend class="form-label">Do you consider yourself to have a disability?</legend>
+    <div class="form-group no-btm-margin">
+      <label data-target="support-panel" for="support-yes" class="block-label">
+        <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
+      </label>
+      <label for="support-no" class="block-label">
+        <input name="support" type="radio" id="support-no">No
+      </label>
+      <label for="support-prefer" class="block-label">
+        <input name="support" type="radio" id="support-prefer">I don't know/prefer not to say
+      </label>
+    </div>
+    <div id="support-panel" class="toggle-content" aria-hidden="true">
+      <div class="form-group">
+        <label id="question4" class="form-hint">Provide more information (optional)</label>
+        <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
       </div>
-    </section>
+
+      <section>
+        <p class="form-label">Would you like to apply under the guaranteed interview scheme?</p>
+        <p class="form-hint">Find out <a href="https://www.gov.uk/guidance/civil-service-fast-stream-how-to-apply#applicants-with-disabilities" rel="external" target="_blank">more about this scheme</a></p>
+        <div class="form-group form-group-compound inline">
+          <label for="gis-yes" class="block-label">
+            <input name="gis" type="radio" id="gis-yes">Yes
+          </label>
+          <label for="gis-no" class="block-label">
+            <input name="gis" type="radio" id="gis-no">No
+          </label>
+        </div>
+      </section>
+    </div>
+
+  </fieldset>
+</section>
+
+<section>
+  <p class="form-label">Will you need extra support for your online exercises?</p>
+  <p class="form-hint">For example, time extension</p>
+  <div class="form-group form-group-compound inline">
+    <label data-target="adjustment-online-panel" for="adjustment-online-yes" class="block-label">
+      <input name="adjustment-online" type="radio" id="adjustment-online-yes" aria-controls="adjustment-online-panel" aria-expanded="false">Yes
+    </label>
+    <label for="adjustment-online-no" class="block-label">
+      <input name="adjustment-online" type="radio" id="adjustment-online-no">No
+    </label>
   </div>
-</fieldset>
+  <div id="adjustment-online-panel" class="toggle-content" aria-hidden="true">
+    <div class="form-group">
+      <label id="adj-other" class="form-label">What adjustments will you need?</label>
+      <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+      <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+    </div>
+    <div class="panel-indent text">
+      <p>If you want to talk about your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
+      <p>It's important you let us know this information now, as there won't be another opportunity to do this unless your situation changes.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="form-label">Will you need extra support at the assessment centre?</p>
+  <p class="form-hint">For example, time extension or rest breaks</p>
+  <div class="form-group form-group-compound inline">
+    <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
+      <input name="adjustment" type="radio" id="adjustment-yes" aria-controls="adjustment-panel" aria-expanded="false">Yes
+    </label>
+    <label for="adjustment-no" class="block-label">
+      <input name="adjustment" type="radio" id="adjustment-no">No
+    </label>
+  </div>
+  <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
+    <div class="form-group">
+      <label id="adj-other" class="form-label">What adjustments will you need?</label>
+      <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+      <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+    </div>
+    <div class="panel-indent text">
+      <p>If you want to talk about your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
+      <p>It's important you let us know this information now, as there won't be another opportunity to do this unless your situation changes.</p>
+    </div>
+  </div>
+</section>
+
 
 <div class="form-group">
   <a href="questionnaire.html" class="button" id="assistanceSave">Save and continue</a>

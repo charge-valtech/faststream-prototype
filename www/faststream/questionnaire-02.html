@@ -105,7 +105,7 @@
       
 
 <section class="page-progress">
-  <p><span class="lede">Page 7 of 8</span></p>
+  <p><span class="lede">Page 6 of 7</span></p>
 </section>
 <div class="hgroup">
   <h1 class="heading-xlarge">Your education</h1>
@@ -178,26 +178,394 @@
         </div>
       </div>
     </section>
-
-    <div>
-      <a href="questionnaire-03.html" class="button">Save and continue</a>
-    </div>
   </div>
 
   <div id="education-ew-panel" class="toggle-content hide-nojs" aria-hidden="true">
-    <div class="text">
-      <h2 class="heading-medium">No more questions</h2>
-      <p>As you didn't live in the UK at the age of 14 we don't need to ask you any more questions.</p>
-      <p>You can now continue to the check your application page.</p>
-    </div>
-
-    <div>
-      <a href="apply-check.html" class="button">Save and continue</a>
-    </div>
   </div>
 </fieldset>
 
+<fieldset>
+  <legend class="form-label" data-degreeques style="display: none;">Do you have a degree?</legend>
+  <div class="form-group" data-degreeques style="display: none;">
+    <label data-target="degree-panel" for="degree-yes" class="block-label">
+      <input name="degree" type="radio" id="degree-yes" aria-controls="degree-panel" aria-expanded="false">Yes
+    </label>
+    <label for="degree-no" class="block-label">
+      <input name="degree" type="radio" id="degree-no">No
+    </label>
+  </div>
 
+  <div id="degree-panel" class="toggle-content">
+    <section>
+      <div class="form-group">
+        <label class="form-label text" for="universityAttended">What is the name of the university you received your degree from?</label>
+        <span class="form-hint text">Or enter your current university if you haven't finished yet</span>
+        <input type="text" id="universityAttended" class="form-control">
+      </div>
+    </section>
+
+    <section>
+      <div class="form-group">
+        <label class="form-label text" for="subjectName">Which category best describes your degree?</label>
+        <select name="" id="">
+          <option value="">Select one</option>
+          <option value="(J)">Combined</option>
+          <option value="(5)">Agriculture &amp; Related Subjects</option>
+          <option value="(A)">Architecture, Building &amp; Planning</option>
+          <option value="(3)">Biological Sciences</option>
+          <option value="(D)">Business &amp; Administrative Studies</option>
+          <option value="(H)">Creative Arts &amp; Design</option>
+          <option value="(8)">Computer Science</option>
+          <option value="(I)">Education</option>
+          <option value="(9)">Engineering &amp; Technology</option>
+          <option value="(G)">Humanities</option>
+          <option value="(F)">Languages</option>
+          <option value="(C)">Law</option>
+          <option value="(E)">Librarianship &amp; Information Science</option>
+          <option value="(7)">Mathematical Science</option>
+          <option value="(1)">Medicine &amp; Dentistry</option>
+          <option value="(2)">Subjects Allied to Medicine</option>
+          <option value="(6)">Physical Science</option>
+          <option value="(B)">Social, Economic &amp; Political Studies</option>
+          <option value="(4)">Veterinary Sciences</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="clearfix">
+      <details class="text">
+        <summary>What category is my subject?</summary>
+        <div class="detail-content">
+          <table class="basictable" border="1">
+          <thead>
+          <tr><th class="header">Subject category</th><th class="header">Subject</th></tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td><strong>Agriculture &amp; Related Subjects</strong></td>
+          <td>
+            <ul>
+              <li>Agriculture</li>
+              <li>Agricultural sciences</li>
+              <li>Forestry</li>
+              <li>Food science</li>
+              <li>Other agricultural subjects</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Architecture, Building &amp; Planning</strong></td>
+          <td>
+            <ul>
+              <li>Architecture</li>
+              <li>Building</li>
+              <li>Environmental technologies</li>
+              <li>Town &amp; country planning</li>
+              <li>Other architectural studies</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Biological Sciences</strong></td>
+          <td>
+            <ul>
+              <li>Biochemistry</li>
+              <li>Biology</li>
+              <li>Botany</li>
+              <li>Genetics</li>
+              <li>Microbiology</li>
+              <li>Molecular biology &amp; biophysics</li>
+              <li>Psychology (not solely as social science)</li>
+              <li>Zoology</li>
+              <li>Other biological sciences</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Business &amp; Administrative Studies</strong></td>
+          <td>
+            <ul>
+              <li>Accountancy</li>
+              <li>Business &amp; management studies</li>
+              <li>Catering &amp; institutional management</li>
+              <li>Financial management</li>
+              <li>Industrial relations</li>
+              <li>Land &amp; property management</li>
+              <li>Marketing &amp; market research</li>
+              <li>Operational research</li>
+              <li>Transport, other business &amp; administrative studies</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Creative Arts &amp; Design</strong></td>
+          <td>
+            <ul>
+              <li>Art &amp; design other</li>
+              <li>Beauty &amp; hairdressing</li>
+              <li>Cinematics</li>
+              <li>Crafts</li>
+              <li>Design studies</li>
+              <li>Drama</li>
+              <li>Fine art</li>
+              <li>Music</li>
+              <li>Balanced combinations</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Computer Science</strong></td>
+          <td>
+            <ul>
+              <li>Computing science</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Education</strong></td>
+          <td>
+            <ul>
+              <li>Academic studies in education</li>
+              <li>Education for those with special needs</li>
+              <li>Management &amp; organisation of education</li>
+              <li>Physical education</li>
+              <li>Teacher training</li>
+              <li>Techniques in teaching children</li>
+              <li>Techniques in teaching adults</li>
+              <li>Technology in education</li>
+              <li>Other topics in education</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Engineering &amp; Technology</strong></td>
+          <td>
+            <ul>
+              <li>Aeronautical engineering</li>
+              <li>Biotechnology</li>
+              <li>Ceramics &amp; glasses</li>
+              <li>Chemical engineering</li>
+              <li>Civil engineering</li>
+              <li>Electrical engineering</li>
+              <li>Electronic engineering</li>
+              <li>General engineering</li>
+              <li>Maritime technology</li>
+              <li>Mechanical engineering</li>
+              <li>Metallurgy</li>
+              <li>Minerals technology</li>
+              <li>Production engineering</li>
+              <li>Polymers &amp; textiles</li>
+              <li>Other engineering</li>
+              <li>Other materials technology</li>
+              <li>Other technologies</li>
+              <li>Balanced combinations</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Humanities</strong></td>
+          <td>
+            <ul>
+              <li>Archaeology</li>
+              <li>Economic &amp; social history</li>
+              <li>History</li>
+              <li>History of art</li>
+              <li>History &amp; philosophy of science</li>
+              <li>Philosophy</li>
+              <li>Theology &amp; religious studies</li>
+              <li>Other humanities</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Languages</strong></td>
+          <td>
+            <ul>
+              <li>African languages, literature &amp; culture</li>
+              <li>American studies</li>
+              <li>Ancient Greek language &amp; literature</li>
+              <li>Celtic languages, literature &amp; culture</li>
+              <li>Chinese languages, literature &amp; culture</li>
+              <li>Classics</li>
+              <li>Comparative literature</li>
+              <li>English</li>
+              <li>Latin language &amp; literature</li>
+              <li>Linguistics</li>
+              <li>French language, literature &amp; culture</li>
+              <li>German language, literature &amp; culture</li>
+              <li>Italian language, literature &amp; culture</li>
+              <li>Japanese languages, literature &amp; culture</li>
+              <li>Modern Middle Eastern languages, literature &amp; culture</li>
+              <li>Latin American languages, literature &amp; culture</li>
+              <li>Portuguese language, literature &amp; culture</li>
+              <li>Russian languages, literature &amp; culture</li>
+              <li>Scandinavian languages, literature &amp; culture</li>
+              <li>Slavonic &amp; East European languages, literature &amp; culture</li>
+              <li>Spanish language, literature &amp; culture</li>
+              <li>Other ancient languages &amp; related studies</li>
+              <li>Other Asian languages, literature &amp; culture</li>
+              <li>Other European languages, literature &amp; culture</li>
+              <li>Other language studies</li>
+              <li>Other or unspecified modern languages</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Law</strong></td>
+          <td>
+            <ul>
+              <li>Law</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Librarianship &amp; Information Science</strong></td>
+          <td>
+            <ul>
+              <li>Communication studies</li>
+              <li>Information science</li>
+              <li>Journalism</li>
+              <li>Librarianship</li>
+              <li>Media studies</li>
+              <li>Publishing</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Mathematical Science</strong></td>
+          <td>
+            <ul>
+              <li>Mathematics</li>
+              <li>Statistics</li>
+              <li>Other mathematical sciences</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Medicine &amp; Dentistry</strong></td>
+          <td>
+            <ul>
+              <li>Clinical medicine</li>
+              <li>Clinical dentistry</li>
+              <li>Pre-clinical medicine</li>
+              <li>Pre-clinical dentistry</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Subjects Allied to Medicine</strong></td>
+          <td>
+            <ul>
+              <li>Anatomy &amp; Physiology</li>
+              <li>Audiology</li>
+              <li>Medical technology</li>
+              <li>Nursing</li>
+              <li>Nutrition</li>
+              <li>Ophthalmics</li>
+              <li>Pharmacology</li>
+              <li>Pharmacy</li>
+              <li>Other medical subjects</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Physical Science</strong></td>
+          <td>
+            <ul>
+              <li>Archaeology as a physical science</li>
+              <li>Astronomy</li>
+              <li>Chemistry</li>
+              <li>Environmental science &amp; other physical sciences</li>
+              <li>Geography studies as a science</li>
+              <li>Geology</li>
+              <li>Materials science</li>
+              <li>Oceanography</li>
+              <li>Physics</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Social, Economic &amp; Political Studies</strong></td>
+          <td>
+            <ul>
+              <li>Anthropology</li>
+              <li>Economics</li>
+              <li>Geography (unless solely as a physical science)</li>
+              <li>Politics</li>
+              <li>Psychology (without significant element of biological science)</li>
+              <li>Social policy &amp; administration</li>
+              <li>Social work</li>
+              <li>Sociology</li>
+              <li>Other social studies</li>
+              <li>Balanced combination</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Veterinary Sciences</strong></td>
+          <td>
+            <ul>
+              <li>Veterinary sciences</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <td><strong>Combined</strong></td>
+          <td>
+            <ul>
+              <li>Combined or general science</li>
+              <li>Combined or general social science</li>
+              <li>Combined or general arts</li>
+              <li>Combined general &amp; leisure courses not elsewhere specified</li>
+              <li>Research methods</li>
+              <li>Other combined or general courses/modular courses</li>
+              <li>Balanced combinations across different subject areas</li>
+            </ul>
+          </td>
+          </tr>
+          </tbody>
+          </table>        </div>
+      </details>
+    </section>
+  </div>
+</fieldset>
+
+<div>
+  <a href="questionnaire-03.html" class="button" id="saveQ2Btn">Save and continue</a>
+</div>
+
+<script>
+  $(function() {
+    var isCivilServant = $.jStorage.get('civilServant');
+
+    if(isCivilServant) {
+      $('[data-degreeques]').css('display', 'block');
+    } else {
+      $('#degree-panel').removeClass('toggle-content');
+    }
+
+    $('#education-uk-no').on('change', function() {
+      $('#saveQ2Btn').attr('href', 'apply-check.html');
+    });
+
+    $('#education-uk-yes').on('change', function() {
+      $('#saveQ2Btn').attr('href', 'questionnaire-03.html');
+    });
+
+  });
+</script>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">
