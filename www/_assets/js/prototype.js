@@ -218,29 +218,29 @@ $(function() {
     $('#nameOnHome').text(storedFirstName + ' ' + storedLastName);
   }
 
-  if($('#nameOnHome').length) {
-    var thePage = gup('Page'),
-        prevItems = $('#' + thePage).prevAll(),
-        theHref = $('#' + thePage).attr('data-href'),
-        doneSdip = $.jStorage.get('doneSdip');
+  // if($('#nameOnHome').length) {
+  //   var thePage = gup('Page'),
+  //       prevItems = $('#' + thePage).prevAll(),
+  //       theHref = $('#' + thePage).attr('data-href'),
+  //       doneSdip = $.jStorage.get('doneSdip');
 
-    prevItems.each(function(index) {
-      var prevHref = $(this).attr('data-href');
-      $(this).find('.the-icon').toggleClass('fa-minus fa-check');
-      $(this).contents().eq(1).wrap('<a href="' + prevHref + '" />');
-    });
+  //   prevItems.each(function(index) {
+  //     var prevHref = $(this).attr('data-href');
+  //     $(this).find('.the-icon').toggleClass('fa-minus fa-check');
+  //     $(this).contents().eq(1).wrap('<a href="' + prevHref + '" />');
+  //   });
 
-    $('#' + thePage).contents().eq(1).wrap('<a href="' + theHref + '" />');
-    $('#startAppBtn').removeClass('button').text('Continue your application').attr('href', theHref);
+  //   $('#' + thePage).contents().eq(1).wrap('<a href="' + theHref + '" />');
+  //   // $('#startAppBtn').removeClass('button').text('Continue your application').attr('href', theHref);
 
-    if(doneSdip === true) {
-      $('#hideIfSdip').addClass('toggle-content');
-      $('#showIfSdip').removeClass('toggle-content');
-    } else {
-      $('#showIfSdip').addClass('toggle-content');
-      $('#hideIfSdip').removeClass('toggle-content');
-    }
-  }
+  //   if(doneSdip === true) {
+  //     $('#hideIfSdip').addClass('toggle-content');
+  //     $('#showIfSdip').removeClass('toggle-content');
+  //   } else {
+  //     $('#showIfSdip').addClass('toggle-content');
+  //     $('#hideIfSdip').removeClass('toggle-content');
+  //   }
+  // }
 
   //-- Find address mock behaviour
 
