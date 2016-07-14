@@ -346,6 +346,10 @@ $(function() {
     $('#global-cookie-message').removeClass('hidden');
   }
 
+  if($('#sentDetails').length && gup('Status') == 'othergrad') {
+    $('#sentDetails').removeClass('toggle-content');
+  }
+
   if($('#adjustmentTime').length && gup('change') == 'adjustment') {
     $('#adjustmentTime, #adjustmentSuccess').removeClass('toggle-content');
     $('#adjustmentLink').addClass('toggle-content');
