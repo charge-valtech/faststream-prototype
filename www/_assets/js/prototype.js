@@ -44,17 +44,6 @@ $(function() {
     $.jStorage.set('firstName', $('#first-name').val());
     $.jStorage.set('lastName', $('#last-name').val());
     $.jStorage.set('emailAddress', $('#email-input').val());
-    if($('#civilservants-current').is(':checked') || $('#civilservants-fasttrack').is(':checked')) {
-      $.jStorage.set('civilServant', true);
-    } else {
-      $.jStorage.set('civilServant', false);
-    }
-    if($('#internship-sdip-current').is(':checked')) {
-      $.jStorage.set('doneSdip', true);
-    } else {
-      $.jStorage.set('doneSdip', false);
-    }
-
   });
 
   if($('#personalDetailsHeading').length && storedFirstName != undefined) {
