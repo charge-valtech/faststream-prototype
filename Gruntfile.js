@@ -288,12 +288,39 @@ module.exports = function(grunt) {
                 branch: 'build'
                 }
             }
+        },
+        banner: '/* \n' +
+          ' * Copyright <%= grunt.template.today("yyyy") %> HM Revenue & Customs\n' +
+          ' *\n' +
+          ' * Licensed under the Apache License, Version 2.0 (the "License");\n' +
+          ' * you may not use this file except in compliance with the License.\n' +
+          ' * You may obtain a copy of the License at\n' +
+          ' *\n' +
+          ' *     http://www.apache.org/licenses/LICENSE-2.0\n' +
+          ' *\n' +
+          ' * Unless required by applicable law or agreed to in writing, software\n' +
+          ' * distributed under the License is distributed on an "AS IS" BASIS,\n' +
+          ' * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n' +
+          ' * See the License for the specific language governing permissions and\n' +
+          ' * limitations under the License.\n' +
+          '*/ \n',
+        usebanner: {
+          dist: {
+            options: {
+              position: 'top',
+              banner: '<%= banner %>',
+              replace: true
+            },
+            files: {
+              src: [ 'www/_assets/js/prototype.js' ]
+            }
+          }
         }
-
     });
 
     [
         'grunt-assemble',
+        'grunt-banner',
         'grunt-modernizr',
         'grunt-contrib-uglify',
         'grunt-contrib-jshint',
@@ -335,7 +362,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('mobilescreenshots', ['localscreenshots:mobile']);
 
-    grunt.registerTask('copyscreens', ['copy:screenshots']);
+    grunt.registerTask('addbanner', ['usebanner']);
+
+
 
 
 };

@@ -5,6 +5,7 @@
   "devDependencies": {
     "grunt": "~1.0.0",
     "grunt-assemble": "^0.4.0",
+    "grunt-banner": "^0.6.0",
     "grunt-browser-sync": "^2.2.0",
     "grunt-build-control": "^0.6.3",
     "grunt-cli": "^1.2.0",

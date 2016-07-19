@@ -132,8 +132,8 @@
             <p id="fullName">Firstname Lastname</p>
           </section>
           <section>
-            <h3 class="heading-small">What should we call you?</h3>
-            <p id="preferredName">Henry</p>
+            <h3 class="heading-small">Preferred name</h3>
+            <p id="preferredName">Firstname</p>
           </section>
           <section>
             <h3 class="heading-small">Date of birth</h3>
@@ -142,84 +142,83 @@
           <section>
             <h3 class="heading-small">Address</h3>
             <ul class="list-text">
-              <li id="address1">38 Bolton Road</li>
-              <li id="address2">Windsor</li>
-              <li id="address3">Windsor and Maidenhead</li>
+              <li id="address1">1 Town Street</li>
+              <li id="address2">Town</li>
+              <li id="address3">County</li>
               <li id="address3b"></li>
-              <li id="address4">SL3 5LK</li>
+              <li id="address4">AA1 1AA</li>
             </ul>
           </section>
           <section>
             <h3 class="heading-small">Telephone number</h3>
-            <p id="phone-input">07988 346763</p>
+            <p id="phone-input">07000 111 222</p>
             <p id="phone-input2"></p>
           </section>
-        </section>
-        <section class="section-border">
-          <h2 class="heading-large">
+          <section class="section-border">
+            <h2 class="heading-large">
     Scheme preference
   </h2>
-          <section>
-            <ul id="schemePreferenceList" class="list-text">
-            </ul>
+            <section>
+              <ul id="schemePreferenceList" class="list-text">
+              </ul>
+            </section>
           </section>
-        </section>
-        <section class="section-border">
-          <h2 class="heading-large">
+          <section class="section-border">
+            <h2 class="heading-large">
     Additional information
   </h2>
-          <section>
-            <h3 class="heading-small">Do you have a disability?</h3>
-            <p>No</p>
+            <section>
+              <h3 class="heading-small">Do you have a disability?</h3>
+              <p>No</p>
+            </section>
+            <section>
+              <h3 class="heading-small">Will you need adjustments or support for your assessment?</h3>
+              <p>No</p>
+            </section>
+            <section>
+              <h3 class="heading-small">How did you hear about us?</h3>
+              <p>Not specified</p>
+            </section>
           </section>
-          <section>
-            <h3 class="heading-small">Will you need adjustments or support for your assessment?</h3>
-            <p>No</p>
-          </section>
-          <section>
-            <h3 class="heading-small">How did you hear about us?</h3>
-            <p>Not specified</p>
-          </section>
-        </section>
-        <section class="section-border">
-          <h2 class="heading-large">
+          <section class="section-border">
+            <h2 class="heading-large">
     Diversity questions
   </h2>
-          <section class="text">
-            <p>Your answers are treated separately from your application so they don't
-              appear here.</p>
-            <p>You've completed the diversity questions, for security reasons you're
-              unable to edit them.</p>
+            <section class="text">
+              <p>Your answers are treated separately from your application so they
+                don't appear here.</p>
+              <p>You've completed the diversity questions, for security reasons you're
+                unable to edit them.</p>
+            </section>
           </section>
-        </section>
-        <section>
-          <a href="profile-home-submitted.html" class="button-link">Return to home</a>
-        </section>
-        <script>
-        $(function()
-        {
-          var schemePreferences = $.jStorage.get('schemePreferences');
-          $('#submitApplicationBtn').on('click', function(e)
+          <section>
+            <a href="profile-home-submitted.html" class="button-link">Return to home</a>
+          </section>
+          <script>
+          $(function()
           {
-            e.preventDefault();
-            if (!$('#accept-terms').is(':checked'))
+            var schemePreferences = $.jStorage.get('schemePreferences');
+            $('#submitApplicationBtn').on('click', function(e)
             {
-              $('#submitError').removeClass('toggle-content');
-            }
-            else
+              e.preventDefault();
+              if (!$('#accept-terms').is(':checked'))
+              {
+                $('#submitError').removeClass('toggle-content');
+              }
+              else
+              {
+                window.location = 'submitted-application.html';
+              }
+            });
+            $.each(schemePreferences, function(key, value)
             {
-              window.location = 'submitted-application.html';
-            }
+              var theScheme = value;
+              $('#schemePreferenceList').append(
+                '<li><h3 class="bold-small">' + theScheme.preference +
+                '</h3>' + theScheme.name + '</li>');
+            });
           });
-          $.each(schemePreferences, function(key, value)
-          {
-            var theScheme = value;
-            $('#schemePreferenceList').append(
-              '<li><h3 class="bold-small">' + theScheme.preference +
-              '</h3>' + theScheme.name + '</li>');
-          });
-        });
-        </script>
+          </script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

@@ -378,7 +378,9 @@ $(function() {
       });
 
       if($('#passwordRequirements').find('.fa-times').length === 0) {
-        $('#errorPassword').addClass('hidden');
+        if(!$('#pass_match').hasClass('strength-weak')) {
+          $('#errorPassword').addClass('hidden');
+        }
       } else {
         $('#errorPassword').removeClass('hidden');
       }
@@ -395,7 +397,7 @@ $(function() {
         } else {
           $('#pass_match').removeClass('strength-strong').addClass('strength-weak').html('<i class="fa fa-times"></i>Your passwords don\'t match');
         }
-      } else if(matchVal.length !== 0 ) {
+      } else {
         $('#pass_match').removeClass('strength-strong').addClass('strength-weak').html('<i class="fa fa-times"></i>Your passwords don\'t match');
       }
 
