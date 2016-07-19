@@ -298,7 +298,7 @@ $(function() {
         char9Icon = requires9Characters.find('.the-icon');
 
     // passInput.after('<p class="form-hint text strength-indicator hide-nojs">Password validation: <span id="pass_meter"></span></p>');
-    confirmPass.after('<div id="matchingHint" class="invisible"><p class="form-hint">Password matching: <span id="pass_match"></span></p></div>');
+    confirmPass.after('<div id="matchingHint" class="invisible"><p class="form-hint">&nbsp;<span id="pass_match"></span></p></div>');
 
     confirmPass.on('blur', function() {
       $('#matchingHint').removeClass('invisible');
@@ -359,12 +359,12 @@ $(function() {
       if(matchVal.length >= minChars) {
         if(matchVal.length == passVal.length) {
           if(matchVal === passVal) {
-            $('#pass_match').removeClass('strength-weak').addClass('strength-strong').text("Your passwords match");
+            $('#pass_match').removeClass('strength-weak').addClass('strength-strong').html('<i class="fa fa-check"></i>Your passwords match');
           } else {
-            $('#pass_match').removeClass('strength-strong').addClass('strength-weak').text("Your passwords don't match");
+            $('#pass_match').removeClass('strength-strong').addClass('strength-weak').html('<i class="fa fa-times"></i>Your passwords don\'t match');
           }
         } else {
-          $('#pass_match').removeClass('strength-strong').addClass('strength-weak').text("Your passwords don't match");
+          $('#pass_match').removeClass('strength-strong').addClass('strength-weak').html('<i class="fa fa-times"></i>Your passwords don\'t match');
         }
       }
     });
@@ -390,13 +390,13 @@ $(function() {
 
       if(matchVal.length == passVal.length) {
         if(matchVal === passVal) {
-          $('#pass_match').removeClass('strength-weak').addClass('strength-strong').text("Your passwords match");
+          $('#pass_match').removeClass('strength-weak').addClass('strength-strong').html('<i class="fa fa-check"></i>Your passwords match');
           $('#errorPassword').addClass('hidden');
         } else {
-          $('#pass_match').removeClass('strength-strong').addClass('strength-weak').text("Your passwords don't match");
+          $('#pass_match').removeClass('strength-strong').addClass('strength-weak').html('<i class="fa fa-times"></i>Your passwords don\'t match');
         }
       } else if(matchVal.length !== 0 ) {
-        $('#pass_match').removeClass('strength-strong').addClass('strength-weak').text("Your passwords don't match");
+        $('#pass_match').removeClass('strength-strong').addClass('strength-weak').html('<i class="fa fa-times"></i>Your passwords don\'t match');
       }
 
     });
