@@ -391,7 +391,7 @@ $(function() {
           matchVal = $(this).val();
 
       if(matchVal.length == passVal.length) {
-        if(matchVal === passVal) {
+        if(matchVal === passVal && $('#passwordRequirements').find('.fa-times').length === 0) {
           $('#pass_match').removeClass('strength-weak').addClass('strength-strong').html('<i class="fa fa-check"></i>Your passwords match');
           $('#errorPassword').addClass('hidden');
         } else {
