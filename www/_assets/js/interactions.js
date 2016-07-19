@@ -373,11 +373,15 @@ $(function() {
       $('#passwordRequirements li').each(function() {
         if(!$(this).hasClass('strength-strong')) {
           $(this).addClass('strength-weak').find('.the-icon').removeClass('fa-minus').addClass('fa-times');
-          $('#errorPassword').removeClass('hidden');
-        } else {
-          $('#errorPassword').addClass('hidden');
+
         }
       });
+
+      if($('#passwordRequirements').find('.fa-times').length === 0) {
+        $('#errorPassword').addClass('hidden');
+      } else {
+        $('#errorPassword').removeClass('hidden');
+      }
     });
 
     confirmPass.keyup(function() {
