@@ -66,6 +66,23 @@
     <main role="main" id="main">
       
 
+<div class="panel-success toggle-content" id="slotsSuccess">
+  <p class="text">You've successfully saved candidate slots</p>
+</div>
+
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+<style type="text/css">
+  th, td { white-space: nowrap; }
+    div.dataTables_wrapper {
+        margin: 0 auto;
+    }
+    table.dataTable.no-footer {
+      border-bottom: none;
+    }
+    .DTFC_LeftHeadWrapper {
+      background: white;
+    }
+</style>
 <h1 class="heading-xlarge">
   Assessment schedule
 </h1>
@@ -73,10 +90,10 @@
   <p>You are currently managing the slot for: <b id="candidateManaging">John Smith</b>.</p>
   <p><a href="" id="stopManagingCandidate">Stop managing</a></p>
 </div>
-<section class="responsive-table scrolling-panel">
-  <table class="date-table">
+<section class="responsive-table">
+  <table class="date-table stripe row-border">
     <thead>
-      <tr class="tableizer-firstrow">
+      <tr>
         <th></th>
         <th>Mon</th>
         <th>Tue</th>
@@ -187,81 +204,119 @@
       <tr>
         <td><a href="location-schedule.html" class="link-unimp">London 1</a></td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="bank-holiday">BH</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -286,152 +341,210 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
       </tr>
       <tr>
         <td><a href="location-schedule.html" class="link-unimp">London 2</a></td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
       </tr>
       <tr>
@@ -439,38 +552,25 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -479,45 +579,80 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
       </tr>
       <tr>
@@ -525,38 +660,25 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -565,45 +687,80 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
       </tr>
       <tr>
@@ -683,20 +840,28 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -734,125 +899,177 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
-        </td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
       </tr>
       <tr>
@@ -879,68 +1096,98 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -967,54 +1214,78 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -1025,134 +1296,134 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
       </tr>
       <tr>
         <td><a href="location-schedule.html" class="link-unimp">Birmingham</a></td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -1160,38 +1431,104 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
       </tr>
       <tr>
@@ -1208,62 +1545,28 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -1271,23 +1574,89 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -1301,36 +1670,16 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -1340,35 +1689,27 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
-        </td>
-        <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
         </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -1376,21 +1717,79 @@
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-tentative">4</div>
-          <div class="grid grid-1-2 day-no-go">3</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-tentative">4</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-confirmed">6</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
         <td class="grid-wrapper">
-          <div class="grid grid-1-2 day-no-go">3</div>
-          <div class="grid grid-1-2 day-confirmed">6</div>
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-tentative">4</span>
+            <span class="grid grid-1-2 day-no-go">3</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-tentative">4</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-confirmed">6</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
+        </td>
+        <td class="grid-wrapper">
+          <a href="session-schedule.html" class="grid-wrapper">
+            <span class="grid grid-1-2 day-no-go">3</span>
+            <span class="grid grid-1-2 day-confirmed">6</span>
+          </a>
         </td>
       </tr>
     </tbody>
@@ -1402,6 +1801,23 @@
   <li><span class="inl-block day-tentative small-right-margin">4</span> Unconfirmed</li>
   <li><span class="inl-block day-confirmed small-right-margin">6</span> Confirmed</li>
 </ul>
+
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
+
+<script>
+  $(function() {
+    $('table').DataTable({
+      scrollX:        true,
+      paging:         false,
+      fixedColumns:   {
+          leftColumns: 1
+      },
+      searching: false,
+      ordering: false
+    });
+  });
+</script>
 
     </main>
   </div>

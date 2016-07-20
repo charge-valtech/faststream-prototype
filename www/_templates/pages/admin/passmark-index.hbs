@@ -15,32 +15,301 @@ layout: admin-layout.hbs
        Online tests pass mark setting
      </h2>
    </div>
-    <section>
-      <p>Choose a scheme to set the pass marks</p>
 
-      <ul>
-        <li>
-          <a href="passmark-set.html">Business</a> <span>(Pass marks set)</span>
-        </li>
-        <li>
-          <a href="passmark-set.html">Commercial</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
-        </li>
-        <li>
-          <a href="passmark-set.html">Digital and technology</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
-        </li>
-        <li>
-          <a href="passmark-set.html">Finance</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
-        </li>
-        <li>
-          <a href="passmark-set.html">Project delivery</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
-        </li>
-      </ul>
+  <div class="text">
+    <p>By default candidates will progress using their first preference, you can then change the selection to progress more candidates.</p>
+  </div>
+  <fieldset class="form-group">
+    <legend class="form-label">Progress candidates using the following criteria</legend>
+    <table role="presentation" class="vert-middle">
+      <tr>
+        <td>
+          <label for="scheme-01" class="block-label">
+            <input checked name="scheme-pref" type="radio" id="scheme-01">Location 1 Scheme 1
+          </label>
+        </td>
+        <td>(Only progress candidates based on their first preference)</td>
+      </tr>
+      <tr>
+        <td>
+          <label for="scheme-other" class="block-label">
+            <input name="scheme-pref" type="radio" id="scheme-other">Other scheme preferences
+          </label>
+        </td>
+        <td>(Only progress based on first <b>and</b> all other scheme preferences)</td>
+      </tr>
+      <tr>
+        <td>
+          <label for="scheme-any" class="block-label">
+            <input name="scheme-pref" type="radio" id="scheme-any">Open to any scheme
+          </label>
+        </td>
+        <td>(Only progress using the above <b>and</b> those that have selected open to any alternative scheme)</td>
+      </tr>
+    </table>
+  </fieldset>
+
+    <section>
+      <table class="hide-errormsgs">
+        <colgroup>
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Scheme</th>
+            <th>Competency</th>
+            <th>Verbal</th>
+            <th>Numerical</th>
+            <th>SJQ</th>
+            <th>Combination</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Business</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="business-failScore-01">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="business-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="business-passScore-01">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="business-passScore-01" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="business-failScore-02">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="business-failScore-02" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="business-passScore-02">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="business-passScore-02" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="business-failScore-03">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="business-failScore-03" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="business-passScore-03">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="business-passScore-03" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="business-failScore-04">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="business-failScore-04" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="business-passScore-04">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="business-passScore-04" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="business-failScore-comb">Fail</label><input type="number" value="" min="20" max="80" class="form-control-small" id="business-failScore-comb" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="business-passScore-comb">Pass</label><input type="number" value="" min="20" max="80" class="form-control-small" id="business-passScore-comb" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Commercial</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="commercial-failScore-01">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="commercial-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="commercial-passScore-01">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="commercial-passScore-01" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="commercial-failScore-02">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="commercial-failScore-02" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="commercial-passScore-02">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="commercial-passScore-02" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="commercial-failScore-03">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="commercial-failScore-03" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="commercial-passScore-03">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="commercial-passScore-03" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="commercial-failScore-04">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="commercial-failScore-04" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="commercial-passScore-04">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="commercial-passScore-04" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="commercial-failScore-comb">Fail</label><input type="number" value="" min="20" max="80" class="form-control-small" id="commercial-failScore-comb" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="commercial-passScore-comb">Pass</label><input type="number" value="" min="20" max="80" class="form-control-small" id="commercial-passScore-comb" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Digital and technology</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="dat-failScore-01">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="dat-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="dat-passScore-01">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="dat-passScore-01" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="dat-failScore-02">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="dat-failScore-02" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="dat-passScore-02">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="dat-passScore-02" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="dat-failScore-03">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="dat-failScore-03" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="dat-passScore-03">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="dat-passScore-03" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="dat-failScore-04">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="dat-failScore-04" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="dat-passScore-04">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="dat-passScore-04" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="dat-failScore-comb">Fail</label><input type="number" value="" min="20" max="80" class="form-control-small" id="dat-failScore-comb" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="dat-passScore-comb">Pass</label><input type="number" value="" min="20" max="80" class="form-control-small" id="dat-passScore-comb" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Finance</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="finance-failScore-01">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="finance-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="finance-passScore-01">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="finance-passScore-01" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="finance-failScore-02">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="finance-failScore-02" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="finance-passScore-02">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="finance-passScore-02" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="finance-failScore-03">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="finance-failScore-03" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="finance-passScore-03">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="finance-passScore-03" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="finance-failScore-04">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="finance-failScore-04" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="finance-passScore-04">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="finance-passScore-04" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="finance-failScore-comb">Fail</label><input type="number" value="" min="20" max="80" class="form-control-small" id="finance-failScore-comb" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="finance-passScore-comb">Pass</label><input type="number" value="" min="20" max="80" class="form-control-small" id="finance-passScore-comb" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Project delivery</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="project-failScore-01">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="project-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="project-passScore-01">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="project-passScore-01" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="project-failScore-02">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="project-failScore-02" />
+                <span class="has-error">Confirm your password</span>
+              </div>
+              <div class="grid grid-1-2">
+                <label for="project-passScore-02">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="project-passScore-02" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="project-failScore-03">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="project-failScore-03" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="project-passScore-03">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="project-passScore-03" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="project-failScore-04">Fail</label><input type="number" value="20" min="20" max="80" class="form-control-small" id="project-failScore-04" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="project-passScore-04">Pass</label><input type="number" value="80" min="20" max="80" class="form-control-small" id="project-passScore-04" />
+              </div>
+            </td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="project-failScore-comb">Fail</label><input type="number" value="" min="20" max="80" class="form-control-small" id="project-failScore-comb" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="project-passScore-comb">Pass</label><input type="number" value="" min="20" max="80" class="form-control-small" id="project-passScore-comb" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
     </section>
 
-    <a href="" class="button disabled" id="submitPassMarks">Submit pass marks</a>
-    <p id="submittedTime"></p>
-
+    <fieldset>
+      <legend class="form-label">Do you want to submit these pass marks?</legend>
+      <div class="form-group form-group-compound inline">
+        <label data-target="passmarkset-panel" for="passmarkset-yes" class="block-label">
+          <input name="passmarkset" type="radio" id="passmarkset-yes" aria-controls="passmarkset-panel" aria-expanded="false">Yes
+        </label>
+        <label for="passmarkset-no" class="block-label">
+          <input name="passmarkset" type="radio" id="passmarkset-no">No
+        </label>
+      </div>
+      <div id="passmarkset-panel" class="toggle-content" aria-hidden="true">
+        <div class="panel-warning">
+          <p class="text">Once submitted you won't be able to decrease the fail marks or increase the pass marks.</p>
+        </div>
+        <a href="" class="button" id="submitPassMarks">Submit pass marks</a>
+        <p id="submittedTime"></p>
+      </div>
+    </fieldset>
 
 <script>
   $(function(){
