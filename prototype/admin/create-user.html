@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pass mark setting | Apply for the Civil Service Fast Stream</title>
+    <title>Find a candidate | Apply for the Civil Service Fast Stream</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -54,7 +54,7 @@
       <div class="global-header__wrapper">
         <div class="grid-wrapper">
           <div class="grid grid-3-4">
-            <h1 class="bold-small">Apply for a Civil Service apprenticeship | Administration</h1>
+            <h1 class="bold-small">Apply for the Civil Service Fast Stream | Administration</h1>
           </div>
           <div class="grid grid-1-4">
             <div class="nav-menu ">
@@ -63,10 +63,8 @@
                 <li><a href="find-candidate.html">Find a candidate</a></li>
                 <li><a href="reporting.html">Reporting</a></li>
                 <li><a href="campaign.html">Campaign management</a></li>
-                <li><a href="manage-user.html">Manage users</a></li>
                 <li><a href="passmark-index.html">Online test pass marks</a></li>
                 <li><a href="assessment-schedule.html">Assessment centre schedule</a></li>
-                <li><a href="assessment-passmarks.html">Assessment centre pass marks</a></li>
               </ul>
             </div>
           </div>
@@ -75,35 +73,43 @@
     </header>
     <div class="content-container">
       <main role="main" id="main">
-        <div class="panel-success toggle-content" id="passMarkSuccess">
-          <p>You've successfully saved the pass marks for that scheme</p>
-        </div>
-        <div class="text">
-          <h2 class="heading-xlarge">
-       Online tests pass mark setting
-     </h2>
-        </div>
+        <h2 class="heading-xlarge">
+      Find a candidate
+    </h2>
         <section>
-          <p>Choose a scheme to set the pass marks</p>
-          <ul>
-            <li>
-              <a href="passmark-set.html">Business</a> <span>(Pass marks set)</span>
-            </li>
-            <li>
-              <a href="passmark-set.html">Commercial</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Digital and technology</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Finance</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Project delivery</a>
-            </li>
-          </ul>
+          <div class="form-group">
+            <label class="form-label" for="email-address">Email address</label>
+            <input type="text" class="form-control" id="email-address" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="last-name">Last name</label>
+            <input type="text" class="form-control" id="last-name" />
+          </div>
+          <div class="form-group form-group-compound inline-fixed">
+            <p class="form-label">Date of birth</p>
+            <span class="form-hint">For example, 19 7 1994</span>
+            <div class="form-group form-group-compound">
+              <label class="date-hint" for="dob-day">Day</label>
+              <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-day">
+            </div>
+            <div class="form-group form-group-compound">
+              <label class="date-hint" for="dob-month">Month</label>
+              <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-month">
+            </div>
+            <div class="form-group form-group-compound form-group-year">
+              <label class="date-hint" for="dob-year">Year</label>
+              <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address4" class="form-label">Postcode</label>
+            <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters"
+            autocorrect="off" value="">
+          </div>
+          <div class="form-group">
+            <a href="candidate-results.html" class="button">Find candidate</a>
+          </div>
         </section>
-        <a href="" class="button disabled">Submit pass marks</a>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

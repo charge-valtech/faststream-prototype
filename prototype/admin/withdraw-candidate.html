@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pass mark setting | Apply for the Civil Service Fast Stream</title>
+    <title>Withdraw candidate | Apply for the Civil Service Fast Stream</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -75,35 +75,30 @@
     </header>
     <div class="content-container">
       <main role="main" id="main">
-        <div class="panel-success toggle-content" id="passMarkSuccess">
-          <p>You've successfully saved the pass marks for that scheme</p>
+        <h1 class="heading-xlarge">Withdraw candidate</h1>
+        <div class="panel-indent">
+          <div class="text">
+            <p>This will withdraw the candidate from the process and they'll no longer
+              be able to continue with their application.</p>
+          </div>
         </div>
-        <div class="text">
-          <h2 class="heading-xlarge">
-       Online tests pass mark setting
-     </h2>
+        <div class="form-group">
+          <label for="withdrawReason" class="form-label">Reason for withdrawal</label>
+          <select name="withdrawalReasons" id="withdrawReason" class="selectWithOptionTrigger">
+            <option value="">-- Select reason from list --</option>
+            <option value="">I've found another job elsewhere</option>
+            <option value="">I'm joining another apprenticeship scheme</option>
+            <option value="">I realised I wasn't eligible for an apprenticeship</option>
+            <option value="">My circumstances have changed</option>
+            <option value="">I have moved abroad</option>
+            <option class="optionTrigger" value="" data-optiontrigger="moreInfo">Other reason (please provide details)</option>
+          </select>
         </div>
-        <section>
-          <p>Choose a scheme to set the pass marks</p>
-          <ul>
-            <li>
-              <a href="passmark-set.html">Business</a> <span>(Pass marks set)</span>
-            </li>
-            <li>
-              <a href="passmark-set.html">Commercial</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Digital and technology</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Finance</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Project delivery</a>
-            </li>
-          </ul>
-        </section>
-        <a href="" class="button disabled">Submit pass marks</a>
+        <div class="form-group toggle-content" id="moreInfo">
+          <label for="otherWithdrawReason" class="form-label">More information about your withdrawal</label>
+          <textarea name="" id="otherWithdrawReason" rows="6" class="form-control"></textarea>
+        </div>
+        <a href="view-candidate.html?Status=withdrawn" class="button" id="withdrawCandidate">Withdraw candidate</a>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

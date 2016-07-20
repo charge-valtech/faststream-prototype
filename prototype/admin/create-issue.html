@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pass mark setting | Apply for the Civil Service Fast Stream</title>
+    <title>Find a candidate | Apply for the Civil Service Fast Stream</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -75,35 +75,44 @@
     </header>
     <div class="content-container">
       <main role="main" id="main">
-        <div class="panel-success toggle-content" id="passMarkSuccess">
-          <p>You've successfully saved the pass marks for that scheme</p>
+        <div class="panel-success toggle-content" id="issueSuccess">
+          <p class="text">The flag has been saved</p>
         </div>
-        <div class="text">
-          <h2 class="heading-xlarge">
-       Online tests pass mark setting
-     </h2>
-        </div>
+        <h1 class="heading-xlarge">
+      Find a candidate
+    </h1>
+        <p><a id="issueReturn" href="view-candidate.html">Return to candidate</a></p>
         <section>
-          <p>Choose a scheme to set the pass marks</p>
-          <ul>
-            <li>
-              <a href="passmark-set.html">Business</a> <span>(Pass marks set)</span>
-            </li>
-            <li>
-              <a href="passmark-set.html">Commercial</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Digital and technology</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Finance</a>
-            </li>
-            <li>
-              <a href="passmark-set.html">Project delivery</a>
-            </li>
-          </ul>
+          <div class="grid-wrapper">
+            <div class="grid grid-2-3">
+              <h2 class="heading-large">Flag candidate</h2>
+            </div>
+          </div>
+          <section>
+            <h3 class="bold-small">Candidate name</h3>
+            <p>John Smith</p>
+          </section>
+          <section>
+            <fieldset>
+              <legend class="form-label">Do you want to flag this candidate?</legend>
+              <div class="form-group form-group-compound inline">
+                <label data-target="issue-panel" for="issue-yes" class="block-label">
+                  <input name="issue" type="radio" id="issue-yes" aria-controls="issue-panel" aria-expanded="false">Yes
+                </label>
+                <label for="issue-no" class="block-label">
+                  <input checked name="issue" type="radio" id="issue-no">No
+                </label>
+              </div>
+              <div id="issue-panel" class="toggle-content" aria-hidden="true">
+                <div class="form-group">
+                  <label for="nameIssue" class="form-label">Enter the reason for the flag</label>
+                  <textarea name="" id="nameIssue" rows="4" class="form-control"></textarea>
+                </div>
+              </div>
+              <a href="" class="button" id="issueSaveBtn">Save issue</a>
+            </fieldset>
+          </section>
         </section>
-        <a href="" class="button disabled">Submit pass marks</a>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

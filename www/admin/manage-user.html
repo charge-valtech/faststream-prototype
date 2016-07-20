@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Find a candidate | Apply for the Civil Service Fast Stream</title>
+  <title>Manage user | Apply for the Civil Service Fast Stream</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -68,25 +68,84 @@
     <main role="main" id="main">
       
 
-    <h2 class="heading-xlarge">
-      Find a candidate
-    </h2>
-    <p><a href="find-candidate.html">Return to search</a></p>
-    <section>
-      <h3 class="heading-large">Results</h3>
-      <ul class="list-text">
-        <li>
-          <a href="view-candidate.html" class="inl-block link-unimp">Smith, James, james.smith@email.com, 17/7/1998, N17 5HS</a>
-        </li>
-        <li>
-          <a href="view-candidate.html" class="inl-block link-unimp">Smith, John, john.smith@email.com, 17/7/1998, HU8 83J</a>
-        </li>
-        <li>
-          <a href="view-candidate-alt.html" class="inl-block link-unimp">Smith, Tim, tim.smith@email.com</a>
-        </li>
-      </ul>
-    </section>
+<h1 class="heading-xlarge">
+  Manage user
+</h1>
 
+<section class="section-border">
+  <h2 class="heading-medium">Manage existing user</h2>
+  <div class="inl-block">
+    <div class="form-group">
+      <label for="existingUsers" class="form-label">Existing users</label>
+      <select name="" id="existingUsers">
+        <option value="null">Select one</option>
+        <option value="John Smith" data-userrole="role-support">John Smith (Service support)</option>
+        <option value="Jane Doe" data-userrole="role-admin">Jane Doe (Service admin)</option>
+      </select>
+    </div>
+  </div>
+  <div class="inl-block hidden" id="manageUserBtn">
+    <a href="#" class="button">Manage user</a>
+  </div>
+</section>
+<section>
+  <h2 class="heading-medium">Create new user</h2>
+  <div class="form-group form-group-compound">
+    <label class="form-label" for="fullName">Full name</label>
+    <input type="text" class="form-control" id="fullName"/>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="emailAddress">Email address</label>
+    <input type="text" class="form-control" id="emailAddress"/>
+  </div>
+  <fieldset>
+    <legend class="form-label">User role</legend>
+    <div class="form-group">
+      <label for="role-admin" class="block-label">
+        <input name="role" type="radio" id="role-admin">Service admin
+      </label>
+      <label for="role-support" class="block-label">
+        <input name="role" type="radio" id="role-support">Service support
+      </label>
+    </div>
+  </fieldset>
+</section>
+<section>
+  <div class="form-group">
+    <a href="#" class="button">Save user</a>
+    <a href="#" class="button-link">Remove user</a>
+  </div>
+</section>
+
+<script>
+  $(function() {
+    $('#existingUsers').on('change', function() {
+      if($(this).val() == 'null') {
+        $('#manageUserBtn').addClass('hidden');
+      } else {
+        $('#manageUserBtn').removeClass('hidden');
+      }
+    });
+
+    $('#manageUserBtn .button').on('click', function(e) {
+      var userRole = $('#existingUsers').find('option:checked').attr('data-userrole'),
+          userName = $('#existingUsers').find('option:checked').val(),
+          userEmail = userName.toLowerCase().replace(/ /g, '.') + '@email.com';
+
+      $('#fullName').val(userName);
+
+      $('#emailAddress').val(userEmail);
+
+      $('#' + userRole).trigger('click').parent().addClass('selected');
+
+      $('input[name="role"]').not('#' + userRole).parent().removeClass('selected');
+
+      e.preventDefault();
+
+
+    });
+  });
+</script>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">

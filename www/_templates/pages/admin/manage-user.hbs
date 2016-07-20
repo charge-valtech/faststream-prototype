@@ -1,0 +1,83 @@
+---
+pageTitle: Manage user
+layout: admin-layout.hbs
+---
+
+<h1 class="heading-xlarge">
+  Manage user
+</h1>
+
+<section class="section-border">
+  <h2 class="heading-medium">Manage existing user</h2>
+  <div class="inl-block">
+    <div class="form-group">
+      <label for="existingUsers" class="form-label">Existing users</label>
+      <select name="" id="existingUsers">
+        <option value="null">Select one</option>
+        <option value="John Smith" data-userrole="role-support">John Smith (Service support)</option>
+        <option value="Jane Doe" data-userrole="role-admin">Jane Doe (Service admin)</option>
+      </select>
+    </div>
+  </div>
+  <div class="inl-block hidden" id="manageUserBtn">
+    <a href="#" class="button">Manage user</a>
+  </div>
+</section>
+<section>
+  <h2 class="heading-medium">Create new user</h2>
+  <div class="form-group form-group-compound">
+    <label class="form-label" for="fullName">Full name</label>
+    <input type="text" class="form-control" id="fullName"/>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="emailAddress">Email address</label>
+    <input type="text" class="form-control" id="emailAddress"/>
+  </div>
+  <fieldset>
+    <legend class="form-label">User role</legend>
+    <div class="form-group">
+      <label for="role-admin" class="block-label">
+        <input name="role" type="radio" id="role-admin">Service admin
+      </label>
+      <label for="role-support" class="block-label">
+        <input name="role" type="radio" id="role-support">Service support
+      </label>
+    </div>
+  </fieldset>
+</section>
+<section>
+  <div class="form-group">
+    <a href="#" class="button">Save user</a>
+    <a href="#" class="button-link">Remove user</a>
+  </div>
+</section>
+
+<script>
+  $(function() {
+    $('#existingUsers').on('change', function() {
+      if($(this).val() == 'null') {
+        $('#manageUserBtn').addClass('hidden');
+      } else {
+        $('#manageUserBtn').removeClass('hidden');
+      }
+    });
+
+    $('#manageUserBtn .button').on('click', function(e) {
+      var userRole = $('#existingUsers').find('option:checked').attr('data-userrole'),
+          userName = $('#existingUsers').find('option:checked').val(),
+          userEmail = userName.toLowerCase().replace(/ /g, '.') + '@email.com';
+
+      $('#fullName').val(userName);
+
+      $('#emailAddress').val(userEmail);
+
+      $('#' + userRole).trigger('click').parent().addClass('selected');
+
+      $('input[name="role"]').not('#' + userRole).parent().removeClass('selected');
+
+      e.preventDefault();
+
+
+    });
+  });
+</script>
