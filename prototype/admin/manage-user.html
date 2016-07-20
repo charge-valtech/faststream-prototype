@@ -85,8 +85,8 @@
               <label for="existingUsers" class="form-label">Existing users</label>
               <select name="" id="existingUsers">
                 <option value="null">Select one</option>
-                <option value="John Smith" data-userrole="role-support">John Smith (Service support)</option>
-                <option value="Jane Doe" data-userrole="role-admin">Jane Doe (Service admin)</option>
+                <option value="John Smith" data-userrole="role-support" data-firstname="John" data-lastname="Smith">John Smith (Service support)</option>
+                <option value="Jane Doe" data-userrole="role-admin" data-firstname="Jane" data-lastname="Doe">Jane Doe (Service admin)</option>
               </select>
             </div>
           </div>
@@ -97,8 +97,12 @@
         <section>
           <h2 class="heading-medium">Create new user</h2>
           <div class="form-group form-group-compound">
-            <label class="form-label" for="fullName">Full name</label>
-            <input type="text" class="form-control" id="fullName" />
+            <label class="form-label" for="firstName">First name</label>
+            <input type="text" class="form-control" id="firstName" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" />
           </div>
           <div class="form-group">
             <label class="form-label" for="emailAddress">Email address</label>
@@ -118,7 +122,7 @@
         </section>
         <section>
           <div class="form-group">
-            <a href="#" class="button">Save user</a>
+            <a href="manage-user.html" class="button" id="saveUserBtn">Save user</a>
             <a href="#" class="button-link">Remove user</a>
           </div>
         </section>
@@ -141,9 +145,14 @@
             var userRole = $('#existingUsers').find('option:checked')
               .attr('data-userrole'),
               userName = $('#existingUsers').find('option:checked').val(),
+              userFirstname = $('#existingUsers').find(
+                'option:checked').attr('data-firstname'),
+              userLastname = $('#existingUsers').find(
+                'option:checked').attr('data-lastname'),
               userEmail = userName.toLowerCase().replace(/ /g, '.') +
               '@email.com';
-            $('#fullName').val(userName);
+            $('#firstName').val(userFirstname);
+            $('#lastName').val(userLastname);
             $('#emailAddress').val(userEmail);
             $('#' + userRole).trigger('click').parent().addClass(
               'selected');
