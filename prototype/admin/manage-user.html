@@ -83,8 +83,8 @@
           <div class="inl-block">
             <div class="form-group">
               <label for="existingUsers" class="form-label">Existing users</label>
-              <select name="" id="existingUsers">
-                <option value="null">Select one</option>
+              <select name="" id="existingUsers" data-placeholder="Select one">
+                <option value="null"></option>
                 <option value="John Smith" data-userrole="role-support" data-firstname="John" data-lastname="Smith">John Smith (Service support)</option>
                 <option value="Jane Doe" data-userrole="role-admin" data-firstname="Jane" data-lastname="Doe">Jane Doe (Service admin)</option>
               </select>
@@ -126,9 +126,11 @@
             <a href="#" class="button-link">Remove user</a>
           </div>
         </section>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/chosen/1.6.1/chosen.jquery.min.js"></script>
         <script>
         $(function()
         {
+          $("#existingUsers").chosen();
           $('#existingUsers').on('change', function()
           {
             if ($(this).val() == 'null')
